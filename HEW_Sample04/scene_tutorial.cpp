@@ -18,7 +18,7 @@ void Tutorial_Finalize(void)
 void Tutorial_Update(void)
 {
 	if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
-		Scene_Change(SCENE_INDEX_GAME);
+		Scene_Change(SCENE_INDEX_P_SELECT);
 	}
 }
 
