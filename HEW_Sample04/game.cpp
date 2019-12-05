@@ -62,11 +62,13 @@ float Move_BG_Enemy2;
 float Move_BG_Enemy2_01;
 float Move_BG_Enemy2_02;
 
-
+Character_main *pC[1];
 
 void Game_Initialize(void)
 {
-	Player_Initialize();
+	pC[0] = new Character_main(100, 500);
+	
+
 	Enemy_Initialize();
 	Timer_Initialize();
 
@@ -105,7 +107,9 @@ void Game_Initialize(void)
 
 void Game_Finalize(void)
 {
-	Player_Finalize();
+	
+	delete pC[0];
+	
 	Enemy_Finalize();
 	Timer_Uninit();
 
@@ -126,7 +130,7 @@ void Game_Update(void)
 		case PHASE_INDEX_PLAYER_IN:
 		case PHASE_INDEX_PLAYER_MUTEKI:
 		case PHASE_INDEX_PLAYER_NORMAL:
-			Player_Update();
+			pC[0]->Update();
 			Enemy_Update();
 			Timer_Update();
 
@@ -153,7 +157,7 @@ void Game_Update(void)
 		if (Count_P <= NOMAL_SCR)
 		{
 			Move_BG += 1.0;
-			Move_BG_Player +=  Player_GetSpeed();
+			Move_BG_Player +=  pC[0]->Player_GetSpeed();
 			Move_BG_01 = (Move_BG + Move_BG_Player);
 
 			if (Move_BG + Move_BG_Player > (SCREEN_HEIGHT  + 150))
@@ -172,7 +176,7 @@ void Game_Update(void)
 		{
 			if (Move_BG_Player + Move_BG < (SCREEN_HEIGHT * 2 - 310))
 			{
-				Move_BG_Player += Player_GetSpeed();
+				Move_BG_Player += pC[0]->Player_GetSpeed();
 				Move_BG += 0.1;
 			}
 			if (Move_BG_01 < (SCREEN_HEIGHT * 2 - 310))
@@ -334,7 +338,7 @@ void Game_Draw(void)
 	//        Sprite_Draw(TEXTURE_INDEX_GAME, i * (SCREEN_WIDTH / 4), -SCREEN_HEIGHT + Move_BG, i * (SCREEN_WIDTH / 4), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
 	//	}
 
-	Player_Draw();
+	pC[0]->Draw();
 	Enemy_Draw();
 	Minute_Draw(440, 0, Timer_GetMinute(), 2, true);
 	Second_Draw(520, 0, Timer_GetSecond(), 2, true);
@@ -359,7 +363,7 @@ void Game_Draw(void)
 
 bool Game_EndCheck(void)
 {
-	if (Player_End() && Enemy_End(0) && Enemy_End(1) && Enemy_End(2))
+	if (pC[0]->Player_End() && Enemy_End(0) && Enemy_End(1) && Enemy_End(2))
 	{
 		return true;
 	}

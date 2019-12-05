@@ -1,3 +1,55 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+﻿  game.cpp
+=======
+<<<<<<< HEAD
+﻿  item.cpp
+  HEW_Sample04.vcxproj -> C:\Users\tomo0105\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+﻿  scene_playerselect.cpp
+c:\users\durar\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+  HEW_Sample04.vcxproj -> C:\Users\durar\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+<<<<<<< HEAD
+﻿  enemy.cpp
+c:\users\1\documents\hew\hew_sample04\enemy.cpp(94): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\enemy.cpp(97): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\enemy.cpp(100): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\enemy.cpp(103): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\enemy.cpp(195): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+  game.cpp
+>>>>>>> da3077182a1a2b30d4d76429343683d00fbbdc67
+c:\users\1\documents\hew\hew_sample04\scene.h(12): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\1\documents\hew\hew_sample04\game.cpp(24): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'PHASE_INDEX' の左辺を無視します。
+c:\users\1\documents\hew\hew_sample04\game.cpp(183): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\game.cpp(199): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\game.cpp(221): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\game.cpp(238): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\game.cpp(258): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\game.cpp(273): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\game.cpp(292): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\game.cpp(311): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(312): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(313): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(315): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(316): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(317): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(319): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(320): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(321): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(323): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(324): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\game.cpp(325): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  HEW_Sample04.vcxproj -> C:\Users\1\Documents\HEW\Debug\HEW_Sample04.exe
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4be784d8acc7958fd56bbb13b4af8d394be4cee3
+>>>>>>> e355ae1068ca25a7543a95ee0fcb3845fe445b16
 ﻿  collision.cpp
 c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
   enemy.cpp
@@ -57,3 +109,13 @@ c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(13): warning C4091: '
 c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
   コードを生成中...
   HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
+<<<<<<< HEAD
+=======
+=======
+  HEW_Sample04.vcxproj -> C:\Users\tomo0105\Documents\HEW\Debug\HEW_Sample04.exe
+>>>>>>> d532fca169ecedac42dbec1eb671c2641fe40dce
+>>>>>>> 96b06096f0d0b4699bb4b62ccec3997cff0d9ad9
+>>>>>>> 4be784d8acc7958fd56bbb13b4af8d394be4cee3
+>>>>>>> 711638616f4c1fe16cc31ff49b0492650ebb8257
+>>>>>>> da3077182a1a2b30d4d76429343683d00fbbdc67
+>>>>>>> e355ae1068ca25a7543a95ee0fcb3845fe445b16

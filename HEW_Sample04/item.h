@@ -1,23 +1,28 @@
 #pragma once
 
+#include <d3dx9.h>
+
 //Item_mainクラス
 class Item_main
 {
 protected:	//干渉できない
-
+	
 private:	//子クラスなら干渉可能
-
+	D3DXVECTOR2	pos;		//アイテムポップのポジション
+	bool		Get_item;	//アイテムの所持フラグ
+	
 public:		//どこからでも干渉可能
 
-	Item_main();		//コンストラクタ
-	//Item_main(引数)	//引数ありのコンストラクタ
-	~Item_main();		//デストラクタ
+	Item_main();						//コンストラクタ
+	Item_main(float x, float y);	//引数ありのコンストラクタ
+	~Item_main();						//デストラクタ
 
-	void Initialize();	//初期化
-	void Finalize();	//終了
-	void Update();		//更新
-	void Draw();		//描画
+	virtual void Update();			//更新
+	virtual void Draw();			//描画
 
+	virtual void ItemUse();			//アイテム使用
+
+	virtual bool Get_ItemFrag();	//アイテム所持フラグのゲッター
 };
 
 //アイテム(サメ)のクラス -> Item_mainクラス
@@ -33,10 +38,8 @@ public:		//どこからでも干渉可能
 	//Shark(引数);	//引数ありのコンストラクタ
 	~Shark();		//デストラクタ
 
-	void Initialize();	//初期化
-	void Finalize();	//終了
-	void Update();		//更新
-	void Draw();		//描画
+	virtual void Update();		//更新
+	virtual void Draw();		//描画
 
 };
 
@@ -53,10 +56,8 @@ public:		//どこからでも干渉可能
 	//Cooking(引数);	//引数ありのコンストラクタ
 	~Cooking();			//デストラクタ
 
-	void Initialize();	//初期化
-	void Finalize();	//終了
-	void Update();		//更新
-	void Draw();		//描画
+	virtual void Update();		//更新
+	virtual void Draw();		//描画
 
 };
 
@@ -73,10 +74,8 @@ public:		//どこからでも干渉可能
 	//Oct(引数);	//引数ありのコンストラクタ
 	~Oct();			//デストラクタ
 
-	void Initialize();	//初期化
-	void Finalize();	//終了
-	void Update();		//更新
-	void Draw();		//描画
+	virtual void Update();		//更新
+	virtual void Draw();		//描画
 
 };
 
@@ -94,14 +93,12 @@ public:		//どこからでも干渉可能
 	//Drag(引数);	//引数ありのコンストラクタ
 	~Drag();		//デストラクタ
 
-	void Initialize();	//初期化
-	void Finalize();	//終了
-	void Update();		//更新
-	void Draw();		//描画
+	virtual void Update();		//更新
+	virtual void Draw();		//描画
 
 };
 
-//アイテム(釣り)のクラス -> Item_mainクラス
+//アイテム(投げ網釣り)のクラス -> Item_mainクラス
 class Fishing :public Item_main
 {
 protected:	//干渉できない
@@ -114,10 +111,8 @@ public:		//どこからでも干渉可能
 	//Fishing(引数);	//引数ありのコンストラクタ
 	~Fishing();			//デストラクタ
 
-	void Initialize();	//初期化
-	void Finalize();	//終了
-	void Update();		//更新
-	void Draw();		//描画
+	virtual void Update();		//更新
+	virtual void Draw();		//描画
 
 };
 
@@ -134,9 +129,7 @@ public:		//どこからでも干渉可能
 	//Carrot(引数);		//引数ありのコンストラクタ
 	~Carrot();			//デストラクタ
 
-	void Initialize();	//初期化
-	void Finalize();	//終了
-	void Update();		//更新
-	void Draw();		//描画
+	virtual void Update();		//更新
+	virtual void Draw();		//描画
 
 };
