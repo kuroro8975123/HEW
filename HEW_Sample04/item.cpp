@@ -9,6 +9,7 @@
 #include "sprite.h"
 #include "texture.h"
 #include "input.h"
+#include "collision.h"
 
 //Item_mainクラスの関数--------------------------------------
 
@@ -16,16 +17,13 @@
 Item_main::Item_main() {
 
 }
+//引数ありのコンストラクタ
+Item_main::Item_main(float x,float y) {
+	pos.x = x;	pos.y = y;
+	Get_item = false;
+}
 //デストラクタ
 Item_main::~Item_main() {
-
-}
-//初期化
-void Item_main::Initialize() {
-
-}
-//終了
-void Item_main::Finalize() {
 
 }
 //更新
@@ -37,6 +35,16 @@ void Item_main::Draw() {
 
 }
 
+//アイテム使用
+void Item_main::ItemUse() {
+
+}
+
+//アイテム所持フラグのゲッター
+bool Item_main::Get_ItemFrag() {
+	return	Item_main::Get_item;
+}
+
 //Sharkクラスの関数------------------------------------------
 
 //コンストラクタ
@@ -45,14 +53,6 @@ Shark::Shark(){
 }
 //デストラクタ
 Shark::~Shark() {
-
-}
-//初期化
-void Shark::Initialize() {
-
-}
-//終了
-void Shark::Finalize() {
 
 }
 //更新
@@ -74,14 +74,6 @@ Cooking::Cooking() {
 Cooking::~Cooking() {
 
 }
-//初期化
-void Cooking::Initialize() {
-
-}
-//終了
-void Cooking::Finalize() {
-
-}
 //更新
 void Cooking::Update() {
 
@@ -99,14 +91,6 @@ Oct::Oct() {
 }
 //デストラクタ
 Oct::~Oct() {
-
-}
-//初期化
-void Oct::Initialize() {
-
-}
-//終了
-void Oct::Finalize() {
 
 }
 //更新
@@ -128,14 +112,6 @@ Drag::Drag() {
 Drag::~Drag() {
 
 }
-//初期化
-void Drag::Initialize() {
-
-}
-//終了
-void Drag::Finalize() {
-
-}
 //更新
 void Drag::Update() {
 
@@ -155,14 +131,6 @@ Fishing::Fishing() {
 Fishing::~Fishing() {
 
 }
-//初期化
-void Fishing::Initialize() {
-
-}
-//終了
-void Fishing::Finalize() {
-
-}
 //更新
 void Fishing::Update() {
 
@@ -180,14 +148,6 @@ Carrot::Carrot() {
 }
 //デストラクタ
 Carrot::~Carrot() {
-
-}
-//初期化
-void Carrot::Initialize() {
-
-}
-//終了
-void Carrot::Finalize() {
 
 }
 //更新
