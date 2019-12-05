@@ -13,37 +13,23 @@
 #define ANIME_PATTERN_SKIPFRAME 8
 
 
-typedef struct
-{
-	D3DXVECTOR2 pos;			//位置
 
-	float       speed;          //スピード
-
-}PLAYER;
-
-PLAYER player;
-int button;
-bool button_flag;
-bool end_flag;
-
-void Player_Initialize(void)
-{
+Character_main::Character_main(float x,float y) {
 	//プレイヤーの初期化
-	player.pos.x = 100;
-	player.pos.y = 500;
-	player.speed = 0;
+	pos.x = x;
+	pos.y = y;
+	speed = 0;
 	button = 0;
 	button_flag = false;
 	end_flag = false;
-}
-
-void Player_Finalize(void)
-{
 
 }
+//デストラクタ
+Character_main::~Character_main() {
 
-void Player_Update(void)
-{
+}
+//更新
+void Character_main::Update() {
 	D3DXVECTOR2 dir = D3DXVECTOR2(0.0f, 0.0f);
 
 	if (button_flag == false)
@@ -55,7 +41,7 @@ void Player_Update(void)
 	{
 		if (Keyboard_IsPress(DIK_UP) || GamePad_IsPress(0, BUTTON_A))
 		{
-			player.speed += 0.08;
+			speed += 0.08;
 			button_flag = false;
 		}
 	}
@@ -63,7 +49,7 @@ void Player_Update(void)
 	{
 		if (Keyboard_IsPress(DIK_RIGHT) || GamePad_IsPress(0, BUTTON_B))
 		{
-			player.speed += 0.05;
+			speed += 0.05;
 			button_flag = false;
 		}
 	}
@@ -71,7 +57,7 @@ void Player_Update(void)
 	{
 		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(0, BUTTON_X))
 		{
-			player.speed += 0.03;
+			speed += 0.03;
 			button_flag = false;
 		}
 	}
@@ -79,22 +65,22 @@ void Player_Update(void)
 	{
 		if (Keyboard_IsPress(DIK_LEFT) || GamePad_IsPress(0, BUTTON_Y))
 		{
-			player.speed += 0.01;
+			speed += 0.01;
 			button_flag = false;
 		}
 	}
 	if (Goal_Flag_P())
 	{
-		if (player.pos.y > 20)
+		if (pos.y > 20)
 		{
-			player.pos.y -= player.speed;
+			pos.y -= speed;
 		}
 	}
 	if (Goal_Flag_P())
 	{
-		if (player.pos.y > 25)
+		if (pos.y > 25)
 		{
-			player.pos.y -= 1.0;
+			pos.y -= 1.0;
 		}
 		else
 		{
@@ -103,14 +89,13 @@ void Player_Update(void)
 	}
 
 	// 座標の更新処理
-	player.pos += dir;
+	pos += dir;
 }
-
-void Player_Draw(void)
-{
+//描画
+void Character_main::Draw() {
 	Sprite_Draw(TEXTURE_INDEX_PLAYER,
-		player.pos.x,
-		player.pos.y);
+		pos.x,
+		pos.y);
 
 	if (button == 1 && button_flag)
 	{
@@ -129,15 +114,6 @@ void Player_Draw(void)
 		Sprite_Draw(TEXTURE_INDEX_BUTTON, 110, 50, 177, 220, 33, 33);
 	}
 
-
 }
 
-float Player_GetSpeed()
-{
-	return player.speed;
-}
 
-bool Player_End()
-{
-	return end_flag;
-}
