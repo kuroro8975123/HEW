@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  enemy.cpp
 c:\users\1\documents\hew\hew_sample04\enemy.cpp(94): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
 c:\users\1\documents\hew\hew_sample04\enemy.cpp(97): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
@@ -54,3 +55,7 @@ c:\users\1\documents\hew\hew_sample04\scene.h(12): warning C4091: 'typedef ': �
 c:\users\1\documents\hew\hew_sample04\scene.h(12): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
   コードを生成中...
   HEW_Sample04.vcxproj -> C:\Users\1\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+﻿  item.cpp
+  HEW_Sample04.vcxproj -> C:\Users\tomo0105\Documents\HEW\Debug\HEW_Sample04.exe
+>>>>>>> 3190351ea5362aa603f2806396988010d492aba0
