@@ -8,7 +8,7 @@
 #include "score_draw.h"
 #include "timer.h"
 
-#define NOMAL_SCR		(100)
+#define NOMAL_SCR		(10)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 
 typedef enum PHASE_INDEX
@@ -62,7 +62,18 @@ float Move_BG_Enemy2;
 float Move_BG_Enemy2_01;
 float Move_BG_Enemy2_02;
 
+// 各プレイヤー毎のタイム格納用
+// 分数
+int Time_Minute_Player01;
+int Time_Minute_Enemy01;
+int Time_Minute_Enemy02;
+int Time_Minute_Enemy03;
 
+// 秒数
+int Time_Second_Player01;
+int Time_Second_Enemy01;
+int Time_Second_Enemy02;
+int Time_Second_Enemy03;
 
 void Game_Initialize(void)
 {
@@ -108,7 +119,6 @@ void Game_Finalize(void)
 	Player_Finalize();
 	Enemy_Finalize();
 	Timer_Uninit();
-
 }
 
 void Game_Update(void)
@@ -181,6 +191,10 @@ void Game_Update(void)
 			}
 			else if (Move_BG_01 > (SCREEN_HEIGHT * 2 - 310))
 			{
+				if (Goal_P == false) {
+					Time_Minute_Player01 = Timer_GetMinute();
+					Time_Second_Player01 = Timer_GetSecond();
+				}
 				Goal_P = true;
 			}
 		}
@@ -220,7 +234,12 @@ void Game_Update(void)
 			}
 			else if (Move_BG_Enemy0_02 > (SCREEN_HEIGHT * 2 - 310) && Count_E01 > 2)
 			{
+				if (Goal_P == false) {
+					Time_Minute_Enemy01 = Timer_GetMinute();
+					Time_Second_Enemy01 = Timer_GetSecond();
+				}
 				Goal_E01 = true;
+				
 			}
 		}
 
@@ -256,6 +275,10 @@ void Game_Update(void)
 			}
 			else if (Move_BG_Enemy1_02 > (SCREEN_HEIGHT * 2 - 310))
 			{
+				if (Goal_P == false) {
+					Time_Minute_Enemy02 = Timer_GetMinute();
+					Time_Second_Enemy02 = Timer_GetSecond();
+				}
 				Goal_E02 = true;
 			}
 		}
@@ -290,6 +313,10 @@ void Game_Update(void)
 			}
 			else if (Move_BG_Enemy2_02 > (SCREEN_HEIGHT * 2 - 310))
 			{
+				if (Goal_P == false) {
+					Time_Minute_Enemy03 = Timer_GetMinute();
+					Time_Second_Enemy03 = Timer_GetSecond();
+				}
 				Goal_E03 = true;
 			}
 		}
@@ -391,4 +418,44 @@ bool Goal_Flag_E02()
 bool Goal_Flag_E03()
 {
 	return Goal_E03;
+}
+
+int	Minute_Player01()
+{
+	return Time_Minute_Player01;
+}
+
+int Second_Player01()
+{
+	return Time_Second_Player01;
+}
+
+int Minute_Enemy01()
+{
+	return Time_Minute_Enemy01;
+}
+
+int Second_Enemy01()
+{
+	return Time_Second_Enemy01;
+}
+
+int Minute_Enemy02()
+{
+	return Time_Minute_Enemy02;
+}
+
+int Second_Enemy02()
+{
+	return Time_Second_Enemy02;
+}
+
+int Minute_Enemy03()
+{
+	return Time_Minute_Enemy03;
+}
+
+int Second_Enemy03()
+{
+	return Time_Second_Enemy03;
 }

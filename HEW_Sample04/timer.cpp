@@ -8,8 +8,6 @@
  ・g_Timeが60回ったら、g_secondが1増える。
  ・g_secondが60以上になったら、g_minuteが1増える。
 
- ＜現在あるバグについて＞
- ・描画に問題がある。
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 #include <math.h>
@@ -20,8 +18,8 @@
 
 int g_Time;		//60FPS測定用
 int g_Time_s;
-int g_second;	//秒計測用
-int g_minute;	//分計測用
+static int g_second;	//秒計測用
+static int g_minute;	//分計測用
 
 //初期化
 void Timer_Initialize(void)
