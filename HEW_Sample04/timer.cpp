@@ -40,7 +40,6 @@ void Timer_Uninit(void)
 void Timer_Update(void)
 {
 	g_Time++;
-	g_Time++;
 
 	if (g_Time >= 60)
 	{
