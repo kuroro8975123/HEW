@@ -62,7 +62,6 @@ float Move_BG_Enemy2;
 float Move_BG_Enemy2_01;
 float Move_BG_Enemy2_02;
 
-<<<<<<< HEAD
 // 各プレイヤー毎のタイム格納用
 // 分数
 int Time_Minute_Player01;
@@ -75,9 +74,8 @@ int Time_Second_Player01;
 int Time_Second_Enemy01;
 int Time_Second_Enemy02;
 int Time_Second_Enemy03;
-=======
+
 Character_main *pC[1];
->>>>>>> 543d5ebdd76afd4d98634ca680eb4d89813493e0
 
 void Game_Initialize(void)
 {
