@@ -94,6 +94,7 @@ void Game_Initialize(void)
 	Move_BG_01 = 0;
 	Move_BG_Player = 0;
 
+
 	Move_BG_Enemy0 = 0;
 	Move_BG_Enemy0_01 = 0;
 	Move_BG_Enemy0_02 = 0;
