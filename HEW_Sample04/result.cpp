@@ -75,9 +75,9 @@ void Result_Draw()
 	{
 		for (int j = 1; j < 4; j++)
 		{
-			if (Player[i].Second < Player[j].Second)
+			if (Player[i].Second >= Player[j].Second)
 			{
-				if (Player[i].Minute <= Player[j].Minute)
+				if (Player[i].Minute >= Player[j].Minute)
 				{
 					tmpS = Player[i].Second;
 					Player[i].Second = Player[j].Second;
@@ -89,7 +89,7 @@ void Result_Draw()
 				}
 			}
 		}
-		Minute_Draw(440, 50, Player[i].Minute, 2, true);
-		Second_Draw(520, 50, Player[i].Second, 2, true);
 	}
+	Minute_Draw(440, 50, Player[0].Minute, 2, true);
+	Second_Draw(520, 50, Player[0].Second, 2, true);
 }

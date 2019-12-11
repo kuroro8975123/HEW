@@ -241,7 +241,7 @@ void Game_Update(void)
 			}
 			else if (Move_BG_Enemy0_02 > (SCREEN_HEIGHT * 2 - 310) && Count_E01 > 2)
 			{
-				if (Goal_P == false) {
+				if (Goal_E01 == false) {
 					Time_Minute_Enemy01 = Timer_GetMinute();
 					Time_Second_Enemy01 = Timer_GetSecond();
 				}
@@ -282,7 +282,7 @@ void Game_Update(void)
 			}
 			else if (Move_BG_Enemy1_02 > (SCREEN_HEIGHT * 2 - 310))
 			{
-				if (Goal_P == false) {
+				if (Goal_E02 == false) {
 					Time_Minute_Enemy02 = Timer_GetMinute();
 					Time_Second_Enemy02 = Timer_GetSecond();
 				}
@@ -320,7 +320,7 @@ void Game_Update(void)
 			}
 			else if (Move_BG_Enemy2_02 > (SCREEN_HEIGHT * 2 - 310))
 			{
-				if (Goal_P == false) {
+				if (Goal_E03 == false) {
 					Time_Minute_Enemy03 = Timer_GetMinute();
 					Time_Second_Enemy03 = Timer_GetSecond();
 				}
