@@ -5,7 +5,6 @@
 
 #define TEXTURE_FILENAME_MAX (64)
 
-
 typedef struct TextureFile_tag
 {
 	char filename[TEXTURE_FILENAME_MAX];
@@ -14,7 +13,8 @@ typedef struct TextureFile_tag
 } TextureFile;
 
 static const TextureFile g_TextureFiles[] = {
-	{ "asset/texture/title.png", 1024, 576 },//01.タイトル画面
+	{ "asset/texture/title1.png", 1024, 576 },//01.タイトル画面
+	{ "asset/texture/title2.png", 1024, 576 },//01.タイトル画面
 	{ "asset/texture/tutorial.png", 1024, 576 },//02.チュートリアル画面
 	{ "asset/texture/game01.png", 1024, 576 },//03.ゲーム画面
 	{ "asset/texture/result.png", 1024, 576 },//04.リザルト画面
