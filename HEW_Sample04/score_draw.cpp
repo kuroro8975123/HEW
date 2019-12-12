@@ -23,7 +23,7 @@ void Score_Draw(float x, float y, int score, int fig, bool bZero)
 
 		Number_Draw(x + NUMBER_WIDTH * (fig - (i + 1)), y, n);
 	}
-	//	}
+	
 	Sprite_Draw(TEXTURE_INDEX_NUMBER, 0.0f, 0.0f);
 
 }

@@ -20,7 +20,7 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/result.png", 1024, 576 },//04.リザルト画面
     { "asset/texture/player.png", 64, 128 },//05.プレイヤー
 	{ "asset/texture/enemy.png", 64, 128 },//06.敵？
-	{ "asset/texture/number01.tga", 320, 32 },//07.数字
+	{ "asset/texture/number.png", 352, 32 },//07.数字
 	{ "asset/texture/3.png", 512, 288 },//08.カウントダウン
 	{ "asset/texture/2.png", 512, 288 },//09.カウントダウン
 	{ "asset/texture/1.png", 512, 288 },//10.カウントダウン
