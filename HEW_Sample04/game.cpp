@@ -1,6 +1,7 @@
 #include "main.h"
 #include "texture.h"
 #include "player.h"
+#include "item.h"
 #include "enemy.h"
 #include "fade.h"
 #include "scene.h"
@@ -75,13 +76,18 @@ int Time_Second_Enemy01;
 int Time_Second_Enemy02;
 int Time_Second_Enemy03;
 
-Character_main *pC[1];
+Character_main	*pC[1];
+Item_system		*pitemsystem[4];
 
 void Game_Initialize(void)
 {
 	pC[0] = new Character_main(100, 500);
-	
 
+	for (int i = 0; i < 4; i++)
+	{
+		pitemsystem[i] = new Item_system(i);
+	}
+	
 	Enemy_Initialize();
 	Timer_Initialize();
 
@@ -123,6 +129,11 @@ void Game_Finalize(void)
 {
 	
 	delete pC[0];
+
+	for (int i = 0; i < 4; i++)
+	{
+		delete pitemsystem[i];
+	}
 	
 	Enemy_Finalize();
 	Timer_Uninit();
@@ -143,7 +154,14 @@ void Game_Update(void)
 		case PHASE_INDEX_PLAYER_IN:
 		case PHASE_INDEX_PLAYER_MUTEKI:
 		case PHASE_INDEX_PLAYER_NORMAL:
+
 			pC[0]->Update();
+
+			for (int i = 0; i < 4; i++)
+			{
+				pitemsystem[i]->Update();
+			}
+
 			Enemy_Update();
 			Timer_Update();
 
@@ -369,6 +387,12 @@ void Game_Draw(void)
 	//	}
 
 	pC[0]->Draw();
+
+	for (int i = 0; i < 4; i++)
+	{
+		pitemsystem[i]->Draw();
+	}
+
 	Enemy_Draw();
 	Minute_Draw(440, 0, Timer_GetMinute(), 2, true);
 	Second_Draw(520, 0, Timer_GetSecond(), 2, true);

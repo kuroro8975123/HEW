@@ -9,41 +9,78 @@
 #include "sprite.h"
 #include "texture.h"
 #include "input.h"
-#include "collision.h"
 
-//Item_mainクラスの関数--------------------------------------
+
+//Item_systemクラスの関数-------------------------------
+
+Item_system::Item_system(int n) {
+	pos.x = 27.0f + n * 255;	pos.y = 32.0f;
+	Pop_item = false;
+}
+
+Item_system::~Item_system(){
+
+}
+
+void Item_system::Update(){
+
+	//アイテムのポップ処理を書く。
+	
+	if (!Pop_item)
+	{
+		pop_pos = rand() % 3;
+		Pop_item = true;
+	}
+	//アイテムの移動を書く。
+
+
+	//プレイヤーとの当たり判定、取得後のアイテム抽選処理を書く。
+
+
+}
+
+void Item_system::Draw() {
+
+	if (Pop_item)
+		Sprite_Draw(TEXTURE_INDEX_BLOCK, pos.x + pop_pos * 75, pos.y);
+}
+
+bool Item_system::Get_ItemFrag(){
+	return Pop_item;
+}
+
+bool Item_system::Get_GetItem() {
+	return Get_item;
+}
+
+//Itemクラスの関数--------------------------------------
 
 //コンストラクタ
-Item_main::Item_main() {
+Item::Item() {
 
 }
 //引数ありのコンストラクタ
-Item_main::Item_main(float x,float y) {
-	pos.x = x;	pos.y = y;
-	Get_item = false;
-}
+//Item::Item(float x,float y) {
+//	pos.x = x;	pos.y = y;
+//}
 //デストラクタ
-Item_main::~Item_main() {
-
+Item::~Item() {
+	
 }
 //更新
-void Item_main::Update() {
+void Item::Update() {
 
 }
 //描画
-void Item_main::Draw() {
-
+void Item::Draw() {
+	
 }
 
 //アイテム使用
-void Item_main::ItemUse() {
+void Item::ItemUse() {
 
 }
 
-//アイテム所持フラグのゲッター
-bool Item_main::Get_ItemFrag() {
-	return	Item_main::Get_item;
-}
 
 //Sharkクラスの関数------------------------------------------
 

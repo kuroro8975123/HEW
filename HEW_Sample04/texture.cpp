@@ -18,7 +18,7 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/tutorial.png", 1024, 576 },//02.チュートリアル画面
 	{ "asset/texture/game01.png", 1024, 576 },//03.ゲーム画面
 	{ "asset/texture/result.png", 1024, 576 },//04.リザルト画面
-    { "asset/texture/player.png", 64, 128 },//05.プレイヤー
+	{ "asset/texture/player.png", 64, 128 },//05.プレイヤー
 	{ "asset/texture/enemy.png", 64, 128 },//06.敵？
 	{ "asset/texture/number01.tga", 320, 32 },//07.数字
 	{ "asset/texture/3.png", 512, 288 },//08.カウントダウン
@@ -31,6 +31,7 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/pool.png", 1024, 576 },//14.キャラクターセレクト
 	{ "asset/texture/charasen.png", 512, 128 },//14.キャラクターを選択してください
 	{ "asset/texture/button2.png", 400, 400 },//14.キャラクターを選択してください
+	{"asset/texture/Block.png",52,52},//ブロックサンプル
 	
 
 };

@@ -1,32 +1,52 @@
 #pragma once
 
 #include <d3dx9.h>
+#include "collision.h"
 
-//Item_mainクラス
-class Item_main
+class Item_system
+{
+protected:
+	int			pop_time;	//アイテムポップの時間
+	int			pop_pos;	//アイテムポップの場所
+	int			pop_cnt;	//アイテムポップのフレームカウント
+private:
+
+public:
+	bool		Pop_item;	//アイテムの出現フラグ
+	bool		Get_item;	//アイテム所持フラグ
+	D3DXVECTOR2	pos;		//アイテムポップのポジション
+
+	Item_system(int n);
+	~Item_system();
+
+	virtual void Update();
+	virtual void Draw();
+
+	virtual bool Get_ItemFrag();	//アイテム出現フラグのゲッター
+	virtual bool Get_GetItem();		//アイテム取得のゲッター
+};
+
+//Itemクラス
+class Item
 {
 protected:	//干渉できない
-	
+	CIRCLE	collision;
 private:	//子クラスなら干渉可能
-	D3DXVECTOR2	pos;		//アイテムポップのポジション
-	bool		Get_item;	//アイテムの所持フラグ
-	
+
 public:		//どこからでも干渉可能
 
-	Item_main();						//コンストラクタ
-	Item_main(float x, float y);	//引数ありのコンストラクタ
-	~Item_main();						//デストラクタ
+	Item();						//コンストラクタ
+	//Item(float x, float y);	//引数ありのコンストラクタ
+	~Item();						//デストラクタ
 
 	virtual void Update();			//更新
 	virtual void Draw();			//描画
 
 	virtual void ItemUse();			//アイテム使用
-
-	virtual bool Get_ItemFrag();	//アイテム所持フラグのゲッター
 };
 
 //アイテム(サメ)のクラス -> Item_mainクラス
-class Shark :public Item_main
+class Shark :public Item
 {
 protected:	//干渉できない
 
@@ -44,7 +64,7 @@ public:		//どこからでも干渉可能
 };
 
 //アイテム(調理)のクラス -> Item_mainクラス
-class Cooking :public Item_main
+class Cooking :public Item
 {
 protected:	//干渉できない
 
@@ -62,7 +82,7 @@ public:		//どこからでも干渉可能
 };
 
 //アイテム(タコ墨)のクラス -> Item_mainクラス
-class Oct :public Item_main
+class Oct :public Item
 {
 protected:	//干渉できない
 
@@ -80,7 +100,7 @@ public:		//どこからでも干渉可能
 };
 
 //アイテム(薬)のクラス -> Item_mainクラス
-class Drag :public Item_main
+class Drag :public Item
 {
 protected:	//干渉できない
 
@@ -99,7 +119,7 @@ public:		//どこからでも干渉可能
 };
 
 //アイテム(投げ網釣り)のクラス -> Item_mainクラス
-class Fishing :public Item_main
+class Fishing :public Item
 {
 protected:	//干渉できない
 
@@ -117,7 +137,7 @@ public:		//どこからでも干渉可能
 };
 
 //アイテム(にんじん)のクラス -> Item_mainクラス
-class Carrot :public Item_main
+class Carrot :public Item
 {
 protected:	//干渉できない
 

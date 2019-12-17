@@ -6,6 +6,7 @@
 #include "input.h"
 #include "texture.h"
 #include "sprite.h"
+#include "item.h"
 #include <time.h>
 
 #define _USE_MATH_DEFINES
