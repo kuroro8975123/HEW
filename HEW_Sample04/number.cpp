@@ -5,7 +5,7 @@
 
 void Number_Draw(float x, float y, int n)
 {
-	if( n < 0 || n > 9 ) return;
+	if( n < 0 || n > 10 ) return;
 
 	Sprite_Draw(TEXTURE_INDEX_NUMBER,
 		x, y,

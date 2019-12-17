@@ -42,8 +42,11 @@ void Title_Update(void)
 void Title_Draw(void)
 {
 	
-	Sprite_Draw(TEXTURE_INDEX_TITLE, 0.0f, 0.0f);
+	
+	Sprite_Draw(TEXTURE_INDEX_TITLE2, 0.0f, 0.0f);
+	Sprite_Draw(TEXTURE_INDEX_TITLE1, 0.0f, 0.0f);
 	Sprite_Draw(TEXTURE_INDEX_PRESS, 30.0f, 50.0f);
+	
 	//Sprite_Draw(TEXTURE_INDEX_BG, 0.0f, y);
 	//Sprite_Draw(TEXTURE_INDEX_BG, 0.0f, -500 + y);
 	

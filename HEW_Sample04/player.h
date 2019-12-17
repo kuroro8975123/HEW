@@ -11,19 +11,17 @@ private:	//子クラスなら干渉可能
 	
 	D3DXVECTOR2 pos;
 	float       speed;          //スピード
-	int button;
+	int			button;
 	bool button_flag;
 	bool end_flag;
 
 public:		//どこからでも干渉可能
-	
+	int select;
 
-	Character_main(float x,float y);		//コンストラクタ
-	//Item_main(引数)	//引数ありのコンストラクタ
+	Character_main();		//コンストラクタ
+	Character_main(float x, float y);	//引数ありのコンストラクタ
 	~Character_main();		//デストラクタ
 
-	//void Initialize();	//初期化
-	//void Finalize();	//終了
 	virtual void Update();		//更新
 	virtual void Draw();		//描画
 
@@ -37,14 +35,89 @@ public:		//どこからでも干渉可能
 		return end_flag;
 	}
 
+	virtual int Player_GetSelect()
+	{
+		return select;
+	}
 };
 
+//カジキちゃん
+class Kaziki :public Character_main
+{
+protected:
 
-//void Player_Initialize(void);
-//void Player_Finalize(void);
-//void Player_Update(void);
-//void Player_Draw(void);
-//
-//float Player_GetSpeed();
-//bool Player_End();
+private:
+	D3DXVECTOR2 pos;
+	float       speed;          //スピード
+	int			button;
+	bool button_flag;
+	bool end_flag;
+public:
+
+	Kaziki();
+	~Kaziki();
+
+	virtual void Update();
+	virtual void Draw();
+};
+
+//クジラ
+class Kujira :public Character_main
+{
+protected:
+
+private:
+	D3DXVECTOR2 pos;
+	float       speed;          //スピード
+	int			button;
+	bool button_flag;
+	bool end_flag;
+public:
+
+	Kujira();
+	~Kujira();
+	
+	virtual void Update();
+	virtual void Draw();
+};
+
+//イルカ
+class Iruka :public Character_main
+{
+protected:
+
+private:
+	D3DXVECTOR2 pos;
+	float       speed;          //スピード
+	int			button;
+	bool button_flag;
+	bool end_flag;
+public:
+
+	Iruka();
+	~Iruka();
+
+	virtual void Update();
+	virtual void Draw();
+};
+
+//馬
+class Uma :public Character_main
+{
+protected:
+
+private:
+	D3DXVECTOR2 pos;
+	float       speed;          //スピード
+	int			button;
+	bool button_flag;
+	bool end_flag;
+public:
+
+	Uma();
+	~Uma();
+
+	virtual void Update();
+	virtual void Draw();
+};
 

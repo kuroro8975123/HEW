@@ -35,7 +35,7 @@ SOUNDPARAM g_aParam[SOUND_LABEL_MAX] =
 	{(char *)"asset/BGM/bgm000.wav", -1},		// BGM0
 	{(char *)"asset/BGM/bgm001.wav", -1},		// BGM1
 	{(char *)"asset/BGM/bgm002.wav", -1},		// BGM2
-	{(char *)"asset/SE/shot000.wav", 0},			// ’e”­ŽË‰¹
+	{(char *)"asset/SE/shot000.wav", 0},		// ’e”­ŽË‰¹
 	{(char *)"asset/SE/hit000.wav", 0},			// ƒqƒbƒg‰¹
 	{(char *)"asset/SE/explosion000.wav", 0},	// ”š”­‰¹
 };

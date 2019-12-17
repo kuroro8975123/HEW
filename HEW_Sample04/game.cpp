@@ -76,12 +76,37 @@ int Time_Second_Enemy01;
 int Time_Second_Enemy02;
 int Time_Second_Enemy03;
 
+<<<<<<< HEAD
 Character_main	*pC[1];
 Item_system		*pitemsystem[4];
 
 void Game_Initialize(void)
 {
 	pC[0] = new Character_main(100, 500);
+=======
+Character_main *pC[4];
+
+void Game_Initialize(void)
+{
+	for (int i; i < 4; i++)
+	{
+		switch (pC[i]->Player_GetSelect())
+		{
+		case 0:
+			pC[i] = new Kaziki;
+			break;
+		case 1:
+			pC[i] = new Kujira;
+			break;
+		case 2:
+			pC[i] = new Iruka;
+			break;
+		case 3:
+			pC[i] = new Uma;
+			break;
+		}
+	}
+>>>>>>> e3308ad52851f4f28283949893dfad1a2a2ab960
 
 	for (int i = 0; i < 4; i++)
 	{
@@ -151,10 +176,13 @@ void Game_Update(void)
 				// PlaySound(SOUND_LABEL_BGM000);
 			}
 			break;
+<<<<<<< HEAD
 		case PHASE_INDEX_PLAYER_IN:
 		case PHASE_INDEX_PLAYER_MUTEKI:
 		case PHASE_INDEX_PLAYER_NORMAL:
 
+=======
+>>>>>>> e3308ad52851f4f28283949893dfad1a2a2ab960
 			pC[0]->Update();
 
 			for (int i = 0; i < 4; i++)
@@ -187,6 +215,7 @@ void Game_Update(void)
 		//ƒvƒŒƒCƒ„[
 		if (Count_P <= NOMAL_SCR)
 		{
+			Kaziki::Update;
 			Move_BG += 1.0;
 			Move_BG_Player +=  pC[0]->Player_GetSpeed();
 			Move_BG_01 = (Move_BG + Move_BG_Player);
