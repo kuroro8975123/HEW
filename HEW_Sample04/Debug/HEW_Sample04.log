@@ -1,5 +1,28 @@
-<<<<<<< HEAD
-﻿  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
-=======
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Platforms\Win32\PlatformToolsets\v141\Toolset.targets(34,5): error MSB8036: Windows SDK バージョン 10.0.17763.0 が見つかりませんでした。必要なバージョンの Windows SDK をインストールするか、プロジェクト プロパティ ページで SDK バージョンを変更するか、ソリューションを右クリックして [ソリューションの再ターゲット] を選択してください。
->>>>>>> f65add46e1bfe07b1bf22c6ae4ffc1142dc17cc1
+﻿  game.cpp
+c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(28): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(24): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'PHASE_INDEX' の左辺を無視します。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(214): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(234): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(256): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(278): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(298): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(317): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(336): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(359): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(360): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(361): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(363): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(364): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(365): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(367): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(368): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(369): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(371): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(372): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(373): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  main.cpp
+c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(28): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  コードを生成中...
+  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe

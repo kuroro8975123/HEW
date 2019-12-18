@@ -1,5 +1,6 @@
 #include "number.h"
 #include "sprite.h"
+#include "texture.h"
 
 void Score_Draw(float x, float y, int score, int fig, bool bZero)
 {

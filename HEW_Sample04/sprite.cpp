@@ -2,6 +2,7 @@
 #include <math.h>
 #include "mydirect3d.h"
 #include "texture.h"
+#include "sprite.h"
 
 typedef struct Vertex2D_tag
 {

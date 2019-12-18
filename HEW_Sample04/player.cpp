@@ -6,6 +6,7 @@
 #include "game.h"
 
 
+
 #define PLAYER_WIDTH	(32)
 #define PLAYER_HEIGHT	(32)
 

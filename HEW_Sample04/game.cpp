@@ -1,7 +1,6 @@
 #include "main.h"
 #include "texture.h"
 #include "player.h"
-#include "item.h"
 #include "enemy.h"
 #include "fade.h"
 #include "scene.h"
@@ -76,19 +75,14 @@ int Time_Second_Enemy01;
 int Time_Second_Enemy02;
 int Time_Second_Enemy03;
 
-<<<<<<< HEAD
+
 Character_main	*pC[1];
-Item_system		*pitemsystem[4];
 
 void Game_Initialize(void)
 {
 	pC[0] = new Character_main(100, 500);
-=======
-Character_main *pC[4];
 
-void Game_Initialize(void)
-{
-	for (int i; i < 4; i++)
+	/*for (int i; i < 4; i++)
 	{
 		switch (pC[i]->Player_GetSelect())
 		{
@@ -105,13 +99,7 @@ void Game_Initialize(void)
 			pC[i] = new Uma;
 			break;
 		}
-	}
->>>>>>> e3308ad52851f4f28283949893dfad1a2a2ab960
-
-	for (int i = 0; i < 4; i++)
-	{
-		pitemsystem[i] = new Item_system(i);
-	}
+	}*/
 	
 	Enemy_Initialize();
 	Timer_Initialize();
@@ -154,11 +142,6 @@ void Game_Finalize(void)
 {
 	
 	delete pC[0];
-
-	for (int i = 0; i < 4; i++)
-	{
-		delete pitemsystem[i];
-	}
 	
 	Enemy_Finalize();
 	Timer_Uninit();
@@ -176,19 +159,11 @@ void Game_Update(void)
 				// PlaySound(SOUND_LABEL_BGM000);
 			}
 			break;
-<<<<<<< HEAD
 		case PHASE_INDEX_PLAYER_IN:
 		case PHASE_INDEX_PLAYER_MUTEKI:
 		case PHASE_INDEX_PLAYER_NORMAL:
 
-=======
->>>>>>> e3308ad52851f4f28283949893dfad1a2a2ab960
 			pC[0]->Update();
-
-			for (int i = 0; i < 4; i++)
-			{
-				pitemsystem[i]->Update();
-			}
 
 			Enemy_Update();
 			Timer_Update();
@@ -215,7 +190,6 @@ void Game_Update(void)
 		//ÉvÉåÉCÉÑÅ[
 		if (Count_P <= NOMAL_SCR)
 		{
-			Kaziki::Update;
 			Move_BG += 1.0;
 			Move_BG_Player +=  pC[0]->Player_GetSpeed();
 			Move_BG_01 = (Move_BG + Move_BG_Player);
@@ -416,11 +390,6 @@ void Game_Draw(void)
 	//	}
 
 	pC[0]->Draw();
-
-	for (int i = 0; i < 4; i++)
-	{
-		pitemsystem[i]->Draw();
-	}
 
 	Enemy_Draw();
 	Minute_Draw(440, 0, Timer_GetMinute(), 2, true);

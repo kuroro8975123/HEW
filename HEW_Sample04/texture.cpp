@@ -13,25 +13,25 @@ typedef struct TextureFile_tag
 } TextureFile;
 
 static const TextureFile g_TextureFiles[] = {
-	{ "asset/texture/title1.png", 1024, 576 },//01.タイトル画面
-	{ "asset/texture/title2.png", 1024, 576 },//01.タイトル画面
-	{ "asset/texture/tutorial.png", 1024, 576 },//02.チュートリアル画面
-	{ "asset/texture/game01.png", 1024, 576 },//03.ゲーム画面
-	{ "asset/texture/result.png", 1024, 576 },//04.リザルト画面
-	{ "asset/texture/player.png", 64, 128 },//05.プレイヤー
-	{ "asset/texture/enemy.png", 64, 128 },//06.敵？
-	{ "asset/texture/number.png", 352, 32 },//07.数字
-	{ "asset/texture/3.png", 512, 288 },//08.カウントダウン
-	{ "asset/texture/2.png", 512, 288 },//09.カウントダウン
-	{ "asset/texture/1.png", 512, 288 },//10.カウントダウン
-	{ "asset/texture/START.png", 512, 288 },//11.カウントダウン
-	{ "asset/texture/button.png", 400, 400 },//12.ボタン
-	{ "asset/texture/pressanykey_touka.png", 1024, 576 },//13.ボタン
-	{ "asset/texture/charasere.png", 256, 128 },//14.キャラクターセレクト
-	{ "asset/texture/pool.png", 1024, 576 },//14.キャラクターセレクト
-	{ "asset/texture/charasen.png", 512, 128 },//14.キャラクターを選択してください
-	{ "asset/texture/button2.png", 400, 400 },//14.キャラクターを選択してください
-	{"asset/texture/Block.png",52,52},//ブロックサンプル
+	{ "asset/texture/title1.png", 1024, 576 },						//01.タイトル画面
+	{ "asset/texture/title2.png", 1024, 576 },						//02.タイトル画面
+	{ "asset/texture/tutorial.png", 1024, 576 },						//03.チュートリアル画面
+	{ "asset/texture/game01.png", 1024, 576 },					//04.ゲーム画面
+	{ "asset/texture/result.png", 1024, 576 },						//05.リザルト画面
+	{ "asset/texture/player.png", 64, 128 },							//06.プレイヤー
+	{ "asset/texture/enemy.png", 64, 128 },							//07.敵？
+	{ "asset/texture/number.png", 352, 32 },						//08.数字
+	{ "asset/texture/3.png", 512, 288 },								//09.カウントダウン
+	{ "asset/texture/2.png", 512, 288 },								//10.カウントダウン
+	{ "asset/texture/1.png", 512, 288 },								//11.カウントダウン
+	{ "asset/texture/START.png", 512, 288 },						//12.カウントダウン
+	{ "asset/texture/button.png", 400, 400 },						//13.ボタン
+	{ "asset/texture/pressanykey_touka.png", 1024, 576 },	//14.ボタン
+	{ "asset/texture/charasere.png", 256, 128 },					//15.キャラクターセレクト
+	{ "asset/texture/pool.png", 1024, 576 },							//16.キャラクターセレクト
+	{ "asset/texture/charasen.png", 512, 128 },					//17.キャラクターを選択してください
+	{ "asset/texture/button2.png", 400, 400 },						//18.キャラクターを選択してください
+	{"asset/texture/Block.png",52,52},									//19ロックサンプル
 	
 
 };
