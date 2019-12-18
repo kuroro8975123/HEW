@@ -3,29 +3,6 @@
 #include <d3dx9.h>
 #include "collision.h"
 
-class Item_system
-{
-protected:
-	int			pop_time;	//アイテムポップの時間
-	int			pop_pos;	//アイテムポップの場所
-	int			pop_cnt;	//アイテムポップのフレームカウント
-private:
-
-public:
-	bool		Pop_item;	//アイテムの出現フラグ
-	bool		Get_item;	//アイテム所持フラグ
-	D3DXVECTOR2	pos;		//アイテムポップのポジション
-
-	Item_system(int n);
-	~Item_system();
-
-	virtual void Update();
-	virtual void Draw();
-
-	virtual bool Get_ItemFrag();	//アイテム出現フラグのゲッター
-	virtual bool Get_GetItem();		//アイテム取得のゲッター
-};
-
 //Itemクラス
 class Item
 {
@@ -36,11 +13,10 @@ private:	//子クラスなら干渉可能
 public:		//どこからでも干渉可能
 
 	Item();						//コンストラクタ
-	//Item(float x, float y);	//引数ありのコンストラクタ
 	~Item();						//デストラクタ
 
-	virtual void Update();			//更新
-	virtual void Draw();			//描画
+	virtual void Update() = 0;			//更新
+	virtual void Draw() = 0;			//描画
 
 	virtual void ItemUse();			//アイテム使用
 };

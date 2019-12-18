@@ -4,8 +4,9 @@
 #include "texture.h"
 #include "fade.h"
 #include "enemy.h"
+#include "player.h"
 
-
+Character_main *pC[4];
 
 void P_Select_Initialize(void)
 {
@@ -18,6 +19,22 @@ void P_Select_Finalize(void)
 
 void P_Select_Update(void)
 {
+	for (int i = 0; i < 4; i++)
+	{
+		if (Keyboard_IsTrigger(DIK_A)) {
+			pC[i]->select = 0;
+		}
+		if (Keyboard_IsTrigger(DIK_B)) {
+			pC[i]->select = 1;
+		}
+		if (Keyboard_IsTrigger(DIK_X)) {
+			pC[i]->select = 2;
+		}
+		if (Keyboard_IsTrigger(DIK_Y)) {
+			pC[i]->select = 3;
+		}
+	}
+
 	if (Keyboard_IsTrigger(DIK_A)) {
 		Scene_Change(SCENE_INDEX_GAME);
 	}

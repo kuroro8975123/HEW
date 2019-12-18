@@ -17,6 +17,7 @@
 #include "score_draw.h"
 #include "number.h"
 #include "timer.h"
+#include "player.h"
 
 static float y;
 
@@ -66,9 +67,6 @@ void Result_Update(void)
 void Result_Draw()
 {
 	Sprite_Draw(TEXTURE_INDEX_RESULT, 0.0f, 0.0f);
-	Sprite_Draw(TEXTURE_INDEX_PLAYER, SCREEN_WIDTH / 2 - 40.0f, 150.0f);
-	Sprite_Draw(TEXTURE_INDEX_ENEMY, 200.0f, 250.0f);
-	Sprite_Draw(TEXTURE_INDEX_ENEMY, 754.0f, 250.0f);
 	//Sprite_Draw(TEXTURE_INDEX_GAME, 0.0f, 0.0f);
 
 	for (int i = 0; i < 4; i++)
@@ -90,6 +88,66 @@ void Result_Draw()
 			}
 		}
 	}
-	Minute_Draw(440, 50, Player[0].Minute, 2, true);
-	Second_Draw(520, 50, Player[0].Second, 2, true);
+	//1ˆÊ•`‰æ
+	Minute_Draw(440, 120, Player[0].Minute, 2, true);	//1ˆÊ•ª”
+	Second_Draw(520, 120, Player[0].Second, 2, true);	//1ˆÊ•b”
+
+	if (Player[0].Second == Second_Player01())
+	{
+		Sprite_Draw(TEXTURE_INDEX_PLAYER, SCREEN_WIDTH / 2 - 40.0f, 220.0f);
+	}
+	if (Player[0].Second == Second_Enemy01())
+	{
+		Sprite_Draw(TEXTURE_INDEX_ENEMY, SCREEN_WIDTH / 2 - 40.0f, 220.0f);
+	}
+	if (Player[0].Second == Second_Enemy02())
+	{
+		Sprite_Draw(TEXTURE_INDEX_ENEMY, SCREEN_WIDTH / 2 - 40.0f, 220.0f);
+	}
+	if (Player[0].Second == Second_Enemy03())
+	{
+		Sprite_Draw(TEXTURE_INDEX_ENEMY, SCREEN_WIDTH / 2 - 40.0f, 220.0f);
+	}
+
+	//2ˆÊ•`‰æ
+	Minute_Draw(100, 200, Player[1].Minute, 2, true);	//2ˆÊ•ª”
+	Second_Draw(180, 200, Player[1].Second, 2, true);	//2ˆÊ•b”
+
+	if (Player[1].Second == Second_Player01())
+	{
+		Sprite_Draw(TEXTURE_INDEX_PLAYER, 150.0f, 300.0f);
+	}
+	if (Player[1].Second == Second_Enemy01())
+	{
+		Sprite_Draw(TEXTURE_INDEX_ENEMY, 150.0f, 300.0f);
+	}
+	if (Player[1].Second == Second_Enemy02())
+	{
+		Sprite_Draw(TEXTURE_INDEX_ENEMY, 150.0f, 300.0f);
+	}
+	if (Player[1].Second == Second_Enemy03())
+	{
+		Sprite_Draw(TEXTURE_INDEX_ENEMY, 150.0f, 300.0f);
+	}
+
+	//3ˆÊ•`‰æ
+	Minute_Draw(750, 200, Player[2].Minute, 2, true);	//3ˆÊ•ª”
+	Second_Draw(830, 200, Player[2].Second, 2, true);	//3ˆÊ•b”
+
+	if (Player[2].Second == Second_Player01())
+	{
+		Sprite_Draw(TEXTURE_INDEX_PLAYER, 800.0f, 300.0f);
+	}
+	if (Player[2].Second == Second_Enemy01())
+	{
+		Sprite_Draw(TEXTURE_INDEX_ENEMY, 800.0f, 300.0f);
+	}
+	if (Player[2].Second == Second_Enemy02())
+	{
+		Sprite_Draw(TEXTURE_INDEX_ENEMY, 800.0f, 300.0f);
+	}
+	if (Player[2].Second == Second_Enemy03())
+	{
+		Sprite_Draw(TEXTURE_INDEX_ENEMY, 800.0f, 300.0f);
+	}
 }

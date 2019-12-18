@@ -99,11 +99,11 @@
     <ClCompile Include="timer.cpp">
       <Filter>ソース ファイル\System_List</Filter>
     </ClCompile>
+    <ClCompile Include="itemmanager.cpp">
+      <Filter>ソース ファイル\Game_main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="myDirect3D.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -163,6 +163,12 @@
     </ClInclude>
     <ClInclude Include="score_draw.h">
       <Filter>ヘッダー ファイル\Draw_List.h</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>ヘッダー ファイル\System_List.h</Filter>
+    </ClInclude>
+    <ClInclude Include="itemmanager.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

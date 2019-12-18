@@ -13,7 +13,9 @@
 #define ANIME_PATTERN_SKIPFRAME 8
 
 
+Character_main::Character_main() {
 
+}
 Character_main::Character_main(float x,float y) {
 	//ÉvÉåÉCÉÑÅ[ÇÃèâä˙âª
 	pos.x = x;
@@ -116,4 +118,86 @@ void Character_main::Draw() {
 
 }
 
+Kaziki::Kaziki() 
+{
+	pos.x = 0;
+	pos.y = 0;
+	speed = 0;
+	button_flag = false;
+	end_flag = false;
+}
+Kaziki::~Kaziki()
+{
 
+}
+void Kaziki::Update()
+{
+
+}
+void Kaziki::Draw()
+{
+
+}
+
+Kujira::Kujira() 
+{
+	pos.x = 0;
+	pos.y = 0;
+	speed = 0;
+	button_flag = false;
+	end_flag = false;
+}
+Kujira::~Kujira()
+{
+
+}
+void Kujira::Update()
+{
+
+}
+void Kujira::Draw()
+{
+
+}
+
+Iruka::Iruka() 
+{
+	pos.x = 0;
+	pos.y = 0;
+	speed = 0;
+	button_flag = false;
+	end_flag = false;
+}
+Iruka::~Iruka()
+{
+
+}
+void Iruka::Update()
+{
+
+}
+void Iruka::Draw()
+{
+
+}
+
+Uma::Uma() 
+{
+	pos.x = 0;
+	pos.y = 0;
+	speed = 0;
+	button_flag = false;
+	end_flag = false;
+}
+Uma::~Uma()
+{
+
+}
+void Uma::Update()
+{
+
+}
+void Uma::Draw()
+{
+
+}
