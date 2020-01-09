@@ -24,12 +24,12 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/3.png", 512, 288 },								//09.カウントダウン
 	{ "asset/texture/2.png", 512, 288 },								//10.カウントダウン
 	{ "asset/texture/1.png", 512, 288 },								//11.カウントダウン
-	{ "asset/texture/START.png", 512, 288 },						//12.カウントダウン
+	{ "asset/texture/START.png", 912, 512 },						//12.カウントダウン
 	{ "asset/texture/button.png", 400, 400 },						//13.ボタン
-	{ "asset/texture/pressanykey_touka.png", 1024, 576 },	//14.ボタン
-	{ "asset/texture/charasere.png", 256, 128 },					//15.キャラクターセレクト
-	{ "asset/texture/pool.png", 1024, 576 },							//16.キャラクターセレクト
-	{ "asset/texture/charasen.png", 512, 128 },					//17.キャラクターを選択してください
+	{ "asset/texture/pressanykey.png", 712, 400},	//14.ボタン
+	{ "asset/texture/chara_select.png", 512, 288 },					//15.キャラクターセレクト
+	{ "asset/texture/title2.png", 1024, 576 },							//16.キャラクターセレクト
+	{ "asset/texture/chara_select.png", 712, 400 },					//17.キャラクターを選択してください
 	{ "asset/texture/button2.png", 400, 400 },						//18.キャラクターを選択してください
 	{"asset/texture/Block.png",52,52},									//19ロックサンプル
 	

@@ -39,8 +39,8 @@ void P_Select_Draw(void)
 {
 	
 	Sprite_Draw(TEXTURE_INDEX_POOL, 0.0f, 0.0f);
-	Sprite_Draw(TEXTURE_INDEX_CHARASELE, 0.0f, 0.0f);
-	Sprite_Draw(TEXTURE_INDEX_CHARASEN, 300.0f, 0.0f);
+	//Sprite_Draw(TEXTURE_INDEX_CHARASELE, 0.0f, 0.0f);
+	Sprite_Draw(TEXTURE_INDEX_CHARASEN, 150.0f, -80.0f);
 
 	Sprite_Draw(TEXTURE_INDEX_ENEMY, 200.0f, 250.0f);
 	Sprite_Draw(TEXTURE_INDEX_ENEMY, 400.0f, 250.0f);

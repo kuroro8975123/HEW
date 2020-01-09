@@ -21,8 +21,4 @@ c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(369): warning C4244:
 c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(371): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
 c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(372): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
 c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(373): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  main.cpp
-c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
-c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(28): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
-  コードを生成中...
   HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe

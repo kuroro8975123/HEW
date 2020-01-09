@@ -408,7 +408,7 @@ void Game_Draw(void)
 	}
 	if (CountDown > 180 && CountDown < 240)
 	{
-		Sprite_Draw(TEXTURE_INDEX_START, 256.0f, 144.0f);
+		Sprite_Draw(TEXTURE_INDEX_START, 80.0f, 30.0f);
 	}
 
 }
