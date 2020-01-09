@@ -69,11 +69,13 @@ void Result_Draw()
 	Sprite_Draw(TEXTURE_INDEX_RESULT, 0.0f, 0.0f);
 	//Sprite_Draw(TEXTURE_INDEX_GAME, 0.0f, 0.0f);
 
+	int x = 0;
+
 	for (int i = 0; i < 4; i++)
 	{
-		for (int j = 1; j < 4; j++)
+		for (int j = 1+x; j < 4; j++)
 		{
-			if (Player[i].Second >= Player[j].Second)
+			if (Player[i].Second > Player[j].Second)
 			{
 				if (Player[i].Minute >= Player[j].Minute)
 				{
@@ -87,6 +89,7 @@ void Result_Draw()
 				}
 			}
 		}
+		x++;
 	}
 	//1à ï`âÊ
 	Minute_Draw(440, 120, Player[0].Minute, 2, true);	//1à ï™êî
