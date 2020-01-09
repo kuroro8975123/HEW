@@ -7,7 +7,6 @@
 #include "player.h"
 
 
-
 void P_Select_Initialize(void)
 {
 	Fade_Start(false, 90, D3DCOLOR_RGBA(0, 0, 0, 0));
