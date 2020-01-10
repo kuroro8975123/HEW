@@ -30,7 +30,9 @@ void Title_Update(void)
 	}
 	else{
 		if( !Fade_IsFade() ) {
-			Scene_Change(SCENE_INDEX_TUTORIAL);
+			/*É¿î≈íÒèoópÇ…è¡ÇµÇƒÇ†ÇËÇ‹Ç∑*/
+			//Scene_Change(SCENE_INDEX_TUTORIAL);
+			Scene_Change(SCENE_INDEX_P_SELECT);
 		}
 	}
 	y += 1.0f;

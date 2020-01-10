@@ -8,7 +8,7 @@
 #include "score_draw.h"
 #include "timer.h"
 
-#define NOMAL_SCR		(10)	//コースの長さ
+#define NOMAL_SCR		(100)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 
 typedef enum PHASE_INDEX
@@ -80,7 +80,7 @@ Character_main	*pC[1];
 
 void Game_Initialize(void)
 {
-	pC[0] = new Character_main(100, 500);
+	pC[0] = new Character_main(65, 300);
 
 	/*for (int i; i < 4; i++)
 	{

@@ -64,9 +64,9 @@ void Enemy_Initialize(void)
 	}
 
 
-	SetEnemy(354, 500);
-	SetEnemy(610, 500);
-	SetEnemy(866, 500);
+	SetEnemy(334, 300);
+	SetEnemy(590, 300);
+	SetEnemy(846, 300);
 
 	srand((unsigned int)time(NULL));
 }
@@ -159,7 +159,10 @@ void Enemy_Draw(void)
 			continue;
 		}
 
-		Sprite_Draw(TEXTURE_INDEX_ENEMY,
+		/*--------------------------------------------------------
+		提出用にイルカにしてあります。
+		----------------------------------------------------------*/
+		Sprite_Draw(TEXTURE_INDEX_IRUKA,
 			enemy[i].pos.x,
 			enemy[i].pos.y);
 	}

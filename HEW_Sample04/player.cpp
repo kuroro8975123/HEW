@@ -6,7 +6,6 @@
 #include "game.h"
 
 
-
 #define PLAYER_WIDTH	(32)
 #define PLAYER_HEIGHT	(32)
 
@@ -96,25 +95,29 @@ void Character_main::Update() {
 }
 //描画
 void Character_main::Draw() {
-	Sprite_Draw(TEXTURE_INDEX_PLAYER,
+
+	/*--------------------------------------------------------
+	提出用にカジキにしてあります。
+	----------------------------------------------------------*/
+	Sprite_Draw(TEXTURE_INDEX_KAZIKI,
 		pos.x,
 		pos.y);
 
 	if (button == 1 && button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_BUTTON, 110, 50, 19, 220, 33, 33);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
 	}
 	if (button == 2 && button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_BUTTON, 110, 50, 70, 220, 33, 33);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
 	}
 	if (button == 3 && button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_BUTTON, 110, 50, 124, 220, 33, 33);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
 	}
 	if (button == 4 && button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_BUTTON, 110, 50, 177, 220, 33, 33);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
 	}
 
 }

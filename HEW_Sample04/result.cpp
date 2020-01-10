@@ -97,19 +97,19 @@ void Result_Draw()
 
 	if (Player[0].Second == Second_Player01())
 	{
-		Sprite_Draw(TEXTURE_INDEX_PLAYER, SCREEN_WIDTH / 2 - 40.0f, 220.0f);
+		Sprite_Draw(TEXTURE_INDEX_KAZIKI, SCREEN_WIDTH / 2 - 70.0f , 150.0f);
 	}
 	if (Player[0].Second == Second_Enemy01())
 	{
-		Sprite_Draw(TEXTURE_INDEX_ENEMY, SCREEN_WIDTH / 2 - 40.0f, 220.0f);
+		Sprite_Draw(TEXTURE_INDEX_IRUKA, SCREEN_WIDTH / 2 - 70.0f, 150.0f);
 	}
 	if (Player[0].Second == Second_Enemy02())
 	{
-		Sprite_Draw(TEXTURE_INDEX_ENEMY, SCREEN_WIDTH / 2 - 40.0f, 220.0f);
+		Sprite_Draw(TEXTURE_INDEX_IRUKA, SCREEN_WIDTH / 2 - 70.0f, 150.0f);
 	}
 	if (Player[0].Second == Second_Enemy03())
 	{
-		Sprite_Draw(TEXTURE_INDEX_ENEMY, SCREEN_WIDTH / 2 - 40.0f, 220.0f);
+		Sprite_Draw(TEXTURE_INDEX_IRUKA, SCREEN_WIDTH / 2 - 70.0f, 150.0f);
 	}
 
 	//2ˆÊ•`‰æ
@@ -118,19 +118,19 @@ void Result_Draw()
 
 	if (Player[1].Second == Second_Player01())
 	{
-		Sprite_Draw(TEXTURE_INDEX_PLAYER, 150.0f, 300.0f);
+		Sprite_Draw(TEXTURE_INDEX_KAZIKI, 150.0f, 250.0f);
 	}
 	if (Player[1].Second == Second_Enemy01())
 	{
-		Sprite_Draw(TEXTURE_INDEX_ENEMY, 150.0f, 300.0f);
+		Sprite_Draw(TEXTURE_INDEX_IRUKA, 150.0f, 250.0f);
 	}
 	if (Player[1].Second == Second_Enemy02())
 	{
-		Sprite_Draw(TEXTURE_INDEX_ENEMY, 150.0f, 300.0f);
+		Sprite_Draw(TEXTURE_INDEX_IRUKA, 150.0f, 250.0f);
 	}
 	if (Player[1].Second == Second_Enemy03())
 	{
-		Sprite_Draw(TEXTURE_INDEX_ENEMY, 150.0f, 300.0f);
+		Sprite_Draw(TEXTURE_INDEX_IRUKA, 150.0f, 250.0f);
 	}
 
 	//3ˆÊ•`‰æ
@@ -139,18 +139,18 @@ void Result_Draw()
 
 	if (Player[2].Second == Second_Player01())
 	{
-		Sprite_Draw(TEXTURE_INDEX_PLAYER, 800.0f, 300.0f);
+		Sprite_Draw(TEXTURE_INDEX_KAZIKI, 800.0f, 270.0f);
 	}
 	if (Player[2].Second == Second_Enemy01())
 	{
-		Sprite_Draw(TEXTURE_INDEX_ENEMY, 800.0f, 300.0f);
+		Sprite_Draw(TEXTURE_INDEX_IRUKA, 800.0f, 270.0f);
 	}
 	if (Player[2].Second == Second_Enemy02())
 	{
-		Sprite_Draw(TEXTURE_INDEX_ENEMY, 800.0f, 300.0f);
+		Sprite_Draw(TEXTURE_INDEX_IRUKA, 800.0f, 270.0f);
 	}
 	if (Player[2].Second == Second_Enemy03())
 	{
-		Sprite_Draw(TEXTURE_INDEX_ENEMY, 800.0f, 300.0f);
+		Sprite_Draw(TEXTURE_INDEX_IRUKA, 800.0f, 270.0f);
 	}
 }

@@ -15,27 +15,32 @@ typedef struct TextureFile_tag
 static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/title1.png", 1024, 576 },						//01.タイトル画面
 	{ "asset/texture/title2.png", 1024, 576 },						//02.タイトル画面
-	{ "asset/texture/tutorial.png", 1024, 576 },						//03.チュートリアル画面
+	{ "asset/texture/tutorial.png", 1024, 576 },					//03.チュートリアル画面
 	{ "asset/texture/game01.png", 1024, 576 },					//04.ゲーム画面
 	{ "asset/texture/result.png", 1024, 576 },						//05.リザルト画面
 	{ "asset/texture/player.png", 64, 128 },							//06.プレイヤー
-	{ "asset/texture/enemy.png", 64, 128 },							//07.敵？
+	{ "asset/texture/enemy.png", 64, 128 },						//07.敵？
 	{ "asset/texture/number.png", 352, 32 },						//08.数字
 	{ "asset/texture/3.png", 512, 288 },								//09.カウントダウン
 	{ "asset/texture/2.png", 512, 288 },								//10.カウントダウン
 	{ "asset/texture/1.png", 512, 288 },								//11.カウントダウン
 	{ "asset/texture/START.png", 912, 512 },						//12.カウントダウン
 	{ "asset/texture/button.png", 400, 400 },						//13.ボタン
-	{ "asset/texture/pressanykey.png", 712, 400},					//14.ボタン
+	{ "asset/texture/pressanykey.png", 712, 400},				//14.ボタン
 	{ "asset/texture/chara_select.png", 512, 288 },				//15.キャラクターセレクト
 	{ "asset/texture/title2.png", 1024, 576 },						//16.キャラクターセレクト
 	{ "asset/texture/chara_select.png", 712, 400 },				//17.キャラクターを選択してください
-	{ "asset/texture/button2.png", 400, 400 },						//18.キャラクターを選択してください
-	{"asset/texture/Block.png",52,52},									//19ロックサンプル
-	{"asset/texture/A_button.jpg", 512 ,288},						//20.Aボタン
-	{"asset/texture/B_button.jpg", 512,288},							//21.Bボタン
-	{"asset/texture/X_button.jpg", 512,288},							//22.Xボタン
-	{"asset/texture/Y_button.jpg", 512,288},							//23.Yボタン
+	{ "asset/texture/button2.png", 400, 400 },					//18.キャラクターを選択してください
+	{"asset/texture/Block.png",52,52},								//19ロックサンプル
+	{"asset/texture/A_button.png", 64 ,64},						//20.Aボタン
+	{"asset/texture/B_button.png",  64 ,64},						//21.Bボタン
+	{"asset/texture/X_button.png", 64,64},							//22.Xボタン
+	{"asset/texture/Y_button.png",  64 ,64},						//23.Yボタン
+	{ "asset/texture/KAZIKI(1).png", 128, 256 },					//24.カジキ
+	{ "asset/texture/kujira(1).png", 192, 256 },					//25.クジラ
+	{ "asset/texture/iruka.png", 96, 220 },							//26.イルカ
+	{ "asset/texture/uma.png", 128, 256 },							//27.馬
+
 };
 
 static const int TEXTURE_FILE_COUNT = sizeof(g_TextureFiles) / sizeof(g_TextureFiles[0]);
