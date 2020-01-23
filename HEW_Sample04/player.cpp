@@ -5,13 +5,11 @@
 #include "sprite.h"
 #include "game.h"
 
-
 #define PLAYER_WIDTH	(32)
 #define PLAYER_HEIGHT	(32)
 
 #define ANIME_PATTERN_MAX		3
 #define ANIME_PATTERN_SKIPFRAME 8
-
 
 Character_main::Character_main() {
 
@@ -96,9 +94,6 @@ void Character_main::Update() {
 //描画
 void Character_main::Draw() {
 
-	/*--------------------------------------------------------
-	提出用にカジキにしてあります。
-	----------------------------------------------------------*/
 	Sprite_Draw(TEXTURE_INDEX_KAZIKI,
 		pos.x,
 		pos.y);
