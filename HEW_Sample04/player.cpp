@@ -43,7 +43,7 @@ void Character_main::Update() {
 	{
 		if (Keyboard_IsPress(DIK_UP) || GamePad_IsPress(0, BUTTON_A))
 		{
-			speed += 0.08;
+			speed += 0.2;
 			button_flag = false;
 		}
 	}
@@ -51,7 +51,7 @@ void Character_main::Update() {
 	{
 		if (Keyboard_IsPress(DIK_RIGHT) || GamePad_IsPress(0, BUTTON_B))
 		{
-			speed += 0.05;
+			speed += 0.2;
 			button_flag = false;
 		}
 	}
@@ -59,7 +59,7 @@ void Character_main::Update() {
 	{
 		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(0, BUTTON_X))
 		{
-			speed += 0.03;
+			speed += 0.2;
 			button_flag = false;
 		}
 	}
@@ -67,7 +67,7 @@ void Character_main::Update() {
 	{
 		if (Keyboard_IsPress(DIK_LEFT) || GamePad_IsPress(0, BUTTON_Y))
 		{
-			speed += 0.01;
+			speed += 0.2;
 			button_flag = false;
 		}
 	}
