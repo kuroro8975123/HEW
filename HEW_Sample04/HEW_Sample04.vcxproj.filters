@@ -96,6 +96,18 @@
     <ClCompile Include="timer.cpp">
       <Filter>ソース ファイル\System_List</Filter>
     </ClCompile>
+    <ClCompile Include="Iruka.cpp">
+      <Filter>ソース ファイル\Game_main</Filter>
+    </ClCompile>
+    <ClCompile Include="Kajiki.cpp">
+      <Filter>ソース ファイル\Game_main</Filter>
+    </ClCompile>
+    <ClCompile Include="Kujira.cpp">
+      <Filter>ソース ファイル\Game_main</Filter>
+    </ClCompile>
+    <ClCompile Include="Uma.cpp">
+      <Filter>ソース ファイル\Game_main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myDirect3D.h">
@@ -157,6 +169,18 @@
     </ClInclude>
     <ClInclude Include="main.h">
       <Filter>ヘッダー ファイル\System_List.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Iruka.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Uma.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Kujira.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Kajiki.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
