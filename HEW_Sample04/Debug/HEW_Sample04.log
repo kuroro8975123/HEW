@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿  title.cpp
 c:\users\tomo0105\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
 c:\users\tomo0105\documents\hew\hew_sample04\texture.h(42): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
   HEW_Sample04.vcxproj -> C:\Users\tomo0105\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: Windows SDK バージョン 10.0.16299.0 が見つかりませんでした。必要なバージョンの Windows SDK をインストールするか、プロジェクト プロパティ ページで SDK バージョンを変更するか、ソリューションを右クリックして [ソリューションの再ターゲット] を選択してください。
+>>>>>>> 16835775b0d1fa56dfbf723fefadb748394c8e6f
