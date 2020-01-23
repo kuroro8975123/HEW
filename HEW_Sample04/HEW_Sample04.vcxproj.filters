@@ -96,11 +96,11 @@
     <ClCompile Include="timer.cpp">
       <Filter>ソース ファイル\System_List</Filter>
     </ClCompile>
+    <ClCompile Include="minimap.cpp">
+      <Filter>ソース ファイル\Game_main</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myDirect3D.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="NKC_BackImage.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -146,9 +146,6 @@
     <ClInclude Include="number.h">
       <Filter>ヘッダー ファイル\Draw_List.h</Filter>
     </ClInclude>
-    <ClInclude Include="sprite.h">
-      <Filter>ヘッダー ファイル\Draw_List.h</Filter>
-    </ClInclude>
     <ClInclude Include="texture.h">
       <Filter>ヘッダー ファイル\Draw_List.h</Filter>
     </ClInclude>
@@ -156,6 +153,15 @@
       <Filter>ヘッダー ファイル\Draw_List.h</Filter>
     </ClInclude>
     <ClInclude Include="main.h">
+      <Filter>ヘッダー ファイル\System_List.h</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite.h">
+      <Filter>ヘッダー ファイル\Scene_List.h</Filter>
+    </ClInclude>
+    <ClInclude Include="minimap.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
+    </ClInclude>
+    <ClInclude Include="myDirect3D.h">
       <Filter>ヘッダー ファイル\System_List.h</Filter>
     </ClInclude>
   </ItemGroup>

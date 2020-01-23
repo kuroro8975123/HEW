@@ -129,6 +129,7 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="minimap.cpp" />
     <ClCompile Include="myDirect3D.cpp" />
     <ClCompile Include="number.cpp" />
     <ClCompile Include="player.cpp" />
@@ -150,6 +151,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="minimap.h" />
     <ClInclude Include="myDirect3D.h" />
     <ClInclude Include="NKC_BackImage.h" />
     <ClInclude Include="number.h" />
