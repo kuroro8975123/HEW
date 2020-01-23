@@ -96,7 +96,20 @@
     <ClCompile Include="timer.cpp">
       <Filter>ソース ファイル\System_List</Filter>
     </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="Iruka.cpp">
+      <Filter>ソース ファイル\Game_main</Filter>
+    </ClCompile>
+    <ClCompile Include="Kajiki.cpp">
+      <Filter>ソース ファイル\Game_main</Filter>
+    </ClCompile>
+    <ClCompile Include="Kujira.cpp">
+      <Filter>ソース ファイル\Game_main</Filter>
+    </ClCompile>
+    <ClCompile Include="Uma.cpp">
+=======
     <ClCompile Include="minimap.cpp">
+>>>>>>> 2dd5f44511e58f912883ca6db62a0e1220372e04
       <Filter>ソース ファイル\Game_main</Filter>
     </ClCompile>
   </ItemGroup>
@@ -155,6 +168,19 @@
     <ClInclude Include="main.h">
       <Filter>ヘッダー ファイル\System_List.h</Filter>
     </ClInclude>
+<<<<<<< HEAD
+    <ClInclude Include="Iruka.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Uma.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Kujira.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Kajiki.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
+=======
     <ClInclude Include="sprite.h">
       <Filter>ヘッダー ファイル\Scene_List.h</Filter>
     </ClInclude>
@@ -163,6 +189,7 @@
     </ClInclude>
     <ClInclude Include="myDirect3D.h">
       <Filter>ヘッダー ファイル\System_List.h</Filter>
+>>>>>>> 2dd5f44511e58f912883ca6db62a0e1220372e04
     </ClInclude>
   </ItemGroup>
 </Project>
