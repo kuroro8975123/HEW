@@ -4,7 +4,6 @@
 #include "texture.h"
 #include "fade.h"
 #include "enemy.h"
-#include "player.h"
 #include "scene_playerselect.h"
 
 int Select_1P;

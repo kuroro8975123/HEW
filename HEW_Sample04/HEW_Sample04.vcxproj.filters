@@ -1,195 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ソース ファイル">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="リソース ファイル">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="ソース ファイル\Game_main">
-      <UniqueIdentifier>{359c748f-bb94-4d58-a19a-16c63dc41dbf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Scene_List">
-      <UniqueIdentifier>{85805018-5689-4386-9148-279b0be1081b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Draw_List">
-      <UniqueIdentifier>{1acf17b8-f7a0-454e-ad97-d16643808dce}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\System_List">
-      <UniqueIdentifier>{b90505b2-e8d9-4547-9e49-b6ad123a0633}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Scene_List.h">
-      <UniqueIdentifier>{4898d05a-fe9f-401b-b8b5-6d80a2a87cd6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Game_main.h">
-      <UniqueIdentifier>{78870fcc-bccb-4134-bd5b-19c42df9a5ce}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\System_List.h">
-      <UniqueIdentifier>{ce6fcf18-60b9-4d1b-9557-672be73337fa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ヘッダー ファイル\Draw_List.h">
-      <UniqueIdentifier>{29803496-c2ad-4cb1-8220-a69a576954cd}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="collision.cpp" />
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="fade.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="input.cpp" />
+    <ClCompile Include="Iruka.cpp" />
+    <ClCompile Include="Kajiki.cpp" />
+    <ClCompile Include="Kujira.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="myDirect3D.cpp" />
+    <ClCompile Include="number.cpp" />
+    <ClCompile Include="result.cpp" />
+    <ClCompile Include="scene.cpp" />
+    <ClCompile Include="scene_playerselect.cpp" />
+    <ClCompile Include="scene_tutorial.cpp" />
+    <ClCompile Include="score_draw.cpp" />
+    <ClCompile Include="sound.cpp" />
+    <ClCompile Include="sprite.cpp" />
+    <ClCompile Include="texture.cpp" />
+    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="title.cpp" />
+    <ClCompile Include="Uma.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="myDirect3D.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="collision.cpp">
-      <Filter>ソース ファイル\Game_main</Filter>
-    </ClCompile>
-    <ClCompile Include="enemy.cpp">
-      <Filter>ソース ファイル\Game_main</Filter>
-    </ClCompile>
-    <ClCompile Include="player.cpp">
-      <Filter>ソース ファイル\Game_main</Filter>
-    </ClCompile>
-    <ClCompile Include="game.cpp">
-      <Filter>ソース ファイル\Scene_List</Filter>
-    </ClCompile>
-    <ClCompile Include="result.cpp">
-      <Filter>ソース ファイル\Scene_List</Filter>
-    </ClCompile>
-    <ClCompile Include="title.cpp">
-      <Filter>ソース ファイル\Scene_List</Filter>
-    </ClCompile>
-    <ClCompile Include="scene_playerselect.cpp">
-      <Filter>ソース ファイル\Scene_List</Filter>
-    </ClCompile>
-    <ClCompile Include="scene_tutorial.cpp">
-      <Filter>ソース ファイル\Scene_List</Filter>
-    </ClCompile>
-    <ClCompile Include="texture.cpp">
-      <Filter>ソース ファイル\Draw_List</Filter>
-    </ClCompile>
-    <ClCompile Include="sprite.cpp">
-      <Filter>ソース ファイル\Draw_List</Filter>
-    </ClCompile>
-    <ClCompile Include="number.cpp">
-      <Filter>ソース ファイル\Draw_List</Filter>
-    </ClCompile>
-    <ClCompile Include="scene.cpp">
-      <Filter>ソース ファイル\Scene_List</Filter>
-    </ClCompile>
-    <ClCompile Include="score_draw.cpp">
-      <Filter>ソース ファイル\Draw_List</Filter>
-    </ClCompile>
-    <ClCompile Include="fade.cpp">
-      <Filter>ソース ファイル\System_List</Filter>
-    </ClCompile>
-    <ClCompile Include="input.cpp">
-      <Filter>ソース ファイル\System_List</Filter>
-    </ClCompile>
-    <ClCompile Include="sound.cpp">
-      <Filter>ソース ファイル\System_List</Filter>
-    </ClCompile>
-    <ClCompile Include="timer.cpp">
-      <Filter>ソース ファイル\System_List</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="Iruka.cpp">
-      <Filter>ソース ファイル\Game_main</Filter>
-    </ClCompile>
-    <ClCompile Include="Kajiki.cpp">
-      <Filter>ソース ファイル\Game_main</Filter>
-    </ClCompile>
-    <ClCompile Include="Kujira.cpp">
-      <Filter>ソース ファイル\Game_main</Filter>
-    </ClCompile>
-    <ClCompile Include="Uma.cpp">
-=======
-    <ClCompile Include="minimap.cpp">
->>>>>>> 2dd5f44511e58f912883ca6db62a0e1220372e04
-      <Filter>ソース ファイル\Game_main</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="NKC_BackImage.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="collision.h">
-      <Filter>ヘッダー ファイル\Game_main.h</Filter>
-    </ClInclude>
-    <ClInclude Include="enemy.h">
-      <Filter>ヘッダー ファイル\Game_main.h</Filter>
-    </ClInclude>
-    <ClInclude Include="player.h">
-      <Filter>ヘッダー ファイル\Game_main.h</Filter>
-    </ClInclude>
-    <ClInclude Include="game.h">
-      <Filter>ヘッダー ファイル\Scene_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="result.h">
-      <Filter>ヘッダー ファイル\Scene_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="scene.h">
-      <Filter>ヘッダー ファイル\Scene_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="scene_playerselect.h">
-      <Filter>ヘッダー ファイル\Scene_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="scene_tutorial.h">
-      <Filter>ヘッダー ファイル\Scene_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="title.h">
-      <Filter>ヘッダー ファイル\Scene_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="input.h">
-      <Filter>ヘッダー ファイル\System_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="fade.h">
-      <Filter>ヘッダー ファイル\System_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="timer.h">
-      <Filter>ヘッダー ファイル\System_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="sound.h">
-      <Filter>ヘッダー ファイル\System_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="number.h">
-      <Filter>ヘッダー ファイル\Draw_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="texture.h">
-      <Filter>ヘッダー ファイル\Draw_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="score_draw.h">
-      <Filter>ヘッダー ファイル\Draw_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="main.h">
-      <Filter>ヘッダー ファイル\System_List.h</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-    <ClInclude Include="Iruka.h">
-      <Filter>ヘッダー ファイル\Game_main.h</Filter>
-    </ClInclude>
-    <ClInclude Include="Uma.h">
-      <Filter>ヘッダー ファイル\Game_main.h</Filter>
-    </ClInclude>
-    <ClInclude Include="Kujira.h">
-      <Filter>ヘッダー ファイル\Game_main.h</Filter>
-    </ClInclude>
-    <ClInclude Include="Kajiki.h">
-      <Filter>ヘッダー ファイル\Game_main.h</Filter>
-=======
-    <ClInclude Include="sprite.h">
-      <Filter>ヘッダー ファイル\Scene_List.h</Filter>
-    </ClInclude>
-    <ClInclude Include="minimap.h">
-      <Filter>ヘッダー ファイル\Game_main.h</Filter>
-    </ClInclude>
-    <ClInclude Include="myDirect3D.h">
-      <Filter>ヘッダー ファイル\System_List.h</Filter>
->>>>>>> 2dd5f44511e58f912883ca6db62a0e1220372e04
-    </ClInclude>
+    <ClInclude Include="collision.h" />
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="fade.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="input.h" />
+    <ClInclude Include="Iruka.h" />
+    <ClInclude Include="Kajiki.h" />
+    <ClInclude Include="Kujira.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="myDirect3D.h" />
+    <ClInclude Include="NKC_BackImage.h" />
+    <ClInclude Include="number.h" />
+    <ClInclude Include="result.h" />
+    <ClInclude Include="scene.h" />
+    <ClInclude Include="scene_playerselect.h" />
+    <ClInclude Include="scene_tutorial.h" />
+    <ClInclude Include="score_draw.h" />
+    <ClInclude Include="sound.h" />
+    <ClInclude Include="sprite.h" />
+    <ClInclude Include="texture.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="title.h" />
+    <ClInclude Include="Uma.h" />
   </ItemGroup>
 </Project>

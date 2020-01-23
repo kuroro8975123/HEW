@@ -132,10 +132,8 @@
     <ClCompile Include="Kajiki.cpp" />
     <ClCompile Include="Kujira.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="minimap.cpp" />
     <ClCompile Include="myDirect3D.cpp" />
     <ClCompile Include="number.cpp" />
-    <ClCompile Include="player.cpp" />
     <ClCompile Include="result.cpp" />
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="scene_playerselect.cpp" />
@@ -158,11 +156,9 @@
     <ClInclude Include="Kajiki.h" />
     <ClInclude Include="Kujira.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="minimap.h" />
     <ClInclude Include="myDirect3D.h" />
     <ClInclude Include="NKC_BackImage.h" />
     <ClInclude Include="number.h" />
-    <ClInclude Include="player.h" />
     <ClInclude Include="result.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="scene_playerselect.h" />

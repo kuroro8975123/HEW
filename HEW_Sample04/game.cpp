@@ -1,6 +1,5 @@
 #include "main.h"
 #include "texture.h"
-#include "player.h"
 #include "enemy.h"
 #include "fade.h"
 #include "scene.h"
@@ -181,7 +180,7 @@ void Game_Update(void)
 
 void Game_Draw(void)
 {
-	Sprite_Draw(TEXTURE_INDEX_BG,0,0);
+
 	if (Player_1P == 1)
 	{
 		Kajiki_Draw_1P();
@@ -214,6 +213,8 @@ void Game_Draw(void)
 	{
 		Uma_Draw_2P();
 	}
+
+	Sprite_Draw(TEXTURE_INDEX_BG, 0, 0);
 
 	//Enemy_Draw();
 	Minute_Draw(440, 0, Timer_GetMinute(), 2, true);

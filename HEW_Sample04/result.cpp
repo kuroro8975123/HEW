@@ -17,7 +17,6 @@
 #include "score_draw.h"
 #include "number.h"
 #include "timer.h"
-#include "player.h"
 #include "Kajiki.h"
 #include "Iruka.h"
 #include "Kujira.h"
