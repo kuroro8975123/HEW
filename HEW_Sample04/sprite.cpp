@@ -20,6 +20,28 @@ void Sprite_SetColor(D3DCOLOR color)
 	g_Color = color;
 }
 
+//三角形描画(ステータス用)
+//引数リスト(dx,dy … 表示位置、spd … スピード、dur … 耐久性、luck … 運、color … 色)
+void Triangle_Draw(float dx, float dy, float spd, float dur , float luck, D3DCOLOR color)
+{
+	LPDIRECT3DDEVICE9 pDevice = GetD3DDevice();
+	if (!pDevice) return;
+
+	Vertex2D vertexes[] = {
+
+		{ D3DXVECTOR4( dx + 150.0f  *  spd ,  dy - 45.0f *  spd , 0.0f, 1.0f),color },
+		{ D3DXVECTOR4( dx +  0.0f  *  dur ,  dy + 225.0f *  dur , 0.0f, 1.0f),color },
+		{ D3DXVECTOR4( dx + 300.0f * luck ,  dy + 225.0f * luck , 0.0f, 1.0f),color },
+		{ D3DXVECTOR4( dx + 150.0f  *  spd ,  dy - 45.0f *  spd , 0.0f, 1.0f),color },
+	};
+
+	pDevice->SetFVF(FVF_VERTEX2D);
+
+	pDevice->SetTexture(0, NULL);
+
+	pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, vertexes, sizeof(Vertex2D));
+}
+
 void Sprite_Draw(TextureIndex texture_index, float dx, float dy)
 {
 	LPDIRECT3DDEVICE9 pDevice = GetD3DDevice();

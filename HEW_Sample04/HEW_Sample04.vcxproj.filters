@@ -96,6 +96,7 @@
     <ClCompile Include="timer.cpp">
       <Filter>ソース ファイル\System_List</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Iruka.cpp">
       <Filter>ソース ファイル\Game_main</Filter>
     </ClCompile>
@@ -106,13 +107,13 @@
       <Filter>ソース ファイル\Game_main</Filter>
     </ClCompile>
     <ClCompile Include="Uma.cpp">
+=======
+    <ClCompile Include="minimap.cpp">
+>>>>>>> 2dd5f44511e58f912883ca6db62a0e1220372e04
       <Filter>ソース ファイル\Game_main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="myDirect3D.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="NKC_BackImage.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -158,9 +159,6 @@
     <ClInclude Include="number.h">
       <Filter>ヘッダー ファイル\Draw_List.h</Filter>
     </ClInclude>
-    <ClInclude Include="sprite.h">
-      <Filter>ヘッダー ファイル\Draw_List.h</Filter>
-    </ClInclude>
     <ClInclude Include="texture.h">
       <Filter>ヘッダー ファイル\Draw_List.h</Filter>
     </ClInclude>
@@ -170,6 +168,7 @@
     <ClInclude Include="main.h">
       <Filter>ヘッダー ファイル\System_List.h</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Iruka.h">
       <Filter>ヘッダー ファイル\Game_main.h</Filter>
     </ClInclude>
@@ -181,6 +180,16 @@
     </ClInclude>
     <ClInclude Include="Kajiki.h">
       <Filter>ヘッダー ファイル\Game_main.h</Filter>
+=======
+    <ClInclude Include="sprite.h">
+      <Filter>ヘッダー ファイル\Scene_List.h</Filter>
+    </ClInclude>
+    <ClInclude Include="minimap.h">
+      <Filter>ヘッダー ファイル\Game_main.h</Filter>
+    </ClInclude>
+    <ClInclude Include="myDirect3D.h">
+      <Filter>ヘッダー ファイル\System_List.h</Filter>
+>>>>>>> 2dd5f44511e58f912883ca6db62a0e1220372e04
     </ClInclude>
   </ItemGroup>
 </Project>

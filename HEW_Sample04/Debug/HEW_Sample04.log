@@ -1,4 +1,21 @@
+<<<<<<< HEAD
 ﻿  scene_playerselect.cpp
 c:\users\1\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
 c:\users\1\documents\hew\hew_sample04\texture.h(42): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
   HEW_Sample04.vcxproj -> C:\Users\1\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+<<<<<<< HEAD
+﻿  title.cpp
+c:\users\tomo0105\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\tomo0105\documents\hew\hew_sample04\texture.h(36): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  HEW_Sample04.vcxproj -> C:\Users\tomo0105\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+﻿  player.cpp
+c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(36): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\player.cpp(46): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\player.cpp(54): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\player.cpp(62): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\player.cpp(70): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
+>>>>>>> b5df822d1eecf6e9a692331754ea11ad418e5ae0
+>>>>>>> 2dd5f44511e58f912883ca6db62a0e1220372e04
