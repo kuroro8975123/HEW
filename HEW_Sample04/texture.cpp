@@ -1,5 +1,6 @@
 #include <d3dx9.h>
 //#include "debugPrintf.h"
+#include "main.h"
 #include "mydirect3d.h"
 #include "texture.h"
 
@@ -13,11 +14,11 @@ typedef struct TextureFile_tag
 } TextureFile;
 
 static const TextureFile g_TextureFiles[] = {
-	{ "asset/texture/title1.png", 1024, 576 },						//01.タイトル画面
-	{ "asset/texture/title2.png", 1024, 576 },						//02.タイトル画面
-	{ "asset/texture/tutorial.png", 1024, 576 },					//03.チュートリアル画面
-	{ "asset/texture/game01.png", 1024, 576 },					//04.ゲーム画面
-	{ "asset/texture/result.png", 1024, 576 },						//05.リザルト画面
+	{ "asset/texture/title1.png", SCREEN_WIDTH, SCREEN_HEIGHT },						//01.タイトル画面
+	{ "asset/texture/title2.png", SCREEN_WIDTH, SCREEN_HEIGHT },						//02.タイトル画面
+	{ "asset/texture/tutorial.png", SCREEN_WIDTH, SCREEN_HEIGHT },					//03.チュートリアル画面
+	{ "asset/texture/game01.png", SCREEN_WIDTH, SCREEN_HEIGHT },					//04.ゲーム画面
+	{ "asset/texture/result.png", SCREEN_WIDTH, SCREEN_HEIGHT },						//05.リザルト画面
 	{ "asset/texture/player.png", 64, 128 },							//06.プレイヤー
 	{ "asset/texture/enemy.png", 64, 128 },						//07.敵？
 	{ "asset/texture/number.png", 352, 32 },						//08.数字
@@ -26,9 +27,9 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/1.png", 512, 288 },								//11.カウントダウン
 	{ "asset/texture/START.png", 912, 512 },						//12.カウントダウン
 	{ "asset/texture/button.png", 400, 400 },						//13.ボタン
-	{ "asset/texture/pressanykey.png", 712, 400},				//14.ボタン
+	{ "asset/texture/pressanykey.png", 912, 512},				//14.ボタン
 	{ "asset/texture/chara_select.png", 512, 288 },				//15.キャラクターセレクト
-	{ "asset/texture/title2.png", 1024, 576 },						//16.キャラクターセレクト
+	{ "asset/texture/title2.png", SCREEN_WIDTH, SCREEN_HEIGHT },						//16.キャラクターセレクト
 	{ "asset/texture/chara_select.png", 712, 400 },				//17.キャラクターを選択してください
 	{ "asset/texture/button2.png", 400, 400 },					//18.キャラクターを選択してください
 	{"asset/texture/Block.png",52,52},								//19ロックサンプル
@@ -40,6 +41,12 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/kujira(1).png", 192, 256 },					//25.クジラ
 	{ "asset/texture/iruka.png", 96, 220 },							//26.イルカ
 	{ "asset/texture/uma.png", 128, 256 },							//27.馬
+	{ "asset/texture/map.png", 128, 500 },							//28.マップ
+	{ "asset/texture/game.png", SCREEN_WIDTH, SCREEN_HEIGHT },							//29.背景
+	{ "asset/texture/KAZIKI.png",800, 300 },					//30.カジキ
+	{ "asset/texture/umauma.png",800, 300 },					//31.馬
+	{ "asset/texture/NEW_IRUKA.png",800, 300 },					//32.イルカ
+	{ "asset/texture/KUZIRA.png",800, 300 },					//33.クジラ
 
 };
 

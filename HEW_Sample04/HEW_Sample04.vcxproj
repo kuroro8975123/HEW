@@ -128,10 +128,12 @@
     <ClCompile Include="fade.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="input.cpp" />
+    <ClCompile Include="Iruka.cpp" />
+    <ClCompile Include="Kajiki.cpp" />
+    <ClCompile Include="Kujira.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="myDirect3D.cpp" />
     <ClCompile Include="number.cpp" />
-    <ClCompile Include="player.cpp" />
     <ClCompile Include="result.cpp" />
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="scene_playerselect.cpp" />
@@ -142,6 +144,7 @@
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="timer.cpp" />
     <ClCompile Include="title.cpp" />
+    <ClCompile Include="Uma.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="collision.h" />
@@ -149,11 +152,13 @@
     <ClInclude Include="fade.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="Iruka.h" />
+    <ClInclude Include="Kajiki.h" />
+    <ClInclude Include="Kujira.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="myDirect3D.h" />
     <ClInclude Include="NKC_BackImage.h" />
     <ClInclude Include="number.h" />
-    <ClInclude Include="player.h" />
     <ClInclude Include="result.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="scene_playerselect.h" />
@@ -164,6 +169,7 @@
     <ClInclude Include="texture.h" />
     <ClInclude Include="timer.h" />
     <ClInclude Include="title.h" />
+    <ClInclude Include="Uma.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
