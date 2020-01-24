@@ -63,6 +63,28 @@ void Sprite_Draw(TextureIndex texture_index, float dx, float dy)
 	pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, vertexes, sizeof(Vertex2D));
 }
 
+//カラー選択可能な引数
+void Sprite_Draw(TextureIndex texture_index, float dx, float dy, D3DCOLOR color)
+{
+	LPDIRECT3DDEVICE9 pDevice = GetD3DDevice();
+	if (!pDevice) return;
+
+	float w = (float)Texture_GetWidth(texture_index);
+	float h = (float)Texture_GetHeight(texture_index);
+
+	Vertex2D vertexes[] = {
+		{ D3DXVECTOR4(dx - 0.5f, dy - 0.5f, 0.0f, 1.0f), color, D3DXVECTOR2(0.0f, 0.0f) },
+	{ D3DXVECTOR4(dx + w - 0.5f, dy - 0.5f, 0.0f, 1.0f), color, D3DXVECTOR2(1.0f, 0.0f) },
+	{ D3DXVECTOR4(dx - 0.5f, dy + h - 0.5f, 0.0f, 1.0f), color, D3DXVECTOR2(0.0f, 1.0f) },
+	{ D3DXVECTOR4(dx + w - 0.5f, dy + h - 0.5f, 0.0f, 1.0f), color, D3DXVECTOR2(1.0f, 1.0f) },
+	};
+
+	pDevice->SetFVF(FVF_VERTEX2D);
+	pDevice->SetTexture(0, Texture_GetTexture(texture_index));
+
+	pDevice->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, vertexes, sizeof(Vertex2D));
+}
+
 void Sprite_Draw(TextureIndex texture_index, float dx, float dy, int tx, int ty,int tw, int th)
 {
 	LPDIRECT3DDEVICE9 pDevice = GetD3DDevice();

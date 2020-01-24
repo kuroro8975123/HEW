@@ -1,17 +1,25 @@
 #include "input.h"
 #include "scene.h"
-#include "sprite.h"
-//#include "texture.h"
 #include "fade.h"
 #include "main.h"
 #include <d3d9.h>
 
+<<<<<<< HEAD
 static bool g_bEnd = false;
+=======
+#include "sprite.h"
+//#include "texture.h"
+>>>>>>> e3085da7d0b9de7fddd580972e7adcc756bd4cd0
 
+static bool g_bEnd = false;
 
 void Title_Initialize(void)
 {
 	g_bEnd = false;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e3085da7d0b9de7fddd580972e7adcc756bd4cd0
 }
 
 void Title_Finalize(void)
@@ -42,7 +50,7 @@ void Title_Draw(void)
 	
 	Sprite_Draw(TEXTURE_INDEX_TITLE2, 0.0f, 0.0f);
 	Sprite_Draw(TEXTURE_INDEX_TITLE1, 0.0f, 0.0f);
-	Sprite_Draw(TEXTURE_INDEX_PRESS, 130.0f, 140.0f);
+	Sprite_Draw(TEXTURE_INDEX_PRESS, SCREEN_WIDTH / 3 - 150.0f, SCREEN_HEIGHT / 3);
 
 	//Sprite_Draw(TEXTURE_INDEX_BG, 0.0f, y);
 	//Sprite_Draw(TEXTURE_INDEX_BG, 0.0f, -500 + y);
