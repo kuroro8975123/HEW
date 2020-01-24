@@ -7,13 +7,11 @@
 #include <d3d9.h>
 
 static bool g_bEnd = false;
-static float y;
 
 
 void Title_Initialize(void)
 {
 	g_bEnd = false;
-	y = 0;
 }
 
 void Title_Finalize(void)
@@ -23,7 +21,7 @@ void Title_Finalize(void)
 void Title_Update(void)
 {
 	if( !g_bEnd ) { 
-		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
+		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(2, BUTTON_A)) {
 			Fade_Start(true, 30, D3DCOLOR_RGBA(255, 255, 255, 255));
 			g_bEnd = true;
 		}
@@ -35,9 +33,6 @@ void Title_Update(void)
 			Scene_Change(SCENE_INDEX_P_SELECT);
 		}
 	}
-	y += 1.0f;
-	if (y > 500)
-		y = 0;
 
 }
 

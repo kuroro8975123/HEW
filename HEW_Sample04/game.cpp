@@ -1,6 +1,5 @@
 #include "main.h"
 #include "texture.h"
-#include "player.h"
 #include "enemy.h"
 #include "fade.h"
 #include "scene.h"
@@ -54,15 +53,15 @@ void Game_Initialize(void)
 	}
 	if (Player_1P == 2)
 	{
-	    Kujira_Initialize_1P(650,300);
+	    Kujira_Initialize_1P(675,300);
 	}
 	if (Player_1P == 3)
 	{
-	    Iruka_Initialize_1P(650,300);
+	    Iruka_Initialize_1P(675,300);
 	}
 	if (Player_1P == 4)
 	{
-	    Uma_Initialize_1P(650,300);
+	    Uma_Initialize_1P(675,300);
 	}
 	if (Player_2P == 1)
 	{
@@ -241,7 +240,7 @@ bool Game_EndCheck(void)
 {
 	if (Player_1P == 1 && Player_2P == 1)
 	{
-		if (End_1P_Kajiki() && End_2P_Kajiki())
+		if (End_1P_Kajiki() == true && End_2P_Kajiki() == true)
 		{
 			return true;
 		}
@@ -255,98 +254,98 @@ bool Game_EndCheck(void)
 	}
 	if (Player_1P == 1 && Player_2P == 3)
 	{
-		if (End_1P_Kajiki && End_2P_Iruka)
+		if (End_1P_Kajiki() && End_2P_Iruka())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 1 && Player_2P == 4)
 	{
-		if (End_1P_Kajiki && End_2P_Uma)
+		if (End_1P_Kajiki() && End_2P_Uma())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 2 && Player_2P == 1)
 	{
-		if (End_1P_Kujira && End_2P_Kajiki)
+		if (End_1P_Kujira() && End_2P_Kajiki())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 2 && Player_2P == 2)
 	{
-		if (End_1P_Kujira && End_2P_Kujira)
+		if (End_1P_Kujira() && End_2P_Kujira())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 2 && Player_2P == 3)
 	{
-		if (End_1P_Kujira && End_2P_Iruka)
+		if (End_1P_Kujira() && End_2P_Iruka())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 2 && Player_2P == 4)
 	{
-		if (End_1P_Kujira && End_2P_Uma)
+		if (End_1P_Kujira() && End_2P_Uma())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 3 && Player_2P == 1)
 	{
-		if (End_1P_Iruka && End_2P_Kajiki)
+		if (End_1P_Iruka() && End_2P_Kajiki())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 3 && Player_2P == 2)
 	{
-		if (End_1P_Iruka && End_2P_Kujira)
+		if (End_1P_Iruka() && End_2P_Kujira())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 3 && Player_2P == 3)
 	{
-		if (End_1P_Iruka && End_2P_Iruka)
+		if (End_1P_Iruka() && End_2P_Iruka())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 3 && Player_2P == 4)
 	{
-		if (End_1P_Iruka && End_2P_Uma)
+		if (End_1P_Iruka() && End_2P_Uma())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 4 && Player_2P == 1)
 	{
-		if (End_1P_Uma && End_2P_Kajiki)
+		if (End_1P_Uma() && End_2P_Kajiki())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 4 && Player_2P == 2)
 	{
-		if (End_1P_Uma && End_2P_Kujira)
+		if (End_1P_Uma() && End_2P_Kujira())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 4 && Player_2P == 3)
 	{
-		if (End_1P_Uma && End_2P_Iruka)
+		if (End_1P_Uma() && End_2P_Iruka())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 4 && Player_2P == 4)
 	{
-		if (End_1P_Uma && End_2P_Uma)
+		if (End_1P_Uma() && End_2P_Uma())
 		{
 			return true;
 		}

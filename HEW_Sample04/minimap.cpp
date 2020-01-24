@@ -4,7 +4,6 @@
 
 #include "main.h"
 #include "minimap.h"
-#include "player.h"
 #include "sprite.h"
 #include "game.h"
 

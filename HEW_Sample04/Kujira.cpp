@@ -147,6 +147,13 @@ void Kujira_Update_2P(void)
 		}
 	}
 	Kujira_Button_2P();
+	
+	g_animCount += 1;
+
+	if (g_animCount > ANIME_PATTERN_MAX)
+	{
+		g_animCount = 0;
+	}
 
 }
 void Kujira_Draw_1P(void)
@@ -154,10 +161,8 @@ void Kujira_Draw_1P(void)
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), Move_BG_1P_Kujira_ + Move_BG1_Kujira, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 150) + Move_BG_1P_Kujira_ + Move_BG1_Kujira, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 300) + Move_BG_1P_Kujira_, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
-
-	Sprite_Draw(TEXTURE_INDEX_KUZIRA,
-		kujira.pos.x,
-		kujira.pos.y);
+	
+	Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, kujira.pos.x, kujira.pos.y, g_animCount * 100, 0, 100, 300);
 
 	if (kujira.button == 1 && kujira.button_flag)
 	{
@@ -183,10 +188,7 @@ void Kujira_Draw_2P(void)
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), (-SCREEN_HEIGHT + 150) + Move_BG2_2P_Kujira_ + Move_BG2_Kujira, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), ((-SCREEN_HEIGHT * 2) + 300) + Move_BG2_2P_Kujira_, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 
-	//Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION,
-	//	kujira.pos.x,
-	//	kujira.pos.y);
-	Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION,kujira.pos.x, kujira.pos.y, g_animCount * 100, 0, 100, 300);
+	Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION,kujira_2P.pos.x, kujira_2P.pos.y, g_animCount * 100, 0, 100, 300);
 
 	if (kujira.button == 1 && kujira.button_flag)
 	{
