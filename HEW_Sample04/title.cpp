@@ -4,22 +4,15 @@
 #include "main.h"
 #include <d3d9.h>
 
-<<<<<<< HEAD
-static bool g_bEnd = false;
-=======
+
 #include "sprite.h"
 //#include "texture.h"
->>>>>>> e3085da7d0b9de7fddd580972e7adcc756bd4cd0
 
 static bool g_bEnd = false;
 
 void Title_Initialize(void)
 {
 	g_bEnd = false;
-<<<<<<< HEAD
-=======
-
->>>>>>> e3085da7d0b9de7fddd580972e7adcc756bd4cd0
 }
 
 void Title_Finalize(void)
