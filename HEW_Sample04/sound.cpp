@@ -38,6 +38,7 @@ SOUNDPARAM g_aParam[SOUND_LABEL_MAX] =
 	{(char *)"asset/SE/shot000.wav", 0},		// ’e”­ŽË‰¹
 	{(char *)"asset/SE/hit000.wav", 0},			// ƒqƒbƒg‰¹
 	{(char *)"asset/SE/explosion000.wav", 0},	// ”š”­‰¹
+	{(char *)"asset/SE/swim/kicking_water.mp3",0},
 };
 
 //=============================================================================
