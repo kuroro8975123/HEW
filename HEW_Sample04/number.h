@@ -1,8 +1,8 @@
 #pragma once
 
 
-#define NUMBER_WIDTH  (32)
-#define NUMBER_HEIGHT (32)
+#define NUMBER_WIDTH  (64)
+#define NUMBER_HEIGHT (64)
 
 
 // 0 <= n <= 10

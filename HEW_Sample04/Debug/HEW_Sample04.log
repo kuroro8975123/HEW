@@ -1,1 +1,3 @@
-﻿  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
+﻿  texture.cpp
+c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
