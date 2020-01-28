@@ -4,7 +4,7 @@
 #include "timer.h"
 #include "sprite.h"
 
-#define NOMAL_SCR		(100)	//コースの長さ
+#define NOMAL_SCR		(1)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 #define ANIME_PATTERN_MAX	7
 
@@ -169,19 +169,19 @@ void Iruka_Draw_1P(void)
 
 	if (iruka.button == 1 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 675, 50);
 	}
 	if (iruka.button == 2 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 675, 50);
 	}
 	if (iruka.button == 3 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 675, 50);
 	}
 	if (iruka.button == 4 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 675, 50);
 	}
 
 }
@@ -195,19 +195,19 @@ void Iruka_Draw_2P(void)
 
 	if (iruka.button == 1 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 50);
 	}
 	if (iruka.button == 2 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 50);
 	}
 	if (iruka.button == 3 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 50);
 	}
 	if (iruka.button == 4 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 50);
 	}
 
 }
