@@ -4,15 +4,15 @@
 #include "main.h"
 #include <d3d9.h>
 
+static bool g_bEnd = false;
+
 #include "sprite.h"
 //#include "texture.h"
 
-static bool g_bEnd = false;
 
 void Title_Initialize(void)
 {
 	g_bEnd = false;
-
 }
 
 void Title_Finalize(void)
@@ -22,7 +22,7 @@ void Title_Finalize(void)
 void Title_Update(void)
 {
 	if( !g_bEnd ) { 
-		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
+		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(2, BUTTON_A)) {
 			Fade_Start(true, 30, D3DCOLOR_RGBA(255, 255, 255, 255));
 			g_bEnd = true;
 		}

@@ -4,7 +4,7 @@
 #include "timer.h"
 #include "sprite.h"
 
-#define NOMAL_SCR		(100)	//コースの長さ
+#define NOMAL_SCR		(1)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 #define ANIME_PATTERN_MAX	7
 
@@ -148,6 +148,13 @@ void Iruka_Update_2P(void)
 		}
 	}
 	Iruka_Button_2P();
+	
+	g_animCount += 1;
+
+	if (g_animCount > ANIME_PATTERN_MAX)
+	{
+		g_animCount = 0;
+	}
 
 }
 void Iruka_Draw_1P(void)
@@ -156,28 +163,25 @@ void Iruka_Draw_1P(void)
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 150) + Move_BG_1P_Iruka_ + Move_BG1_Iruka,  (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 300) + Move_BG_1P_Iruka_, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	
-	//Sprite_Draw(TEXTURE_INDEX_IRUKA,
-	//			iruka.pos.x,
-	//			iruka.pos.y);
 
 	Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, iruka.pos.x, iruka.pos.y, g_animCount * 100, 0, 100, 300);
 
 
 	if (iruka.button == 1 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 675, 50);
 	}
 	if (iruka.button == 2 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 675, 50);
 	}
 	if (iruka.button == 3 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 675, 50);
 	}
 	if (iruka.button == 4 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 675, 50);
 	}
 
 }
@@ -187,25 +191,23 @@ void Iruka_Draw_2P(void)
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), (-SCREEN_HEIGHT + 150) + Move_BG_2P_Iruka_ + Move_BG2_Iruka,  (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), ((-SCREEN_HEIGHT * 2) + 300) + Move_BG_2P_Iruka_, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	
-	Sprite_Draw(TEXTURE_INDEX_IRUKA,
-				iruka.pos.x,
-				iruka.pos.y);
+	Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, iruka_2P.pos.x, iruka_2P.pos.y, g_animCount * 100, 0, 100, 300);
 
 	if (iruka.button == 1 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 50);
 	}
 	if (iruka.button == 2 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 50);
 	}
 	if (iruka.button == 3 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 50);
 	}
 	if (iruka.button == 4 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 50);
 	}
 
 }

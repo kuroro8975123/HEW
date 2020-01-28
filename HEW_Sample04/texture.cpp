@@ -21,11 +21,11 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/result.png", SCREEN_WIDTH, SCREEN_HEIGHT },						//05.リザルト画面
 	{ "asset/texture/player.png", 64, 128 },							//06.プレイヤー
 	{ "asset/texture/enemy.png", 64, 128 },						//07.敵？
-	{ "asset/texture/number.png", 352, 32 },						//08.数字
-	{ "asset/texture/3.png", 512, 288 },								//09.カウントダウン
-	{ "asset/texture/2.png", 512, 288 },								//10.カウントダウン
-	{ "asset/texture/1.png", 512, 288 },								//11.カウントダウン
-	{ "asset/texture/START.png", 912, 512 },						//12.カウントダウン
+	{ "asset/texture/number.png",704 , 64 },						//08.数字
+	{ "asset/texture/3.png", 800, 400 },								//09.カウントダウン
+	{ "asset/texture/2.png", 800, 400 },								//10.カウントダウン
+	{ "asset/texture/1.png", 800, 400 },								//11.カウントダウン
+	{ "asset/texture/START.png", 2048, 1024 },						//12.カウントダウン
 	{ "asset/texture/button.png", 400, 400 },						//13.ボタン
 	{ "asset/texture/pressanykey.png", 912, 512},				//14.ボタン
 	{ "asset/texture/chara_select.png", 512, 288 },				//15.キャラクターセレクト
@@ -47,6 +47,12 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/umauma.png",800, 300 },					//31.馬
 	{ "asset/texture/NEW_IRUKA.png",800, 300 },					//32.イルカ
 	{ "asset/texture/KUZIRA.png",800, 300 },					//33.クジラ
+	{ "asset/texture/ka.png",900, 900 },					//34.カジキセレクト
+	{ "asset/texture/kujira.png",900, 900 },					//35.クジラセレクト
+	{ "asset/texture/iruka_.png",900, 900 },					//36.イルカセレクト
+	{ "asset/texture/uma_.png",900, 900 },					//37.馬セレクト
+	{ "asset/texture/left.png",450, 300 },					//38.左
+	{ "asset/texture/right.png",450, 300 },					//39.右
 
 };
 

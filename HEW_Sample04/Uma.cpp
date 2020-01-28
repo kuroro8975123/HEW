@@ -4,7 +4,7 @@
 #include "timer.h"
 #include "sprite.h"
 
-#define NOMAL_SCR		(100)	//コースの長さ
+#define NOMAL_SCR		(1)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 #define ANIME_PATTERN_MAX	7
 
@@ -149,6 +149,14 @@ void Uma_Update_2P(void)
 	}
 	Uma_Button_2P();
 
+	g_animCount += 1;
+
+	if (g_animCount > ANIME_PATTERN_MAX)
+	{
+		g_animCount = 0;
+	}
+
+
 }
 void Uma_Draw_1P(void)
 {
@@ -156,26 +164,23 @@ void Uma_Draw_1P(void)
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 150) + Move_BG_1P_Uma_ + Move_BG1_Uma, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 300) + Move_BG_1P_Uma_, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 
-	//Sprite_Draw(TEXTURE_INDEX_IRUKA,
-	//	uma.pos.x,
-	//	uma.pos.y);
 	Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, uma.pos.x, uma.pos.y, g_animCount * 100, 0, 100, 300);
 
 	if (uma.button == 1 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 650, 50);
 	}
 	if (uma.button == 2 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 650, 50);
 	}
 	if (uma.button == 3 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 650, 50);
 	}
 	if (uma.button == 4 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 650, 50);
 	}
 
 }
@@ -185,25 +190,23 @@ void Uma_Draw_2P(void)
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), (-SCREEN_HEIGHT + 150) + Move_BG2_2P_Uma_ + Move_BG2, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), ((-SCREEN_HEIGHT * 2) + 300) + Move_BG2_2P_Uma_, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 
-	Sprite_Draw(TEXTURE_INDEX_IRUKA,
-		uma.pos.x,
-		uma.pos.y);
+	Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, uma_2P.pos.x, uma_2P.pos.y, g_animCount * 100, 0, 100, 300);
 
 	if (uma.button == 1 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 50);
 	}
 	if (uma.button == 2 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 50);
 	}
 	if (uma.button == 3 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 50);
 	}
 	if (uma.button == 4 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 50);
 	}
 
 }
@@ -283,7 +286,7 @@ void Uma_Button_2P(void)
 	}
 	if (uma_2P.button == 1 && uma_2P.button_flag)
 	{
-		if (Keyboard_IsPress(DIK_UP) || GamePad_IsPress(0, BUTTON_A))
+		if (Keyboard_IsPress(DIK_UP) || GamePad_IsPress(2, BUTTON_A))
 		{
 			uma_2P.speed += 0.08;
 			uma_2P.button_flag = false;
@@ -291,7 +294,7 @@ void Uma_Button_2P(void)
 	}
 	if (uma_2P.button == 2 && uma_2P.button_flag)
 	{
-		if (Keyboard_IsPress(DIK_RIGHT) || GamePad_IsPress(0, BUTTON_B))
+		if (Keyboard_IsPress(DIK_RIGHT) || GamePad_IsPress(2, BUTTON_B))
 		{
 			uma_2P.speed += 0.05;
 			uma_2P.button_flag = false;
@@ -299,7 +302,7 @@ void Uma_Button_2P(void)
 	}
 	if (uma.button == 3 && uma.button_flag)
 	{
-		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(0, BUTTON_X))
+		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(2, BUTTON_X))
 		{
 			uma_2P.speed += 0.03;
 			uma_2P.button_flag = false;
@@ -307,7 +310,7 @@ void Uma_Button_2P(void)
 	}
 	if (uma_2P.button == 4 && uma_2P.button_flag)
 	{
-		if (Keyboard_IsPress(DIK_LEFT) || GamePad_IsPress(0, BUTTON_Y))
+		if (Keyboard_IsPress(DIK_LEFT) || GamePad_IsPress(2, BUTTON_Y))
 		{
 			uma_2P.speed += 0.01;
 			uma_2P.button_flag = false;

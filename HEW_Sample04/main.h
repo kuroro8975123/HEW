@@ -9,4 +9,3 @@
 //ウィンドウハンドルのGetter
 HWND GetHWND();
 double frand();
-D3DXVECTOR2 GetAnimTbl(int set, int muki, int anim);

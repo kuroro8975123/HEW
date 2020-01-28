@@ -10,6 +10,10 @@
     <ClCompile Include="Kajiki.cpp" />
     <ClCompile Include="Kujira.cpp" />
     <ClCompile Include="main.cpp" />
+<<<<<<< HEAD
+    <ClCompile Include="minimap.cpp" />
+=======
+>>>>>>> e3085da7d0b9de7fddd580972e7adcc756bd4cd0
     <ClCompile Include="myDirect3D.cpp" />
     <ClCompile Include="number.cpp" />
     <ClCompile Include="result.cpp" />
@@ -34,6 +38,10 @@
     <ClInclude Include="Kajiki.h" />
     <ClInclude Include="Kujira.h" />
     <ClInclude Include="main.h" />
+<<<<<<< HEAD
+    <ClInclude Include="minimap.h" />
+=======
+>>>>>>> e3085da7d0b9de7fddd580972e7adcc756bd4cd0
     <ClInclude Include="myDirect3D.h" />
     <ClInclude Include="NKC_BackImage.h" />
     <ClInclude Include="number.h" />

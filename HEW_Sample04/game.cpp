@@ -53,15 +53,15 @@ void Game_Initialize(void)
 	}
 	if (Player_1P == 2)
 	{
-	    Kujira_Initialize_1P(650,300);
+	    Kujira_Initialize_1P(675,300);
 	}
 	if (Player_1P == 3)
 	{
-	    Iruka_Initialize_1P(650,300);
+	    Iruka_Initialize_1P(675,300);
 	}
 	if (Player_1P == 4)
 	{
-	    Uma_Initialize_1P(650,300);
+	    Uma_Initialize_1P(675,300);
 	}
 	if (Player_2P == 1)
 	{
@@ -217,23 +217,24 @@ void Game_Draw(void)
 	Sprite_Draw(TEXTURE_INDEX_BG, 0, 0);
 
 	//Enemy_Draw();
-	Minute_Draw(440, 0, Timer_GetMinute(), 2, true);
-	Second_Draw(520, 0, Timer_GetSecond(), 2, true);
+	Minute_Draw(850, 20, Timer_GetMinute(), 2, true);
+	Second_Draw(980, 20, Timer_GetSecond(), 2, true);
+
 	if (CountDown < 60)
 	{
-		Sprite_Draw(TEXTURE_INDEX_3, 256.0f, 144.0f);
+		Sprite_Draw(TEXTURE_INDEX_3, 600.0f, 320.0f);
 	}
 	if (CountDown > 60 && CountDown < 120)
 	{
-		Sprite_Draw(TEXTURE_INDEX_2, 256.0f, 144.0f);
+		Sprite_Draw(TEXTURE_INDEX_2, 600.0f, 320.0f);
 	}
 	if (CountDown > 120 && CountDown < 180)
 	{
-		Sprite_Draw(TEXTURE_INDEX_1, 256.0f, 144.0f);
+		Sprite_Draw(TEXTURE_INDEX_1, 600.0f, 320.0f);
 	}
 	if (CountDown > 180 && CountDown < 240)
 	{
-		Sprite_Draw(TEXTURE_INDEX_START, 80.0f, 30.0f);
+		Sprite_Draw(TEXTURE_INDEX_START, -10.0f, 30.0f);
 	}
 
 }
@@ -242,7 +243,7 @@ bool Game_EndCheck(void)
 {
 	if (Player_1P == 1 && Player_2P == 1)
 	{
-		if (End_1P_Kajiki() && End_2P_Kajiki())
+		if (End_1P_Kajiki() == true && End_2P_Kajiki() == true)
 		{
 			return true;
 		}
@@ -256,98 +257,98 @@ bool Game_EndCheck(void)
 	}
 	if (Player_1P == 1 && Player_2P == 3)
 	{
-		if (End_1P_Kajiki && End_2P_Iruka)
+		if (End_1P_Kajiki() && End_2P_Iruka())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 1 && Player_2P == 4)
 	{
-		if (End_1P_Kajiki && End_2P_Uma)
+		if (End_1P_Kajiki() && End_2P_Uma())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 2 && Player_2P == 1)
 	{
-		if (End_1P_Kujira && End_2P_Kajiki)
+		if (End_1P_Kujira() && End_2P_Kajiki())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 2 && Player_2P == 2)
 	{
-		if (End_1P_Kujira && End_2P_Kujira)
+		if (End_1P_Kujira() && End_2P_Kujira())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 2 && Player_2P == 3)
 	{
-		if (End_1P_Kujira && End_2P_Iruka)
+		if (End_1P_Kujira() && End_2P_Iruka())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 2 && Player_2P == 4)
 	{
-		if (End_1P_Kujira && End_2P_Uma)
+		if (End_1P_Kujira() && End_2P_Uma())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 3 && Player_2P == 1)
 	{
-		if (End_1P_Iruka && End_2P_Kajiki)
+		if (End_1P_Iruka() && End_2P_Kajiki())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 3 && Player_2P == 2)
 	{
-		if (End_1P_Iruka && End_2P_Kujira)
+		if (End_1P_Iruka() && End_2P_Kujira())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 3 && Player_2P == 3)
 	{
-		if (End_1P_Iruka && End_2P_Iruka)
+		if (End_1P_Iruka() && End_2P_Iruka())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 3 && Player_2P == 4)
 	{
-		if (End_1P_Iruka && End_2P_Uma)
+		if (End_1P_Iruka() && End_2P_Uma())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 4 && Player_2P == 1)
 	{
-		if (End_1P_Uma && End_2P_Kajiki)
+		if (End_1P_Uma() && End_2P_Kajiki())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 4 && Player_2P == 2)
 	{
-		if (End_1P_Uma && End_2P_Kujira)
+		if (End_1P_Uma() && End_2P_Kujira())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 4 && Player_2P == 3)
 	{
-		if (End_1P_Uma && End_2P_Iruka)
+		if (End_1P_Uma() && End_2P_Iruka())
 		{
 			return true;
 		}
 	}
 	if (Player_1P == 4 && Player_2P == 4)
 	{
-		if (End_1P_Uma && End_2P_Uma)
+		if (End_1P_Uma() && End_2P_Uma())
 		{
 			return true;
 		}

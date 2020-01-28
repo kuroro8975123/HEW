@@ -1,20 +1,49 @@
+#include "main.h"
 #include "input.h"
 #include "scene.h"
 #include "sprite.h"
 #include "texture.h"
 #include "fade.h"
 #include "enemy.h"
+
+#include "enemy.h"
+
 #include "scene_playerselect.h"
 
 int Select_1P;
 int Select_2P;
 int Select_Count;
+int frame;
+bool Select;
+bool Left;
+bool Right;
+
+Select_Kaziki kaziki;
+Select_Kujira kuzira;
+Select_Iruka iruka;
+Select_Uma uma;
+
 void P_Select_Initialize(void)
 {
 	Fade_Start(false, 90, D3DCOLOR_RGBA(0, 0, 0, 0));
 	Select_1P = 0;
 	Select_2P = 0;
 	Select_Count = 0;
+	kaziki.pos.x = 450;
+	kaziki.pos.y = 100;
+	kaziki.flag = true;
+	kuzira.pos.x = 450 + SCREEN_WIDTH;
+	kuzira.pos.y = 100;
+	kuzira.flag = false;
+	iruka.pos.x = (450 + (SCREEN_WIDTH * 2));
+	iruka.pos.y = 100;
+	iruka.flag = false;
+	uma.pos.x = (450 + (SCREEN_WIDTH * 3));
+	uma.pos.y = 100;
+	uma.flag = false;
+	Select = false;
+	Left = false;
+	Right = false;
 }
 
 void P_Select_Finalize(void)
@@ -23,63 +52,199 @@ void P_Select_Finalize(void)
 
 void P_Select_Update(void)
 {
-	
-
-	if (Keyboard_IsTrigger(DIK_A)) //カジキ
+	if (kaziki.flag)
 	{
-		if (Select_Count == 0)
+		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_LB))
+		{
+		}
+		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsPress(2, BUTTON_RB))
+		{
+			Left = true;
+		}
+		if (Left)
+		{
+			if (kuzira.pos.x > 550)
+			{
+				kaziki.pos.x -= 50;
+				kuzira.pos.x -= 50;
+				iruka.pos.x -= 50;
+				uma.pos.x -= 50;
+			}
+			else
+			{
+				Left = false;
+				kaziki.flag = false;
+				kuzira.flag = true;
+			}
+		}
+	}
+	if (kuzira.flag)
+	{
+		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_LB))
+		{
+			Right = true;
+
+		}
+		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsPress(2, BUTTON_RB))
+		{
+			Left = true;
+		}
+		if (Left)
+		{
+			if (iruka.pos.x > 550)
+			{
+				kaziki.pos.x -= 50;
+				kuzira.pos.x -= 50;
+				iruka.pos.x -= 50;
+				uma.pos.x -= 50;
+			}
+			else
+			{
+				Left = false;
+				kuzira.flag = false;
+				iruka.flag = true;
+			}
+		}
+		if (Right)
+		{
+			if (kaziki.pos.x < 550)
+			{
+				kaziki.pos.x += 50;
+				kuzira.pos.x += 50;
+				iruka.pos.x += 50;
+				uma.pos.x += 50;
+
+			}
+			else
+			{
+				Right = false;
+				kuzira.flag = false;
+				kaziki.flag = true;
+			}
+		}
+	}
+	if (iruka.flag)
+	{
+		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_LB))
+		{
+			Right = true;
+
+		}
+		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsPress(2, BUTTON_RB))
+		{
+			Left = true;
+		}
+		if (Left)
+		{
+			if (uma.pos.x > 550)
+			{
+				kaziki.pos.x -= 50;
+				kuzira.pos.x -= 50;
+				iruka.pos.x -= 50;
+				uma.pos.x -= 50;
+			}
+			else
+			{
+				Left = false;
+				iruka.flag = false;
+				uma.flag = true;
+			}
+		}
+		if (Right)
+		{
+			if (kuzira.pos.x < 550)
+			{
+				kaziki.pos.x += 50;
+				kuzira.pos.x += 50;
+				iruka.pos.x += 50;
+				uma.pos.x += 50;
+
+			}
+			else
+			{
+				Right = false;
+				iruka.flag = false;
+				kuzira.flag = true;
+			}
+		}
+	}
+	if (uma.flag)
+	{
+		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_LB))
+		{
+			Right = true;
+
+		}
+		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsPress(2, BUTTON_RB))
+		{
+		}
+		if (Right)
+		{
+			if (iruka.pos.x < 550)
+			{
+				kaziki.pos.x += 50;
+				kuzira.pos.x += 50;
+				iruka.pos.x += 50;
+				uma.pos.x += 50;
+			}
+			else
+			{
+				Right = false;
+				uma.flag = false;
+				iruka.flag = true;
+			}
+		}
+	}
+
+
+
+	if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_A))
+	{
+		if (kaziki.flag)
 		{
 			Select_1P = 1;
-			Select_Count++;
+			Select_Count = 1;
 		}
-		else if (Select_Count == 1)
-		{
-			Select_2P = 1;
-			Select_Count++;
-		}
-	}
-	if (Keyboard_IsTrigger(DIK_B)) //クジラ
-	{
-		if (Select_Count == 0)
+		else if (kuzira.flag)
 		{
 			Select_1P = 2;
-			Select_Count++;
+			Select_Count = 1;
 		}
-		else if (Select_Count == 1)
-		{
-			Select_2P = 2;
-			Select_Count++;
-		}
-
-	}
-	if (Keyboard_IsTrigger(DIK_X)) //イルカ
-	{
-		if (Select_Count == 0)
+		else if (iruka.flag)
 		{
 			Select_1P = 3;
-			Select_Count++;
+			Select_Count = 1;
 		}
-		else if (Select_Count == 1)
-		{
-			Select_2P = 3;
-			Select_Count++;
-		}
-
-	}
-	if (Keyboard_IsTrigger(DIK_Y)) //馬
-	{
-		if (Select_Count == 0)
+		else if (uma.flag)
 		{
 			Select_1P = 4;
-			Select_Count++;
+			Select_Count = 1;
 		}
-		else if (Select_Count == 1)
+	}
+	if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_B) && Select_Count == 1)
+	{
+		if (kaziki.flag)
+		{
+			Select_2P = 1;
+			Select_Count = 2;
+		}
+		else if (kuzira.flag)
+		{
+			Select_2P = 2;
+			Select_Count = 2;
+		}
+		else if (iruka.flag)
+		{
+			Select_2P = 3;
+			Select_Count = 2;
+		}
+		else if (uma.flag)
 		{
 			Select_2P = 4;
-			Select_Count++;
+			Select_Count = 2;
 		}
-
 	}
+
 	if (Select_Count == 2)
 	{
 		Scene_Change(SCENE_INDEX_GAME);
@@ -88,21 +253,20 @@ void P_Select_Update(void)
 
 void P_Select_Draw(void)
 {
-	
+
 	Sprite_Draw(TEXTURE_INDEX_POOL, 0.0f, 0.0f);
-	//Sprite_Draw(TEXTURE_INDEX_CHARASELE, 0.0f, 0.0f);
 	Sprite_Draw(TEXTURE_INDEX_CHARASEN, 150.0f, -80.0f);
 
-	Sprite_Draw(TEXTURE_INDEX_KAZIKI, 184.0f, 200.0f);		//カジキ
-	Sprite_Draw(TEXTURE_INDEX_KUZIRA, 352.0f, 200.0f);		//クジラ
-	Sprite_Draw(TEXTURE_INDEX_IRUKA, 600.0f, 200.0f);		//イルカ
-	Sprite_Draw(TEXTURE_INDEX_UMA, 784.0f, 240.0f);			//馬
+	Sprite_Draw(TEXTURE_INDEX_RIGHT, 1500.0f, 400.0f);
+	Sprite_Draw(TEXTURE_INDEX_LEFT, 150.0f, 400.0f);
 
-	Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 215, 450);
-	Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 415, 450);
-	Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 615, 450);
-	Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 815, 450);
+	Sprite_Draw(TEXTURE_INDEX_KAZIKI_SELECT, kaziki.pos.x, kaziki.pos.y);
+	Sprite_Draw(TEXTURE_INDEX_KUJIRA_SELECT, kuzira.pos.x, kuzira.pos.y);
+	Sprite_Draw(TEXTURE_INDEX_IRUKA_SELECT, iruka.pos.x, iruka.pos.y);
+	Sprite_Draw(TEXTURE_INDEX_UMA_SELECT, uma.pos.x, uma.pos.y);
+
 }
+
 
 int Get_Select_1P()
 {
