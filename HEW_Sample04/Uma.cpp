@@ -4,7 +4,7 @@
 #include "timer.h"
 #include "sprite.h"
 
-#define NOMAL_SCR		(100)	//コースの長さ
+#define NOMAL_SCR		(1)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 #define ANIME_PATTERN_MAX	7
 
@@ -168,19 +168,19 @@ void Uma_Draw_1P(void)
 
 	if (uma.button == 1 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 650, 50);
 	}
 	if (uma.button == 2 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 650, 50);
 	}
 	if (uma.button == 3 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 650, 50);
 	}
 	if (uma.button == 4 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 650, 50);
 	}
 
 }
@@ -194,19 +194,19 @@ void Uma_Draw_2P(void)
 
 	if (uma.button == 1 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 50);
 	}
 	if (uma.button == 2 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 50);
 	}
 	if (uma.button == 3 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 50);
 	}
 	if (uma.button == 4 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 50);
 	}
 
 }

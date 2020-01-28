@@ -4,7 +4,7 @@
 #include "timer.h"
 #include "sprite.h"
 
-#define NOMAL_SCR		(100)	//コースの長さ
+#define NOMAL_SCR		(1)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 #define ANIME_PATTERN_MAX	7
 
@@ -166,19 +166,19 @@ void Kajiki_Draw_1P(void)
 
 	if (kajiki.button == 1 && kajiki.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 650, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 700, 50);
 	}
 	if (kajiki.button == 2 && kajiki.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 650, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 700, 50);
 	}
 	if (kajiki.button == 3 && kajiki.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 650, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 700, 50);
 	}
 	if (kajiki.button == 4 && kajiki.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 650, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 700, 50);
 	}
 
 }

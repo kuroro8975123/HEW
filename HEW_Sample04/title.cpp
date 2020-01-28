@@ -4,11 +4,8 @@
 #include "main.h"
 #include <d3d9.h>
 
-<<<<<<< HEAD
 static bool g_bEnd = false;
-=======
 
->>>>>>> c18442c46a1f60fd0983b31cee829280e386b306
 #include "sprite.h"
 //#include "texture.h"
 
