@@ -124,7 +124,6 @@ void Game_Update(void)
 			//Enemy_Update();
 			Timer_Update();
 
-
 			//ゲームの終了チェック
 			if (Game_EndCheck())
 			{

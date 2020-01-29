@@ -91,9 +91,9 @@ void Uma_Update_1P(void)
 		else if (Move_BG_1P_Uma > (SCREEN_HEIGHT * 2 - 310))
 		{
 			if (Goal_1P_Uma == false) {
-				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 				Time_Minute_1P_Uma = Timer_GetMinute();
 				Time_Second_1P_Uma = Timer_GetSecond();
+				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 			}
 			Goal_1P_Uma = true;
 		}
@@ -143,9 +143,9 @@ void Uma_Update_2P(void)
 		else if (Move_BG2_2P_Uma > (SCREEN_HEIGHT * 2 - 310))
 		{
 			if (Goal_2P_Uma == false) {
-				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 				Time_Minute_2P_Uma = Timer_GetMinute();
 				Time_Second_2P_Uma = Timer_GetSecond();
+				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 			}
 			Goal_2P_Uma = true;
 		}

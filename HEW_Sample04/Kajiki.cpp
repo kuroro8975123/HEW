@@ -90,9 +90,9 @@ void Kajiki_Update_1P(void)
 		else if (Move_BG1_1P_Kajiki > (SCREEN_HEIGHT * 2 - 510))
 		{
 			if (Goal_1P_Kajiki == false) {
-				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 				Time_Minute_1P_Kajiki = Timer_GetMinute();
 				Time_Second_1P_Kajiki = Timer_GetSecond();
+				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 			}
 			Goal_1P_Kajiki = true;
 		}
@@ -142,9 +142,9 @@ void Kajiki_Update_2P(void)
 		else if (Move_BG_2P_Kajiki > (SCREEN_HEIGHT * 2 - 510))
 		{
 			if (Goal_2P_Kajiki == false) {
-				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 				Time_Minute_2P_Kajiki = Timer_GetMinute();
 				Time_Second_2P_Kajiki = Timer_GetSecond();
+				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 			}
 			Goal_2P_Kajiki = true;
 		}

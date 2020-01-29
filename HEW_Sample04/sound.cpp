@@ -38,14 +38,15 @@ SOUNDPARAM g_aParam[SOUND_LABEL_MAX] =
 	{(char *)"asset/SE/shot000.wav", 0},		// 弾発射音
 	{(char *)"asset/SE/hit000.wav", 0},			// ヒット音
 	{(char *)"asset/SE/explosion000.wav", 0},	// 爆発音
-	{(char *)"asset/SE/swimming.wav",0},
-	{(char *)"asset/SE/kettei.wav",0 },
-	{(char *)"asset/SE/atari.wav",0 },
-	{(char *)"asset/SE/count.wav",0 },
-	{(char *)"asset/SE/start.wav",0 },
-	{(char *)"asset/SE/timeout.wav",0 },
-	{(char *)"asset/SE/awa.wav",0 },
-	{(char *)"asset/SE/hakushu.wav",0 },
+	{(char *)"asset/SE/swimming.wav",-1},		// 水泳音
+	{(char *)"asset/SE/kettei.wav",0 },			// 決定音
+	{(char *)"asset/SE/atari.wav",0 },			// ボタン成功音
+	{(char *)"asset/SE/count.wav",0 },			// カウントダウン( 321 )
+	{(char *)"asset/SE/start.wav",0 },			// スタート
+	{(char *)"asset/SE/timeout.wav",0 },		// ゴール音
+	{(char *)"asset/SE/awa.wav",0 },			// 泡
+	{(char *)"asset/SE/hakushu.wav",0 },		// 拍手
+	{(char *)"asset/SE/kasoru.wav",0 },			// カーソル移動音
 };
 
 //=============================================================================

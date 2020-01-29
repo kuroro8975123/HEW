@@ -91,9 +91,9 @@ void Iruka_Update_1P(void)
 		else if (Move_BG_1P_Iruka > (SCREEN_HEIGHT * 2 - 310))
 		{
 			if (Goal_1P_Iruka == false) {
-				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 				Time_Minute_1P_Iruka = Timer_GetMinute();
 				Time_Second_1P_Iruka = Timer_GetSecond();
+				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 			}
 			Goal_1P_Iruka = true;
 		}
@@ -143,9 +143,9 @@ void Iruka_Update_2P(void)
 		else if (Move_BG_2P_Iruka > (SCREEN_HEIGHT * 2 - 310))
 		{
 			if (Goal_2P_Iruka == false) {
-				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 				Time_Minute_2P_Iruka = Timer_GetMinute();
 				Time_Second_2P_Iruka = Timer_GetSecond();
+				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 			}
 			Goal_2P_Iruka = true;
 		}
