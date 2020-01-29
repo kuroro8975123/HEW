@@ -3,6 +3,7 @@
 #include "input.h"
 #include "timer.h"
 #include "sprite.h"
+#include "sound.h"
 
 #define NOMAL_SCR		(1)	//ƒR[ƒX‚Ì’·‚³
 #define END_SCR			(NOMAL_SCR + 1)
@@ -90,6 +91,7 @@ void Uma_Update_1P(void)
 		else if (Move_BG_1P_Uma > (SCREEN_HEIGHT * 2 - 310))
 		{
 			if (Goal_1P_Uma == false) {
+				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 				Time_Minute_1P_Uma = Timer_GetMinute();
 				Time_Second_1P_Uma = Timer_GetSecond();
 			}
@@ -141,6 +143,7 @@ void Uma_Update_2P(void)
 		else if (Move_BG2_2P_Uma > (SCREEN_HEIGHT * 2 - 310))
 		{
 			if (Goal_2P_Uma == false) {
+				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 				Time_Minute_2P_Uma = Timer_GetMinute();
 				Time_Second_2P_Uma = Timer_GetSecond();
 			}
@@ -224,6 +227,7 @@ void Uma_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_UP) || GamePad_IsPress(0, BUTTON_A))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			uma.speed += 0.08;
 			uma.button_flag = false;
 		}
@@ -232,6 +236,7 @@ void Uma_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_RIGHT) || GamePad_IsPress(0, BUTTON_B))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			uma.speed += 0.05;
 			uma.button_flag = false;
 		}
@@ -240,6 +245,7 @@ void Uma_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(0, BUTTON_X))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			uma.speed += 0.03;
 			uma.button_flag = false;
 		}
@@ -248,6 +254,7 @@ void Uma_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_LEFT) || GamePad_IsPress(0, BUTTON_Y))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			uma.speed += 0.01;
 			uma.button_flag = false;
 		}
@@ -288,6 +295,7 @@ void Uma_Button_2P(void)
 	{
 		if (Keyboard_IsPress(DIK_UP) || GamePad_IsPress(2, BUTTON_A))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			uma_2P.speed += 0.08;
 			uma_2P.button_flag = false;
 		}
@@ -296,6 +304,7 @@ void Uma_Button_2P(void)
 	{
 		if (Keyboard_IsPress(DIK_RIGHT) || GamePad_IsPress(2, BUTTON_B))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			uma_2P.speed += 0.05;
 			uma_2P.button_flag = false;
 		}
@@ -304,6 +313,7 @@ void Uma_Button_2P(void)
 	{
 		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(2, BUTTON_X))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			uma_2P.speed += 0.03;
 			uma_2P.button_flag = false;
 		}
@@ -312,6 +322,7 @@ void Uma_Button_2P(void)
 	{
 		if (Keyboard_IsPress(DIK_LEFT) || GamePad_IsPress(2, BUTTON_Y))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			uma_2P.speed += 0.01;
 			uma_2P.button_flag = false;
 		}

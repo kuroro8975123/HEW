@@ -1,25 +1,74 @@
-<<<<<<< HEAD
-﻿  texture.cpp
-c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
-  title.cpp
-c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
-c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
-  コードを生成中...
-  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
-=======
-<<<<<<< HEAD
-﻿  result.cpp
-c:\users\1\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
-=======
-<<<<<<< HEAD
-﻿  title.cpp
-c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
-c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
-  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
-=======
 ﻿  Iruka.cpp
->>>>>>> 21822360f01d39220425df45db55c5b76f0574ed
-c:\users\1\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
-  HEW_Sample04.vcxproj -> C:\Users\1\Documents\HEW\Debug\HEW_Sample04.exe
->>>>>>> 4bf285b112f60a0a2b0038e6dca04e09f93992da
->>>>>>> af40f59b16bb41d917e3295070eb04c358acceac
+c:\users\saris\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(85): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(137): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(165): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(166): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(167): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(193): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(194): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(195): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(232): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(241): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(250): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(259): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(300): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(309): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(318): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\iruka.cpp(327): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  Kajiki.cpp
+c:\users\saris\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(84): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(136): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(164): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(165): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(166): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(190): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(191): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(192): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(229): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(238): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(247): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(256): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(297): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(306): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(315): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kajiki.cpp(324): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  Kujira.cpp
+c:\users\saris\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(84): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(136): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(164): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(165): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(166): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(190): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(191): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(192): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(229): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(238): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(247): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(256): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(297): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(306): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(315): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\kujira.cpp(324): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  Uma.cpp
+c:\users\saris\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(85): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(137): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(166): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(167): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(168): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(192): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(193): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(194): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(231): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(240): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(249): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(258): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(299): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(308): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(317): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\saris\documents\hew\hew_sample04\uma.cpp(326): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  コードを生成中...
+  HEW_Sample04.vcxproj -> C:\Users\saris\Documents\HEW\Debug\HEW_Sample04.exe

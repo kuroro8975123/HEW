@@ -38,7 +38,14 @@ SOUNDPARAM g_aParam[SOUND_LABEL_MAX] =
 	{(char *)"asset/SE/shot000.wav", 0},		// ’e”­ŽË‰¹
 	{(char *)"asset/SE/hit000.wav", 0},			// ƒqƒbƒg‰¹
 	{(char *)"asset/SE/explosion000.wav", 0},	// ”š”­‰¹
-	{(char *)"asset/SE/swim/kicking_water.mp3",0},
+	{(char *)"asset/SE/swimming.wav",0},
+	{(char *)"asset/SE/kettei.wav",0 },
+	{(char *)"asset/SE/atari.wav",0 },
+	{(char *)"asset/SE/count.wav",0 },
+	{(char *)"asset/SE/start.wav",0 },
+	{(char *)"asset/SE/timeout.wav",0 },
+	{(char *)"asset/SE/awa.wav",0 },
+	{(char *)"asset/SE/hakushu.wav",0 },
 };
 
 //=============================================================================

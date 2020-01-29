@@ -9,6 +9,7 @@
 #include "enemy.h"
 
 #include "scene_playerselect.h"
+#include "sound.h"
 
 int Select_1P;
 int Select_2P;
@@ -202,21 +203,26 @@ void P_Select_Update(void)
 	{
 		if (kaziki.flag)
 		{
+			PlaySound(SOUND_LABEL_SE_KETTEI);
 			Select_1P = 1;
 			Select_Count = 1;
+
 		}
 		else if (kuzira.flag)
 		{
+			PlaySound(SOUND_LABEL_SE_KETTEI);
 			Select_1P = 2;
 			Select_Count = 1;
 		}
 		else if (iruka.flag)
 		{
+			PlaySound(SOUND_LABEL_SE_KETTEI);
 			Select_1P = 3;
 			Select_Count = 1;
 		}
 		else if (uma.flag)
 		{
+			PlaySound(SOUND_LABEL_SE_KETTEI);
 			Select_1P = 4;
 			Select_Count = 1;
 		}
@@ -225,21 +231,25 @@ void P_Select_Update(void)
 	{
 		if (kaziki.flag)
 		{
+			PlaySound(SOUND_LABEL_SE_KETTEI);
 			Select_2P = 1;
 			Select_Count = 2;
 		}
 		else if (kuzira.flag)
 		{
+			PlaySound(SOUND_LABEL_SE_KETTEI);
 			Select_2P = 2;
 			Select_Count = 2;
 		}
 		else if (iruka.flag)
 		{
+			PlaySound(SOUND_LABEL_SE_KETTEI);
 			Select_2P = 3;
 			Select_Count = 2;
 		}
 		else if (uma.flag)
 		{
+			PlaySound(SOUND_LABEL_SE_KETTEI);
 			Select_2P = 4;
 			Select_Count = 2;
 		}

@@ -2,6 +2,7 @@
 #include "scene.h"
 #include "fade.h"
 #include "main.h"
+#include "sound.h"
 #include <d3d9.h>
 
 static bool g_bEnd = false;
@@ -23,6 +24,7 @@ void Title_Update(void)
 {
 	if( !g_bEnd ) { 
 		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(2, BUTTON_A)) {
+			PlaySound(SOUND_LABEL_SE_AWA);
 			Fade_Start(true, 30, D3DCOLOR_RGBA(255, 255, 255, 255));
 			g_bEnd = true;
 		}
