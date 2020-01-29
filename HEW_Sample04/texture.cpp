@@ -27,7 +27,7 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/1.png", 800, 400 },								//11.カウントダウン
 	{ "asset/texture/START.png", 2048, 1024 },						//12.カウントダウン
 	{ "asset/texture/button.png", 400, 400 },						//13.ボタン
-	{ "asset/texture/pressanykey.png", 912, 512},				//14.ボタン
+	{ "asset/texture/pressanykey.png", 1024, 512},				//14.ボタン
 	{ "asset/texture/chara_select.png", 512, 288 },				//15.キャラクターセレクト
 	{ "asset/texture/title2.png", SCREEN_WIDTH, SCREEN_HEIGHT },						//16.キャラクターセレクト
 	{ "asset/texture/chara_select.png", 712, 400 },				//17.キャラクターを選択してください

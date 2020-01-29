@@ -5,10 +5,7 @@
 #include "texture.h"
 #include "fade.h"
 #include "enemy.h"
-<<<<<<< HEAD
-=======
 
->>>>>>> 4bf285b112f60a0a2b0038e6dca04e09f93992da
 #include "enemy.h"
 
 #include "scene_playerselect.h"

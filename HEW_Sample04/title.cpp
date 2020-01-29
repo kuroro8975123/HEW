@@ -30,8 +30,7 @@ void Title_Update(void)
 	else{
 		if( !Fade_IsFade() ) {
 			//Scene_Change(SCENE_INDEX_TUTORIAL);
-			//Scene_Change(SCENE_INDEX_P_SELECT);
-			Scene_Change(SCENE_INDEX_GAME);
+			Scene_Change(SCENE_INDEX_P_SELECT);
 		}
 	}
 
@@ -43,7 +42,7 @@ void Title_Draw(void)
 	
 	Sprite_Draw(TEXTURE_INDEX_TITLE2, 0.0f, 0.0f);
 	Sprite_Draw(TEXTURE_INDEX_TITLE1, 0.0f, 0.0f);
-	Sprite_Draw(TEXTURE_INDEX_PRESS, SCREEN_WIDTH / 3 - 150.0f, SCREEN_HEIGHT / 3);
+	Sprite_Draw(TEXTURE_INDEX_PRESS, SCREEN_WIDTH / 3 - 200.0f, SCREEN_HEIGHT / 3);
 
 	//Sprite_Draw(TEXTURE_INDEX_BG, 0.0f, y);
 	//Sprite_Draw(TEXTURE_INDEX_BG, 0.0f, -500 + y);
