@@ -32,20 +32,13 @@ DWORD g_aSizeAudio[SOUND_LABEL_MAX] = {};					// オーディオデータサイズ
 // 各音素材のパラメータ
 SOUNDPARAM g_aParam[SOUND_LABEL_MAX] =
 {
-	{"asset/BGM/bgm000.wav", -1},			// BGM0
-	{"asset/BGM/bgm001.wav", -1},			// BGM1
-	{"asset/BGM/bgm002.wav", -1},			// BGM2
-	{"asset/SE/shot000.wav", 0},			// 弾発射音
-	{"asset/SE/hit000.wav", 0},				// ヒット音
-	{"asset/SE/explosion000.wav",0},		// 爆発音
-	{"asset/SE/swimming.wav",0},			// 泳ぐ音
-	{"asset/SE/kettei.wav",0},				// 決定音
-	{"asset/SE/atari.wav",0 },				// 成功音
-	{"asset/SE/count.wav",0 },				// カウントダウン（3　2　1）
-	{"asset/SE/start.wav",0 },				// スタート音
-	{"asset/SE/timeout.wav",0 },			// ゴール音
-	{"asset/SE/awa.wav",0 },				// 泡
-	{"asset/SE/hakushu.wav",0 },			// 拍手
+	{(char *)"asset/BGM/bgm000.wav", -1},		// BGM0
+	{(char *)"asset/BGM/bgm001.wav", -1},		// BGM1
+	{(char *)"asset/BGM/bgm002.wav", -1},		// BGM2
+	{(char *)"asset/SE/shot000.wav", 0},		// 弾発射音
+	{(char *)"asset/SE/hit000.wav", 0},			// ヒット音
+	{(char *)"asset/SE/explosion000.wav", 0},	// 爆発音
+	{(char *)"asset/SE/swim/kicking_water.mp3",0},
 };
 
 //=============================================================================

@@ -11,7 +11,6 @@
 #include "Kujira.h"
 #include "Uma.h"
 #include "scene_playerselect.h"
-#include "sound.h"
 
 #define NOMAL_SCR		(100)	//ÉRÅ[ÉXÇÃí∑Ç≥
 #define END_SCR			(NOMAL_SCR + 1)
@@ -101,7 +100,6 @@ void Game_Finalize(void)
 	Uma_Finalize();
 	//Enemy_Finalize();
 	Timer_Uninit();
-	StopSound();
 }
 
 void Game_Update(void)
@@ -225,22 +223,18 @@ void Game_Draw(void)
 	if (CountDown < 60)
 	{
 		Sprite_Draw(TEXTURE_INDEX_3, 600.0f, 320.0f);
-		PlaySound(SOUND_LABEL_SE_COUNT);
 	}
 	if (CountDown > 60 && CountDown < 120)
 	{
 		Sprite_Draw(TEXTURE_INDEX_2, 600.0f, 320.0f);
-		PlaySound(SOUND_LABEL_SE_COUNT);
 	}
 	if (CountDown > 120 && CountDown < 180)
 	{
 		Sprite_Draw(TEXTURE_INDEX_1, 600.0f, 320.0f);
-		PlaySound(SOUND_LABEL_SE_COUNT);
 	}
 	if (CountDown > 180 && CountDown < 240)
 	{
 		Sprite_Draw(TEXTURE_INDEX_START, -10.0f, 30.0f);
-		PlaySound(SOUND_LABEL_SE_START);
 	}
 
 }

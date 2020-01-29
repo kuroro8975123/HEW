@@ -6,7 +6,6 @@
 #include "input.h"
 #include "texture.h"
 #include "sprite.h"
-#include "sound.h"
 #include <time.h>
 
 #define _USE_MATH_DEFINES
@@ -200,7 +199,6 @@ bool Initialize(HINSTANCE hInst)
 	//全テクスチャファイルのロード
 	Texture_Load();
 
-	InitSound(g_hWnd);
 	Fade_Initialize();
 	Scene_Initialize(SCENE_INDEX_TITLE);
 
@@ -211,9 +209,6 @@ void Finalize(void)
 {
 	// テクスチャの解放
 	Texture_Release();
-
-	// サウンドの終了処理
-	UninitSound();
 
 	// DirectInputの終了処理
 	GamePad_Finalize();
