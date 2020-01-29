@@ -4,7 +4,7 @@
 #include "timer.h"
 #include "sprite.h"
 
-#define NOMAL_SCR		(100)	//コースの長さ
+#define NOMAL_SCR		(1)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 #define ANIME_PATTERN_MAX	7
 
@@ -110,7 +110,7 @@ void Kujira_Update_2P(void)
 	//プレイヤー
 	if (Count_2P_Kujira <= NOMAL_SCR)
 	{
-		Move_BG2_Kujira += 1.0;
+		Move_BG2_Kujira += 2.0;
 		Move_BG2_2P_Kujira_ += GetSpeed_2P_Kujira();
 		Move_BG2_2P_Kujira = (Move_BG2_Kujira + Move_BG2_2P_Kujira_);
 
@@ -166,19 +166,19 @@ void Kujira_Draw_1P(void)
 
 	if (kujira.button == 1 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 675, 50);
 	}
 	if (kujira.button == 2 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 675, 50);
 	}
 	if (kujira.button == 3 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 675, 50);
 	}
 	if (kujira.button == 4 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 675, 50);
 	}
 
 }
@@ -190,21 +190,21 @@ void Kujira_Draw_2P(void)
 
 	Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION,kujira_2P.pos.x, kujira_2P.pos.y, g_animCount * 100, 0, 100, 300);
 
-	if (kujira.button == 1 && kujira.button_flag)
+	if (kujira_2P.button == 1 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 50);
 	}
-	if (kujira.button == 2 && kujira.button_flag)
+	if (kujira_2P.button == 2 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 50);
 	}
-	if (kujira.button == 3 && kujira.button_flag)
+	if (kujira_2P.button == 3 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 50);
 	}
-	if (kujira.button == 4 && kujira.button_flag)
+	if (kujira_2P.button == 4 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 95, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 50);
 	}
 
 }

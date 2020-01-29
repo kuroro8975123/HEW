@@ -1,10 +1,25 @@
 <<<<<<< HEAD
-﻿  main.cpp
-c:\users\1\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
-c:\users\1\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
-  HEW_Sample04.vcxproj -> C:\Users\1\Documents\HEW\Debug\HEW_Sample04.exe
-=======
 ﻿  texture.cpp
 c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  title.cpp
+c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  コードを生成中...
   HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
->>>>>>> c18442c46a1f60fd0983b31cee829280e386b306
+=======
+<<<<<<< HEAD
+﻿  result.cpp
+c:\users\1\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+=======
+<<<<<<< HEAD
+﻿  title.cpp
+c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+﻿  Iruka.cpp
+>>>>>>> 21822360f01d39220425df45db55c5b76f0574ed
+c:\users\1\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  HEW_Sample04.vcxproj -> C:\Users\1\Documents\HEW\Debug\HEW_Sample04.exe
+>>>>>>> 4bf285b112f60a0a2b0038e6dca04e09f93992da
+>>>>>>> af40f59b16bb41d917e3295070eb04c358acceac
