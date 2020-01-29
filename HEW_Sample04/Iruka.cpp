@@ -3,6 +3,7 @@
 #include "input.h"
 #include "timer.h"
 #include "sprite.h"
+#include "sound.h"
 
 #define NOMAL_SCR		(100)	//ƒR[ƒX‚Ì’·‚³
 #define END_SCR			(NOMAL_SCR + 1)
@@ -141,6 +142,7 @@ void Iruka_Update_2P(void)
 		else if (Move_BG_2P_Iruka > (SCREEN_HEIGHT * 2 - 310))
 		{
 			if (Goal_2P_Iruka == false) {
+				//PlaySound(SOUND_LABEL_SE_GOAL);
 				Time_Minute_2P_Iruka = Timer_GetMinute();
 				Time_Second_2P_Iruka = Timer_GetSecond();
 			}
@@ -225,6 +227,7 @@ void Iruka_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_UP) || GamePad_IsPress(0, BUTTON_A))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			iruka.speed += 0.08;
 			iruka.button_flag = false;
 		}
@@ -233,6 +236,7 @@ void Iruka_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_RIGHT) || GamePad_IsPress(0, BUTTON_B))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			iruka.speed += 0.05;
 			iruka.button_flag = false;
 		}
@@ -241,6 +245,7 @@ void Iruka_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(0, BUTTON_X))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			iruka.speed += 0.03;
 			iruka.button_flag = false;
 		}
@@ -249,6 +254,7 @@ void Iruka_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_LEFT) || GamePad_IsPress(0, BUTTON_Y))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			iruka.speed += 0.01;
 			iruka.button_flag = false;
 		}

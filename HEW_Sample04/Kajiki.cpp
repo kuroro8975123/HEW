@@ -3,6 +3,7 @@
 #include "input.h"
 #include "timer.h"
 #include "sprite.h"
+#include "sound.h"
 
 #define NOMAL_SCR		(100)	//ƒR[ƒX‚Ì’·‚³
 #define END_SCR			(NOMAL_SCR + 1)
@@ -140,6 +141,7 @@ void Kajiki_Update_2P(void)
 		else if (Move_BG_2P_Kajiki > (SCREEN_HEIGHT * 2 - 310))
 		{
 			if (Goal_2P_Kajiki == false) {
+				//PlaySound(SOUND_LABEL_SE_GOAL);
 				Time_Minute_2P_Kajiki = Timer_GetMinute();
 				Time_Second_2P_Kajiki = Timer_GetSecond();
 			}
@@ -286,6 +288,7 @@ void Kajiki_Button_2P(void)
 	{
 		if (Keyboard_IsPress(DIK_UP) || GamePad_IsPress(0, BUTTON_A))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			kajiki_2P.speed += 0.08;
 			kajiki_2P.button_flag = false;
 		}
@@ -294,6 +297,7 @@ void Kajiki_Button_2P(void)
 	{
 		if (Keyboard_IsPress(DIK_RIGHT) || GamePad_IsPress(0, BUTTON_B))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			kajiki_2P.speed += 0.05;
 			kajiki_2P.button_flag = false;
 		}
@@ -302,6 +306,7 @@ void Kajiki_Button_2P(void)
 	{
 		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(0, BUTTON_X))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			kajiki_2P.speed += 0.03;
 			kajiki_2P.button_flag = false;
 		}
@@ -310,6 +315,7 @@ void Kajiki_Button_2P(void)
 	{
 		if (Keyboard_IsPress(DIK_LEFT) || GamePad_IsPress(0, BUTTON_Y))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			kajiki_2P.speed += 0.01;
 			kajiki_2P.button_flag = false;
 		}

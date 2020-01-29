@@ -3,6 +3,7 @@
 #include "input.h"
 #include "timer.h"
 #include "sprite.h"
+#include "sound.h"
 
 #define NOMAL_SCR		(100)	//ƒR[ƒX‚Ì’·‚³
 #define END_SCR			(NOMAL_SCR + 1)
@@ -140,6 +141,7 @@ void Kujira_Update_2P(void)
 		else if (Move_BG2_2P_Kujira > (SCREEN_HEIGHT * 2 - 310))
 		{
 			if (Goal_2P_Kujira == false) {
+				//PlaySound(SOUND_LABEL_SE_GOAL);
 				Time_Minute_2P_Kujira = Timer_GetMinute();
 				Time_Second_2P_Kujira = Timer_GetSecond();
 			}
@@ -222,6 +224,7 @@ void Kujira_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_UP) || GamePad_IsPress(0, BUTTON_A))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			kujira.speed += 0.08;
 			kujira.button_flag = false;
 		}
@@ -230,6 +233,7 @@ void Kujira_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_RIGHT) || GamePad_IsPress(0, BUTTON_B))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			kujira.speed += 0.05;
 			kujira.button_flag = false;
 		}
@@ -238,6 +242,7 @@ void Kujira_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(0, BUTTON_X))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			kujira.speed += 0.03;
 			kujira.button_flag = false;
 		}
@@ -246,6 +251,7 @@ void Kujira_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_LEFT) || GamePad_IsPress(0, BUTTON_Y))
 		{
+			PlaySound(SOUND_LABEL_SE_ATARI);
 			kujira.speed += 0.01;
 			kujira.button_flag = false;
 		}

@@ -4,13 +4,8 @@
 #include "sprite.h"
 #include "texture.h"
 #include "fade.h"
-<<<<<<< HEAD
 #include "enemy.h"
-=======
-
 #include "enemy.h"
-
->>>>>>> c18442c46a1f60fd0983b31cee829280e386b306
 #include "scene_playerselect.h"
 
 int Select_1P;

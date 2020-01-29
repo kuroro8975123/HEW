@@ -3,12 +3,10 @@
 #include "fade.h"
 #include "main.h"
 #include <d3d9.h>
+#include "sound.h"
 
-<<<<<<< HEAD
 static bool g_bEnd = false;
-=======
 
->>>>>>> c18442c46a1f60fd0983b31cee829280e386b306
 #include "sprite.h"
 //#include "texture.h"
 
@@ -20,12 +18,14 @@ void Title_Initialize(void)
 
 void Title_Finalize(void)
 {
+	//StopSound();
 }
 
 void Title_Update(void)
 {
 	if( !g_bEnd ) { 
 		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(2, BUTTON_A)) {
+			PlaySound(SOUND_LABEL_SE_AWA);
 			Fade_Start(true, 30, D3DCOLOR_RGBA(255, 255, 255, 255));
 			g_bEnd = true;
 		}
