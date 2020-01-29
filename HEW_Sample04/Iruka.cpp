@@ -64,13 +64,13 @@ void Iruka_Update_1P(void)
 		Move_BG_1P_Iruka_ += GetSpeed_1P_Iruka();
 		Move_BG_1P_Iruka = (Move_BG1_Iruka + Move_BG_1P_Iruka_);
 
-		if (Move_BG1_Iruka + Move_BG_1P_Iruka_ > (SCREEN_HEIGHT + 150))
+		if (Move_BG1_Iruka + Move_BG_1P_Iruka_ > (SCREEN_HEIGHT + 300))
 		{
 			Move_BG1_Iruka = 150;
 			Move_BG_1P_Iruka_ = 150;
 			Count_1P_Iruka++;
 		}
-		if (Move_BG_1P_Iruka > (SCREEN_HEIGHT * 2) + 300)
+		if (Move_BG_1P_Iruka > (SCREEN_HEIGHT * 2) +100)
 		{
 			Move_BG_1P_Iruka = 300;
 
