@@ -24,6 +24,7 @@
     <ClCompile Include="title.cpp" />
     <ClCompile Include="Uma.cpp" />
     <ClCompile Include="worldrecord.cpp" />
+    <ClCompile Include="worldrecord_2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="collision.h" />
@@ -50,5 +51,6 @@
     <ClInclude Include="title.h" />
     <ClInclude Include="Uma.h" />
     <ClInclude Include="worldrecord.h" />
+    <ClInclude Include="worldrecord_2.h" />
   </ItemGroup>
 </Project>

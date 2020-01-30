@@ -38,6 +38,10 @@ void Title_Update(void)
 		}
 	}
 
+	if (Keyboard_IsTrigger(DIK_R) || GamePad_IsTrigger(0, BUTTON_A)) {
+		Scene_Change(SCENE_INDEX_WORLDRECORD_2);
+	}
+
 }
 
 void Title_Draw(void)
