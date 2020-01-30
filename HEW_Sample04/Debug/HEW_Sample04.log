@@ -1,5 +1,4 @@
-﻿  game.cpp
-c:\users\saris\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
-c:\users\saris\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
-c:\users\saris\documents\hew\hew_sample04\game.cpp(29): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'PHASE_INDEX' の左辺を無視します。
-  HEW_Sample04.vcxproj -> C:\Users\saris\Documents\HEW\Debug\HEW_Sample04.exe
+﻿  result.cpp
+c:\users\tomo0105\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\tomo0105\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  HEW_Sample04.vcxproj -> C:\Users\tomo0105\Documents\HEW\Debug\HEW_Sample04.exe

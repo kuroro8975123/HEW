@@ -58,7 +58,7 @@ void P_Select_Update(void)
 		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_LB))
 		{
 		}
-		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsPress(2, BUTTON_RB))
+		if (Keyboard_IsTrigger(DIK_E) || GamePad_IsPress(2, BUTTON_RB))
 		{
 			PlaySound(SOUND_LABEL_SE_KASORU);
 			Left = true;
@@ -82,13 +82,13 @@ void P_Select_Update(void)
 	}
 	if (kuzira.flag)
 	{
-		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_LB))
+		if (Keyboard_IsTrigger(DIK_Q) || GamePad_IsTrigger(2, BUTTON_LB))
 		{
 			PlaySound(SOUND_LABEL_SE_KASORU);
 			Right = true;
 
 		}
-		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsPress(2, BUTTON_RB))
+		if (Keyboard_IsTrigger(DIK_E) || GamePad_IsPress(2, BUTTON_RB))
 		{
 			PlaySound(SOUND_LABEL_SE_KASORU);
 			Left = true;
@@ -129,13 +129,13 @@ void P_Select_Update(void)
 	}
 	if (iruka.flag)
 	{
-		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_LB))
+		if (Keyboard_IsTrigger(DIK_Q) || GamePad_IsTrigger(2, BUTTON_LB))
 		{
 			PlaySound(SOUND_LABEL_SE_KASORU);
 			Right = true;
 
 		}
-		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsPress(2, BUTTON_RB))
+		if (Keyboard_IsTrigger(DIK_E) || GamePad_IsPress(2, BUTTON_RB))
 		{
 			PlaySound(SOUND_LABEL_SE_KASORU);
 			Left = true;
@@ -176,7 +176,7 @@ void P_Select_Update(void)
 	}
 	if (uma.flag)
 	{
-		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_LB))
+		if (Keyboard_IsTrigger(DIK_Q) || GamePad_IsTrigger(2, BUTTON_LB))
 		{
 			PlaySound(SOUND_LABEL_SE_KASORU);
 			Right = true;
@@ -205,7 +205,7 @@ void P_Select_Update(void)
 
 
 
-	if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_A))
+	if (Keyboard_IsTrigger(DIK_B) || GamePad_IsTrigger(2, BUTTON_A))
 	{
 		if (kaziki.flag)
 		{
@@ -233,7 +233,7 @@ void P_Select_Update(void)
 			Select_Count = 1;
 		}
 	}
-	if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_B) && Select_Count == 1)
+	if (Keyboard_IsTrigger(DIK_N) || GamePad_IsTrigger(2, BUTTON_B) && Select_Count == 1)
 	{
 		if (kaziki.flag)
 		{
