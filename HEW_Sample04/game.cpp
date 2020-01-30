@@ -57,11 +57,7 @@ void Game_Initialize(void)
 	Player_2P = Get_Select_2P();
 	if (Player_1P == 1)
 	{
-<<<<<<< HEAD
 	    Kajiki_Initialize_1P(675,300);
-=======
-<<<<<<< HEAD
-		Kajiki_Initialize_1P(675, 300);
 	}
 	if (Player_1P == 2)
 	{
@@ -74,9 +70,7 @@ void Game_Initialize(void)
 	if (Player_1P == 4)
 	{
 		Uma_Initialize_1P(675, 300);
-=======
-	    Kajiki_Initialize_1P(690,600);
->>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
+	    //Kajiki_Initialize_1P(690,600);
 	}
 	if (Player_1P == 2)
 	{
@@ -88,20 +82,13 @@ void Game_Initialize(void)
 	}
 	if (Player_1P == 4)
 	{
-<<<<<<< HEAD
 	    Uma_Initialize_1P(675,300);
-=======
-	    Uma_Initialize_1P(690,600);
->>>>>>> 30c7be4363dd7eb0345bf129664dd2c93b975c90
->>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
+	   // Uma_Initialize_1P(690,600);
 	}
 	if (Player_2P == 1)
 	{
-<<<<<<< HEAD
 	    Kajiki_Initialize_2P(1175,300);
-=======
-<<<<<<< HEAD
-		Kajiki_Initialize_2P(1175, 300);
+		//Kajiki_Initialize_2P(1175, 300);
 	}
 	if (Player_2P == 2)
 	{
@@ -114,9 +101,7 @@ void Game_Initialize(void)
 	if (Player_2P == 4)
 	{
 		Uma_Initialize_2P(1175, 300);
-=======
-	    Kajiki_Initialize_2P(1190,600);
->>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
+	    //Kajiki_Initialize_2P(1190,600);
 	}
 	if (Player_2P == 2)
 	{
@@ -128,12 +113,8 @@ void Game_Initialize(void)
 	}
 	if (Player_2P == 4)
 	{
-<<<<<<< HEAD
 	    Uma_Initialize_2P(1175,300);
-=======
-	    Uma_Initialize_2P(1190,600);
->>>>>>> 30c7be4363dd7eb0345bf129664dd2c93b975c90
->>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
+	    //Uma_Initialize_2P(1190,600);
 	}
 
 

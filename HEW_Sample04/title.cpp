@@ -5,6 +5,8 @@
 #include "sound.h"
 #include <d3d9.h>
 
+#include "timer.h"
+
 static bool g_bEnd = false;
 
 #include "sprite.h"

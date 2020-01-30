@@ -1,17 +1,9 @@
 #include "input.h"
 #include "scene.h"
 #include "sprite.h"
-//#include "texture.h"
 #include "fade.h"
 #include "main.h"
-//#include "game.h"
-//#include "score_draw.h"
-//#include "number.h"
 #include "timer.h"
-//#include "Kajiki.h"
-//#include "Iruka.h"
-//#include "Kujira.h"
-//#include "Uma.h"
 #include "worldrecord.h"
 #include "worldrecord_2.h"
 
@@ -20,8 +12,7 @@ typedef struct {
 	int Sec;
 }RECORD;
 
-static RECORD	g_Wrecod[5];			//プレイヤーレコード（七人分）
-static int		tempMin, tempSec;		//タイム一時格納変数
+static RECORD	g_Wrecord[5];			//プレイヤーレコード（七人分）
 
 void WorldRecord_2_Initialize(void)
 {
@@ -29,8 +20,8 @@ void WorldRecord_2_Initialize(void)
 
 	for (int i = 0; i < 5; i++)
 	{
-		g_Wrecod[i].Min = Get_WorldMin(i);
-		g_Wrecod[i].Sec = Get_WorldSec(i);
+		g_Wrecord[i].Min = Get_WorldMin(i);
+		g_Wrecord[i].Sec = Get_WorldSec(i);
 	}
 
 }
@@ -44,11 +35,6 @@ void WorldRecord_2_Update(void)
 	if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
 		Scene_Change(SCENE_INDEX_TITLE);
 	}
-
-	//1位タイム表示
-	Minute_Draw(800, 300, g_Wrecod[0].Min, 2, true, 1.5f, 1.5f);	//1位分数
-	Second_Draw(960, 300, g_Wrecod[0].Sec, 2, true, 1.5f, 1.5f);	//1位秒数
-
 }
 
 void WorldRecord_2_Draw()
@@ -60,26 +46,18 @@ void WorldRecord_2_Draw()
 	Sprite_Draw(TEXTURE_INDEX_4TH, 250.0f, 550.0f);
 	Sprite_Draw(TEXTURE_INDEX_5TH, 1050.0f, 550.0f);
 
-	int x = 0;
+	Minute_Draw(750, 250, g_Wrecord[0].Min, 2, true, 1.5f, 1.5f);	//1位分数
+	Second_Draw(950, 250, g_Wrecord[0].Sec, 2, true, 1.5f, 1.5f);	//1位秒数
 
-	//for (int i = 0; i < 4; i++)
-	//{
-	//	for (int j = 1+x; j < 4; j++)
-	//	{
-	//		if (Player[i].Second > Player[j].Second)
-	//		{
-	//			if (Player[i].Minute >= Player[j].Minute)
-	//			{
-	//				tmpS = Player[i].Second;
-	//				Player[i].Second = Player[j].Second;
-	//				Player[j].Second = tmpS;
+	Minute_Draw(440, 425, g_Wrecord[1].Min, 2, true);				//2位分数
+	Second_Draw(600, 425, g_Wrecord[1].Sec, 2, true);				//2位秒数
 
-	//				tmpM = Player[i].Minute;
-	//				Player[i].Minute = Player[j].Minute;
-	//				Player[j].Minute = tmpM;
-	//			}
-	//		}
-	//	}
-	//	x++;
-	
+	Minute_Draw(1240, 425, g_Wrecord[2].Min, 2, true);				//3位分数
+	Second_Draw(1400, 425, g_Wrecord[2].Sec, 2, true);				//3位秒数
+
+	Minute_Draw(440, 625, g_Wrecord[3].Min, 2, true);				//4位分数
+	Second_Draw(600, 625, g_Wrecord[3].Sec, 2, true);				//4位秒数
+
+	Minute_Draw(1240, 625, g_Wrecord[4].Min, 2, true);				//5位分数
+	Second_Draw(1400, 625, g_Wrecord[4].Sec, 2, true);				//5位秒数
 }
