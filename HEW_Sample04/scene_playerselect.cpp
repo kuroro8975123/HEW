@@ -68,13 +68,7 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 			//if (kuzira.pos.x >= 550)
-=======
->>>>>>> 37ffc62761056abfff0589254b4282c60930ebe5
->>>>>>> fe1cbd37ae95941dc848217399d83dd128624aab
 			if (kuzira.pos.x > 300)
 			{
 				kaziki.pos.x -= 50;
@@ -104,11 +98,7 @@ void P_Select_Update(void)
 			Left = true;
 		}
 		if (Left)
-<<<<<<< HEAD
-		{			
-=======
 		{
->>>>>>> fe1cbd37ae95941dc848217399d83dd128624aab
 			if (iruka.pos.x >= 200)
 			{
 				kaziki.pos.x -= 50;
@@ -156,10 +146,6 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-<<<<<<< HEAD
-
-=======
->>>>>>> fe1cbd37ae95941dc848217399d83dd128624aab
 			if (uma.pos.x >= 300)
 			{
 				kaziki.pos.x -= 50;
@@ -288,7 +274,6 @@ void P_Select_Update(void)
 	}
 	if (Select_Count == 2)
 	{
-		//Scene_Change(SCENE_INDEX_RESULT);
 		Scene_Change(SCENE_INDEX_GAME);
 	}
 }
