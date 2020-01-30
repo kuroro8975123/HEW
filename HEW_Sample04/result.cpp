@@ -116,18 +116,12 @@ void Result_Finalize(void)
 
 void Result_Update(void)
 {
-<<<<<<< HEAD
-	if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
 
-=======
-	if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
->>>>>>> d59f43ab6cdc254a145301f671e2538b95d8edf4
-		Scene_Change(SCENE_INDEX_WORLDRECORD);
-		PlaySound(SOUND_LABEL_SE_AWA);
-		Scene_Change(SCENE_INDEX_TITLE);
-	}
-
-
+		if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
+			Scene_Change(SCENE_INDEX_WORLDRECORD);
+			PlaySound(SOUND_LABEL_SE_AWA);
+			//Scene_Change(SCENE_INDEX_TITLE);
+		}
 }
 
 void Result_Draw()

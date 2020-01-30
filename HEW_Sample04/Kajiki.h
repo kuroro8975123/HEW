@@ -41,3 +41,6 @@ int Minute_1P_Kajiki();
 int Minute_2P_Kajiki();
 int Second_1P_Kajiki();
 int Second_2P_Kajiki();
+float Kajiki_Speed_1P();
+float Kajiki_Speed_2P();
+

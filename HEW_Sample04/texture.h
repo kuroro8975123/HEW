@@ -53,6 +53,8 @@ typedef enum TextureIndex
 	TEXTURE_INDEX_3RD,          //3rd
 	TEXTURE_INDEX_4TH,          //4th
 	TEXTURE_INDEX_5TH,          //5th
+	TEXTURE_INDEX_1P_MAP,          //1P
+	TEXTURE_INDEX_2P_MAP,          //1P
 
 	TEXTURE_INDEX_MAX
 };

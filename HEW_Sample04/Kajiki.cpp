@@ -110,6 +110,7 @@ void Kajiki_Update_1P(void)
 	}
 	Kajiki_Button_1P();
 
+
 	g_animCount += 1;
 
 	if (g_animCount > ANIME_PATTERN_MAX)
@@ -175,7 +176,6 @@ void Kajiki_Draw_1P(void)
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 250) + Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT -50);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT -50);
-
 	Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, kajiki.pos.x, kajiki.pos.y, g_animCount * 100, 0, 100, 300);
 
 	if (kajiki.button == 1 && kajiki.button_flag)
@@ -403,4 +403,13 @@ int Second_1P_Kajiki()
 int Second_2P_Kajiki()
 {
 	return Time_Second_2P_Kajiki;
+}
+
+float Kajiki_Speed_1P()
+{
+	return Move_BG1_1P_Kajiki;
+}
+float Kajiki_Speed_2P()
+{
+	return Move_BG_2P_Kajiki;
 }

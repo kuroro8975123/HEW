@@ -63,6 +63,8 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/3rd.png",175, 175 },					//46.3rd
 	{ "asset/texture/4th.png",175, 175 },					//47.4th
 	{ "asset/texture/5th.png",175, 175 },					//48.5th
+	{ "asset/texture/1P.png",75, 55 },					//42.1P
+	{ "asset/texture/2P.png",75, 55 },					//42.1P
 
 };
 
