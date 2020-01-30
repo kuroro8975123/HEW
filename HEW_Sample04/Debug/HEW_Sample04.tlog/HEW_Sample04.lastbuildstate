@@ -1,6 +1,2 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.16299.0
-<<<<<<< HEAD
-Debug|Win32|C:\Users\kuror\OneDrive\Documents\HEW\|
-=======
-Debug|Win32|C:\Users\1\Documents\HEW\|
->>>>>>> d59f43ab6cdc254a145301f671e2538b95d8edf4
+Debug|Win32|C:\Users\saris\Documents\HEW\|
