@@ -5,7 +5,10 @@
 #include "texture.h"
 #include "fade.h"
 #include "enemy.h"
+<<<<<<< HEAD
+=======
 
+>>>>>>> fec8e74568152b1f30defe052497a7c61487d3c2
 #include "enemy.h"
 
 #include "scene_playerselect.h"
@@ -30,17 +33,17 @@ void P_Select_Initialize(void)
 	Select_1P = 0;
 	Select_2P = 0;
 	Select_Count = 0;
-	kaziki.pos.x = 450;
-	kaziki.pos.y = 100;
+	kaziki.pos.x = 200;
+	kaziki.pos.y = 0;
 	kaziki.flag = true;
-	kuzira.pos.x = 450 + SCREEN_WIDTH;
-	kuzira.pos.y = 100;
+	kuzira.pos.x = 100 + SCREEN_WIDTH;
+	kuzira.pos.y = 0;
 	kuzira.flag = false;
-	iruka.pos.x = (450 + (SCREEN_WIDTH * 2));
-	iruka.pos.y = 100;
+	iruka.pos.x = (150 + (SCREEN_WIDTH * 2));
+	iruka.pos.y = -50;
 	iruka.flag = false;
-	uma.pos.x = (450 + (SCREEN_WIDTH * 3));
-	uma.pos.y = 100;
+	uma.pos.x = (200 + (SCREEN_WIDTH * 3));
+	uma.pos.y = 0;
 	uma.flag = false;
 	Select = false;
 	Left = false;
@@ -65,7 +68,11 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-			if (kuzira.pos.x > 550)
+<<<<<<< HEAD
+			if (kuzira.pos.x >= 550)
+=======
+			if (kuzira.pos.x > 300)
+>>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -95,7 +102,11 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-			if (iruka.pos.x > 550)
+<<<<<<< HEAD
+			if (iruka.pos.x >= 550)
+=======
+			if (iruka.pos.x > 200)
+>>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -111,7 +122,11 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-			if (kaziki.pos.x < 550)
+<<<<<<< HEAD
+			if (kaziki.pos.x <= 550)
+=======
+			if (kaziki.pos.x < 200)
+>>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -142,7 +157,11 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-			if (uma.pos.x > 550)
+<<<<<<< HEAD
+			if (uma.pos.x >= 550)
+=======
+			if (uma.pos.x > 300)
+>>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -158,7 +177,11 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-			if (kuzira.pos.x < 550)
+<<<<<<< HEAD
+			if (kuzira.pos.x <= 550)
+=======
+			if (kuzira.pos.x < 300)
+>>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -187,7 +210,11 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-			if (iruka.pos.x < 550)
+<<<<<<< HEAD
+			if (iruka.pos.x <= 550)
+=======
+			if (iruka.pos.x < 200)
+>>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -280,7 +307,6 @@ void P_Select_Draw(void)
 	Sprite_Draw(TEXTURE_INDEX_KUJIRA_SELECT, kuzira.pos.x, kuzira.pos.y);
 	Sprite_Draw(TEXTURE_INDEX_IRUKA_SELECT, iruka.pos.x, iruka.pos.y);
 	Sprite_Draw(TEXTURE_INDEX_UMA_SELECT, uma.pos.x, uma.pos.y);
-
 }
 
 

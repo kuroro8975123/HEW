@@ -64,30 +64,30 @@ void Kujira_Update_1P(void)
 		Move_BG_1P_Kujira_ += GetSpeed_1P_Kujira();
 		Move_BG_1P_Kujira = (Move_BG1_Kujira + Move_BG_1P_Kujira_);
 
-		if (Move_BG1_Kujira + Move_BG_1P_Kujira_ > (SCREEN_HEIGHT + 150))
+		if (Move_BG1_Kujira + Move_BG_1P_Kujira_ > (SCREEN_HEIGHT + 250))
 		{
-			Move_BG1_Kujira = 150;
-			Move_BG_1P_Kujira_ = 150;
+			Move_BG1_Kujira = 250;
+			Move_BG_1P_Kujira_ = 250;
 			Count_1P_Kujira++;
 		}
-		if (Move_BG_1P_Kujira > (SCREEN_HEIGHT * 2) + 300)
+		if (Move_BG_1P_Kujira > (SCREEN_HEIGHT * 2) + 500)
 		{
-			Move_BG_1P_Kujira = 300;
+			Move_BG_1P_Kujira = 500;
 
 		}
 	}
 	else if (Count_1P_Kujira >= END_SCR)
 	{
-		if (Move_BG_1P_Kujira_ + Move_BG1_Kujira < (SCREEN_HEIGHT * 2 - 310))
+		if (Move_BG_1P_Kujira_ + Move_BG1_Kujira < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_1P_Kujira_ += GetSpeed_1P_Kujira();
 			Move_BG1_Kujira += 0.1;
 		}
-		if (Move_BG_1P_Kujira < (SCREEN_HEIGHT * 2 - 310))
+		if (Move_BG_1P_Kujira < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_1P_Kujira = (Move_BG_1P_Kujira_ + Move_BG1_Kujira);
 		}
-		else if (Move_BG_1P_Kujira > (SCREEN_HEIGHT * 2 - 310))
+		else if (Move_BG_1P_Kujira > (SCREEN_HEIGHT * 2 - 510))
 		{
 			if (Goal_1P_Kujira == false) {
 				Time_Minute_1P_Kujira = Timer_GetMinute();
@@ -116,30 +116,30 @@ void Kujira_Update_2P(void)
 		Move_BG2_2P_Kujira_ += GetSpeed_2P_Kujira();
 		Move_BG2_2P_Kujira = (Move_BG2_Kujira + Move_BG2_2P_Kujira_);
 
-		if (Move_BG2_Kujira + Move_BG2_2P_Kujira_ > (SCREEN_HEIGHT + 150))
+		if (Move_BG2_Kujira + Move_BG2_2P_Kujira_ > (SCREEN_HEIGHT + 250))
 		{
-			Move_BG2_Kujira = 150;
-			Move_BG2_2P_Kujira_ = 150;
+			Move_BG2_Kujira = 250;
+			Move_BG2_2P_Kujira_ = 250;
 			Count_2P_Kujira++;
 		}
-		if (Move_BG2_2P_Kujira > (SCREEN_HEIGHT * 2) + 300)
+		if (Move_BG2_2P_Kujira > (SCREEN_HEIGHT * 2) + 500)
 		{
-			Move_BG2_2P_Kujira = 300;
+			Move_BG2_2P_Kujira = 500;
 
 		}
 	}
 	else if (Count_2P_Kujira >= END_SCR)
 	{
-		if (Move_BG2_2P_Kujira_ + Move_BG2_Kujira < (SCREEN_HEIGHT * 2 - 310))
+		if (Move_BG2_2P_Kujira_ + Move_BG2_Kujira < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG2_2P_Kujira_ += GetSpeed_2P_Kujira();
 			Move_BG2_Kujira += 0.1;
 		}
-		if (Move_BG2_2P_Kujira < (SCREEN_HEIGHT * 2 - 310))
+		if (Move_BG2_2P_Kujira < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG2_2P_Kujira = (Move_BG2_2P_Kujira_ + Move_BG2_Kujira);
 		}
-		else if (Move_BG2_2P_Kujira > (SCREEN_HEIGHT * 2 - 310))
+		else if (Move_BG2_2P_Kujira > (SCREEN_HEIGHT * 2 - 510))
 		{
 			if (Goal_2P_Kujira == false) {
 				Time_Minute_2P_Kujira = Timer_GetMinute();
@@ -169,19 +169,19 @@ void Kujira_Draw_1P(void)
 
 	if (kujira.button == 1 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 675, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 675, 80);
 	}
 	if (kujira.button == 2 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 675, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 675, 80);
 	}
 	if (kujira.button == 3 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 675, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 675, 80);
 	}
 	if (kujira.button == 4 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 675, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 675, 80);
 	}
 
 }
@@ -193,21 +193,21 @@ void Kujira_Draw_2P(void)
 
 	Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION,kujira_2P.pos.x, kujira_2P.pos.y, g_animCount * 100, 0, 100, 300);
 
-	if (kujira_2P.button == 1 && kujira.button_flag)
+	if (kujira_2P.button == 1 && kujira_2P.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 80);
 	}
-	if (kujira_2P.button == 2 && kujira.button_flag)
+	if (kujira_2P.button == 2 && kujira_2P.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 80);
 	}
-	if (kujira_2P.button == 3 && kujira.button_flag)
+	if (kujira_2P.button == 3 && kujira_2P.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 80);
 	}
-	if (kujira_2P.button == 4 && kujira.button_flag)
+	if (kujira_2P.button == 4 && kujira_2P.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 80);
 	}
 
 }

@@ -66,8 +66,12 @@ void Result_Finalize(void)
 void Result_Update(void)
 {
 	if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
+<<<<<<< HEAD
+		Scene_Change(SCENE_INDEX_WORLDRECORD);
+=======
 		PlaySound(SOUND_LABEL_SE_AWA);
 		Scene_Change(SCENE_INDEX_TITLE);
+>>>>>>> fec8e74568152b1f30defe052497a7c61487d3c2
 	}
 	
 
@@ -76,7 +80,8 @@ void Result_Update(void)
 void Result_Draw()
 {
 	Sprite_Draw(TEXTURE_INDEX_RESULT, 0.0f, 0.0f);
-	//Sprite_Draw(TEXTURE_INDEX_GAME, 0.0f, 0.0f);
+	Sprite_Draw(TEXTURE_INDEX_WINNER, 250.0f, 350.0f);
+	Sprite_Draw(TEXTURE_INDEX_LOSER, 400.0f, 720.0f);
 
 	if (Player[0].Minute == Player[1].Minute)
 	{

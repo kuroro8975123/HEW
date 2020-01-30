@@ -1,4 +1,26 @@
+<<<<<<< HEAD
 ﻿  result.cpp
 c:\users\tomo0105\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
 c:\users\tomo0105\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
   HEW_Sample04.vcxproj -> C:\Users\tomo0105\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+﻿  texture.cpp
+c:\users\1\documents\hew\hew_sample04\texture.h(58): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  worldrecord.cpp
+c:\users\1\documents\hew\hew_sample04\scene.h(14): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\1\documents\hew\hew_sample04\texture.h(58): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  コードを生成中...
+  HEW_Sample04.vcxproj -> C:\Users\1\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+﻿  game.cpp
+c:\users\saris\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+=======
+﻿  scene_playerselect.cpp
+>>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
+c:\users\saris\documents\hew\hew_sample04\scene.h(13): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\saris\documents\hew\hew_sample04\texture.h(48): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+  HEW_Sample04.vcxproj -> C:\Users\saris\Documents\HEW\Debug\HEW_Sample04.exe
+>>>>>>> fec8e74568152b1f30defe052497a7c61487d3c2
+>>>>>>> 8734d623311d6da38c716021a1744adf0903b58d

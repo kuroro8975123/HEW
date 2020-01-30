@@ -4,6 +4,7 @@
 #include "scene_playerselect.h"
 #include "game.h"
 #include "result.h"
+#include "worldrecord.h"
 
 
 static SCENE_INDEX g_SceneIndex;
@@ -17,6 +18,7 @@ static const SceneFunc Initialize[] = {
 	P_Select_Initialize,
 	Game_Initialize,
 	Result_Initialize,
+	WorldRecord_Initialize,
 };
 
 
@@ -50,6 +52,10 @@ void Scene_Finalize(void)
 	case SCENE_INDEX_RESULT:
 		Result_Finalize();
 		break;
+	
+	case SCENE_INDEX_WORLDRECORD:
+		WorldRecord_Finalize();
+		break;
 	}
 }
 
@@ -76,6 +82,10 @@ void Scene_Update(void)
 	case SCENE_INDEX_RESULT:
 		Result_Update();
 		break;
+	
+	case SCENE_INDEX_WORLDRECORD:
+		WorldRecord_Update();
+		break;
 	}
 }
 
@@ -101,6 +111,10 @@ void Scene_Draw(void)
 
 	case SCENE_INDEX_RESULT:
 		Result_Draw();
+		break;
+	
+	case SCENE_INDEX_WORLDRECORD:
+		WorldRecord_Draw();
 		break;
 	}
 }
