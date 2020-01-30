@@ -47,10 +47,10 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/umauma.png",800, 300 },					//31.馬
 	{ "asset/texture/NEW_IRUKA.png",800, 300 },					//32.イルカ
 	{ "asset/texture/KUZIRA.png",800, 300 },					//33.クジラ
-	{ "asset/texture/ka.png",900, 900 },					//34.カジキセレクト
-	{ "asset/texture/kujira.png",900, 900 },					//35.クジラセレクト
-	{ "asset/texture/iruka_.png",900, 900 },					//36.イルカセレクト
-	{ "asset/texture/uma_.png",900, 900 },					//37.馬セレクト
+	{ "asset/texture/ka.png",1500, 1200 },					//34.カジキセレクト
+	{ "asset/texture/kujira.png",1500, 1100 },					//35.クジラセレクト
+	{ "asset/texture/iruka_.png",1700, 1100 },					//36.イルカセレクト
+	{ "asset/texture/uma_.png",1500, 1100 },					//37.馬セレクト
 	{ "asset/texture/left.png",450, 300 },					//38.左
 	{ "asset/texture/right.png",450, 300 },					//39.右
 	{ "asset/texture/winner.png",400, 400 },				//40.勝利

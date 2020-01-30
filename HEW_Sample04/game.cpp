@@ -44,6 +44,8 @@ int Player_1P;
 
 int Player_2P;
 
+int swimCount;
+
 void Game_Initialize(void)
 {
 	Player_1P = Get_Select_1P();
@@ -90,6 +92,8 @@ void Game_Initialize(void)
 	g_Score = 0;
 	g_KillCount = 0;
 	Fade_Start(false, 30, D3DCOLOR_RGBA(0, 0, 0, 0));
+
+	swimCount = 90;
 }
 
 void Game_Finalize(void)
@@ -119,7 +123,14 @@ void Game_Update(void)
 		case PHASE_INDEX_PLAYER_MUTEKI:
 		case PHASE_INDEX_PLAYER_NORMAL:
 
-			
+			// 泳いでる音のSE（うるさいので今コメントアウトしてます。）
+			/*swimCount++;
+
+			if (swimCount > 90)
+			{
+				PlaySound(SOUND_LABEL_SE_SWIM);
+				swimCount = 0;
+			}*/
 
 			//Enemy_Update();
 			Timer_Update();
