@@ -169,19 +169,19 @@ void Kujira_Draw_1P(void)
 
 	if (kujira.button == 1 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 675, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 675, 80);
 	}
 	if (kujira.button == 2 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 675, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 675, 80);
 	}
 	if (kujira.button == 3 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 675, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 675, 80);
 	}
 	if (kujira.button == 4 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 675, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 675, 80);
 	}
 
 }
@@ -195,19 +195,19 @@ void Kujira_Draw_2P(void)
 
 	if (kujira_2P.button == 1 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 80);
 	}
 	if (kujira_2P.button == 2 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 80);
 	}
 	if (kujira_2P.button == 3 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 80);
 	}
 	if (kujira_2P.button == 4 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 80);
 	}
 
 }

@@ -171,19 +171,19 @@ void Uma_Draw_1P(void)
 
 	if (uma.button == 1 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 650, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 650, 80);
 	}
 	if (uma.button == 2 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 650, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 650, 80);
 	}
 	if (uma.button == 3 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 650, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 650, 80);
 	}
 	if (uma.button == 4 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 650, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 650, 80);
 	}
 
 }
@@ -197,19 +197,19 @@ void Uma_Draw_2P(void)
 
 	if (uma.button == 1 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 80);
 	}
 	if (uma.button == 2 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 80);
 	}
 	if (uma.button == 3 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 80);
 	}
 	if (uma.button == 4 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 50);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 80);
 	}
 
 }
