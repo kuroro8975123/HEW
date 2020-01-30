@@ -57,83 +57,36 @@ void Game_Initialize(void)
 	Player_2P = Get_Select_2P();
 	if (Player_1P == 1)
 	{
-<<<<<<< HEAD
-	    Kajiki_Initialize_1P(675,300);
-=======
-<<<<<<< HEAD
-		Kajiki_Initialize_1P(675, 300);
+		Kajiki_Initialize_1P(675, 600);
 	}
 	if (Player_1P == 2)
 	{
-		Kujira_Initialize_1P(675, 300);
+	    Kujira_Initialize_1P(675,600);
 	}
 	if (Player_1P == 3)
 	{
-		Iruka_Initialize_1P(675, 300);
+	    Iruka_Initialize_1P(675,600);
 	}
 	if (Player_1P == 4)
 	{
-		Uma_Initialize_1P(675, 300);
-=======
-	    Kajiki_Initialize_1P(690,600);
->>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
-	}
-	if (Player_1P == 2)
-	{
-	    Kujira_Initialize_1P(675,300);
-	}
-	if (Player_1P == 3)
-	{
-	    Iruka_Initialize_1P(675,300);
-	}
-	if (Player_1P == 4)
-	{
-<<<<<<< HEAD
-	    Uma_Initialize_1P(675,300);
-=======
 	    Uma_Initialize_1P(690,600);
->>>>>>> 30c7be4363dd7eb0345bf129664dd2c93b975c90
->>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
 	}
+
 	if (Player_2P == 1)
 	{
-<<<<<<< HEAD
-	    Kajiki_Initialize_2P(1175,300);
-=======
-<<<<<<< HEAD
-		Kajiki_Initialize_2P(1175, 300);
+	    Kajiki_Initialize_2P(1175,600);
 	}
 	if (Player_2P == 2)
 	{
-		Kujira_Initialize_2P(1175, 300);
+	    Kujira_Initialize_2P(1175,600);
 	}
 	if (Player_2P == 3)
 	{
-		Iruka_Initialize_2P(1175, 300);
+	    Iruka_Initialize_2P(1175,600);
 	}
 	if (Player_2P == 4)
 	{
-		Uma_Initialize_2P(1175, 300);
-=======
-	    Kajiki_Initialize_2P(1190,600);
->>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
-	}
-	if (Player_2P == 2)
-	{
-	    Kujira_Initialize_2P(1175,300);
-	}
-	if (Player_2P == 3)
-	{
-	    Iruka_Initialize_2P(1175,300);
-	}
-	if (Player_2P == 4)
-	{
-<<<<<<< HEAD
-	    Uma_Initialize_2P(1175,300);
-=======
-	    Uma_Initialize_2P(1190,600);
->>>>>>> 30c7be4363dd7eb0345bf129664dd2c93b975c90
->>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
+	    Uma_Initialize_2P(1175,600);
 	}
 
 
@@ -193,6 +146,7 @@ void Game_Update(void)
 			//ゲームの終了チェック
 			if (Game_EndCheck())
 			{
+				StopSound(SOUND_LABEL_SE_SWIM);
 				Fade_Start(true, 90, D3DCOLOR_RGBA(0, 0, 0, 0));
 				g_Phase = PHASE_INDEX_STAGE_CLEAR;
 			}
