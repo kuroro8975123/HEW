@@ -7,3 +7,5 @@
 
 // 0 <= n <= 10
 void Number_Draw(float x, float y, int n);
+
+void Number_Draw(float x, float y, int n, float sx, float sy);

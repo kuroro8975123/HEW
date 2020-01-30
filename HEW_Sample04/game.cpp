@@ -12,6 +12,7 @@
 #include "Uma.h"
 #include "scene_playerselect.h"
 #include "sound.h"
+#include "number.h"
 
 #define NOMAL_SCR		(100)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
@@ -31,19 +32,15 @@ typedef enum PHASE_INDEX
 static PHASE_INDEX g_Phase;
 static int g_GameFrameCount;
 
-static int g_Score = 0;// 点数
-static int g_KillCount = 0;
-
 static bool Game_EndCheck(void);
 
 int Score;
-
 int CountDown;
 
 static int Player_1P;
-
 static int Player_2P;
 
+// 泳ぐ音再生までのカウント用
 int swimCount;
 
 
@@ -101,8 +98,6 @@ void Game_Initialize(void)
 
 	g_Phase = PHASE_INDEX_FADE;
 	g_GameFrameCount = 0;
-	g_Score = 0;
-	g_KillCount = 0;
 	Fade_Start(false, 30, D3DCOLOR_RGBA(0, 0, 0, 0));
 	CountDown = 0;
 	swimCount = 90;
@@ -135,14 +130,19 @@ void Game_Update(void)
 		case PHASE_INDEX_PLAYER_MUTEKI:
 		case PHASE_INDEX_PLAYER_NORMAL:
 
+<<<<<<< HEAD
 			// 泳いでる音のSE
 			swimCount++;
+=======
+			// 泳いでる音のSE（うるさいので今コメントアウトしてます。）
+			/*swimCount++;
+>>>>>>> fe1cbd37ae95941dc848217399d83dd128624aab
 
 			if (swimCount > 90)
 			{
 				PlaySound(SOUND_LABEL_SE_SWIM);
 				swimCount = 0;
-			}
+			}*/
 
 			//Enemy_Update();
 			Timer_Update();
@@ -240,8 +240,10 @@ void Game_Draw(void)
 	Sprite_Draw(TEXTURE_INDEX_BG, 0, 0);
 
 	//Enemy_Draw();
-	Minute_Draw(850, 20, Timer_GetMinute(), 2, true);
-	Second_Draw(980, 20, Timer_GetSecond(), 2, true);
+	//タイムの表示
+	Minute_Draw(830, 20, Timer_GetMinute(), 2, true);
+	Number_Draw(950, 20, 10);																																																														
+	Second_Draw(1000, 20, Timer_GetSecond(), 2, true);
 
 	if (CountDown < 60)
 	{

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Kajiki.cpp
 c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(58): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
 c:\users\kuror\onedrive\documents\hew\hew_sample04\kajiki.cpp(117): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
@@ -17,3 +18,57 @@ c:\users\kuror\onedrive\documents\hew\hew_sample04\kajiki.cpp(356): warning C430
 c:\users\kuror\onedrive\documents\hew\hew_sample04\kajiki.cpp(365): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
 c:\users\kuror\onedrive\documents\hew\hew_sample04\kajiki.cpp(374): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
   HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+<<<<<<< HEAD
+﻿  result.cpp
+c:\users\tomo0105\documents\hew\hew_sample04\scene.h(14): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\tomo0105\documents\hew\hew_sample04\texture.h(58): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(139): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(146): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(149): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(152): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(155): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(158): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(165): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(168): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(171): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(174): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(179): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(186): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(189): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(192): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(195): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(198): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(205): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(208): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(211): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(214): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(220): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(227): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(230): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(233): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(236): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(239): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(246): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(249): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(252): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(255): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(260): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(267): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(270): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(273): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(276): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(279): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(286): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(289): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(292): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\tomo0105\documents\hew\hew_sample04\result.cpp(295): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  HEW_Sample04.vcxproj -> C:\Users\tomo0105\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+﻿  game.cpp
+c:\users\saris\documents\hew\hew_sample04\texture.h(58): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\saris\documents\hew\hew_sample04\scene.h(14): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\saris\documents\hew\hew_sample04\game.cpp(30): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'PHASE_INDEX' の左辺を無視します。
+  HEW_Sample04.vcxproj -> C:\Users\saris\Documents\HEW\Debug\HEW_Sample04.exe
+>>>>>>> 37ffc62761056abfff0589254b4282c60930ebe5
+>>>>>>> fe1cbd37ae95941dc848217399d83dd128624aab
