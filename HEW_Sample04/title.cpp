@@ -23,12 +23,8 @@ void Title_Finalize(void)
 void Title_Update(void)
 {
 	if( !g_bEnd ) { 
-<<<<<<< HEAD
-		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(1, BUTTON_A)) {
-=======
 		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(2, BUTTON_A)) {
 			PlaySound(SOUND_LABEL_SE_AWA);
->>>>>>> fec8e74568152b1f30defe052497a7c61487d3c2
 			Fade_Start(true, 30, D3DCOLOR_RGBA(255, 255, 255, 255));
 			g_bEnd = true;
 		}
@@ -37,10 +33,7 @@ void Title_Update(void)
 		if( !Fade_IsFade() ) {
 			//Scene_Change(SCENE_INDEX_TUTORIAL);
 			Scene_Change(SCENE_INDEX_P_SELECT);
-<<<<<<< HEAD
 			//Scene_Change(SCENE_INDEX_GAME);
-=======
->>>>>>> fec8e74568152b1f30defe052497a7c61487d3c2
 		}
 	}
 

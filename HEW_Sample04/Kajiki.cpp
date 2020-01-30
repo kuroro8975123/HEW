@@ -39,6 +39,12 @@ void Kajiki_Initialize_1P(float x, float y)
 	kajiki.button_flag = false;
 	kajiki.end_flag = false;
 	g_animCount = 0;
+	Count_1P_Kajiki = 0;
+	Move_BG1_Kajiki = 0;
+	Move_BG1_1P_Kajiki_ = 0;
+	Move_BG1_1P_Kajiki = 0;
+	Goal_1P_Kajiki = false;
+
 }
 void Kajiki_Initialize_2P(float x, float y)
 {
@@ -49,6 +55,11 @@ void Kajiki_Initialize_2P(float x, float y)
 	kajiki_2P.button = 0;
 	kajiki_2P.button_flag = false;
 	kajiki_2P.end_flag = false;
+	Count_2P_Kajiki = 0;
+	Move_BG2_Kajiki = 0;
+	Move_BG_2P_Kajiki_ = 0;
+	Move_BG_2P_Kajiki = 0;
+	Goal_2P_Kajiki = false;
 
 }
 void Kajiki_Finalize(void)
@@ -133,7 +144,7 @@ void Kajiki_Update_2P(void)
 		if (Move_BG_2P_Kajiki_ + Move_BG2_Kajiki < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_2P_Kajiki_ += GetSpeed_2P_Kajiki();
-			Move_BG2_Kajiki += 0.1;
+			Move_BG2_Kajiki += 1.1;
 		}
 		if (Move_BG_2P_Kajiki < (SCREEN_HEIGHT * 2 - 510))
 		{
@@ -307,7 +318,7 @@ void Kajiki_Button_2P(void)
 			kajiki_2P.button_flag = false;
 		}
 	}
-	if (kajiki.button == 3 && kajiki.button_flag)
+	if (kajiki_2P.button == 3 && kajiki_2P.button_flag)
 	{
 		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(3, BUTTON_X))
 		{

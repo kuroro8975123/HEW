@@ -38,6 +38,11 @@ void Iruka_Initialize_1P(float x, float y)
 	iruka.button_flag = false;
 	iruka.end_flag = false;
 	g_animCount = 0;
+	Count_1P_Iruka = 0;
+	Move_BG1_Iruka = 0;
+	Move_BG_1P_Iruka = 0;
+	Move_BG_1P_Iruka_ = 0;
+	Goal_1P_Iruka = false;
 
 }
 void Iruka_Initialize_2P(float x, float y)
@@ -50,6 +55,12 @@ void Iruka_Initialize_2P(float x, float y)
 	iruka_2P.button_flag = false;
 	iruka_2P.end_flag = false;
 	g_animCount = 0;
+	Count_2P_Iruka = 0;
+	Move_BG2_Iruka = 0;
+	Move_BG_2P_Iruka = 0;
+	Move_BG_2P_Iruka_ = 0;
+	Goal_2P_Iruka = false;
+
 
 }
 void Iruka_Finalize(void)
@@ -82,7 +93,7 @@ void Iruka_Update_1P(void)
 		if (Move_BG_1P_Iruka_ + Move_BG1_Iruka < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_1P_Iruka_ += GetSpeed_1P_Iruka();
-			Move_BG1_Iruka += 0.1;
+			Move_BG1_Iruka += 1.1;
 		}
 		if (Move_BG_1P_Iruka < (SCREEN_HEIGHT * 2 - 510))
 		{
@@ -134,7 +145,7 @@ void Iruka_Update_2P(void)
 		if (Move_BG_2P_Iruka_ + Move_BG2_Iruka < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_2P_Iruka_ += GetSpeed_2P_Iruka();
-			Move_BG2_Iruka += 0.1;
+			Move_BG2_Iruka += 1.1;
 		}
 		if (Move_BG_2P_Iruka < (SCREEN_HEIGHT * 2 - 510))
 		{
@@ -164,7 +175,7 @@ void Iruka_Draw_1P(void)
 {
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), Move_BG_1P_Iruka_ + Move_BG1_Iruka, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 250) + Move_BG_1P_Iruka_ + Move_BG1_Iruka,  (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG_1P_Iruka_, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG_1P_Iruka_ + Move_BG1_Iruka, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	
 
 	Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, iruka.pos.x, iruka.pos.y, g_animCount * 100, 0, 100, 300);
@@ -191,8 +202,8 @@ void Iruka_Draw_1P(void)
 void Iruka_Draw_2P(void)
 {
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), Move_BG_2P_Iruka_ + Move_BG2_Iruka, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), (-SCREEN_HEIGHT + 150) + Move_BG_2P_Iruka_ + Move_BG2_Iruka,  (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), ((-SCREEN_HEIGHT * 2) + 300) + Move_BG_2P_Iruka_, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), (-SCREEN_HEIGHT + 250) + Move_BG_2P_Iruka_ + Move_BG2_Iruka,  (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG_2P_Iruka_ + Move_BG2_Iruka, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	
 	Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, iruka_2P.pos.x, iruka_2P.pos.y, g_animCount * 100, 0, 100, 300);
 
@@ -310,7 +321,7 @@ void Iruka_Button_2P(void)
 			iruka_2P.button_flag = false;
 		}
 	}
-	if (iruka.button == 3 && iruka.button_flag)
+	if (iruka_2P.button == 3 && iruka_2P.button_flag)
 	{
 		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(0, BUTTON_X))
 		{
