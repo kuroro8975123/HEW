@@ -64,30 +64,30 @@ void Iruka_Update_1P(void)
 		Move_BG_1P_Iruka_ += GetSpeed_1P_Iruka();
 		Move_BG_1P_Iruka = (Move_BG1_Iruka + Move_BG_1P_Iruka_);
 
-		if (Move_BG1_Iruka + Move_BG_1P_Iruka_ > (SCREEN_HEIGHT + 300))
+		if (Move_BG1_Iruka + Move_BG_1P_Iruka_ > (SCREEN_HEIGHT + 250))
 		{
-			Move_BG1_Iruka = 150;
-			Move_BG_1P_Iruka_ = 150;
+			Move_BG1_Iruka = 250;
+			Move_BG_1P_Iruka_ = 250;
 			Count_1P_Iruka++;
 		}
-		if (Move_BG_1P_Iruka > (SCREEN_HEIGHT * 2) +100)
+		if (Move_BG_1P_Iruka > (SCREEN_HEIGHT * 2) +500)
 		{
-			Move_BG_1P_Iruka = 300;
+			Move_BG_1P_Iruka = 500;
 
 		}
 	}
 	else if (Count_1P_Iruka >= END_SCR)
 	{
-		if (Move_BG_1P_Iruka_ + Move_BG1_Iruka < (SCREEN_HEIGHT * 2 - 310))
+		if (Move_BG_1P_Iruka_ + Move_BG1_Iruka < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_1P_Iruka_ += GetSpeed_1P_Iruka();
 			Move_BG1_Iruka += 0.1;
 		}
-		if (Move_BG_1P_Iruka < (SCREEN_HEIGHT * 2 - 310))
+		if (Move_BG_1P_Iruka < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_1P_Iruka = (Move_BG_1P_Iruka_ + Move_BG1_Iruka);
 		}
-		else if (Move_BG_1P_Iruka > (SCREEN_HEIGHT * 2 - 310))
+		else if (Move_BG_1P_Iruka > (SCREEN_HEIGHT * 2 - 510))
 		{
 			if (Goal_1P_Iruka == false) {
 				Time_Minute_1P_Iruka = Timer_GetMinute();
@@ -115,30 +115,30 @@ void Iruka_Update_2P(void)
 		Move_BG_2P_Iruka_ += GetSpeed_2P_Iruka();
 		Move_BG_2P_Iruka = (Move_BG2_Iruka + Move_BG_2P_Iruka_);
 
-		if (Move_BG2_Iruka + Move_BG_2P_Iruka_ > (SCREEN_HEIGHT + 150))
+		if (Move_BG2_Iruka + Move_BG_2P_Iruka_ > (SCREEN_HEIGHT + 250))
 		{
-			Move_BG2_Iruka = 150;
-			Move_BG_2P_Iruka_ = 150;
+			Move_BG2_Iruka = 250;
+			Move_BG_2P_Iruka_ = 250;
 			Count_2P_Iruka++;
 		}
-		if (Move_BG_2P_Iruka > (SCREEN_HEIGHT * 2) + 300)
+		if (Move_BG_2P_Iruka > (SCREEN_HEIGHT * 2) + 500)
 		{
-			Move_BG_2P_Iruka = 300;
+			Move_BG_2P_Iruka = 500;
 
 		}
 	}
 	else if (Count_2P_Iruka >= END_SCR)
 	{
-		if (Move_BG_2P_Iruka_ + Move_BG2_Iruka < (SCREEN_HEIGHT * 2 - 310))
+		if (Move_BG_2P_Iruka_ + Move_BG2_Iruka < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_2P_Iruka_ += GetSpeed_2P_Iruka();
 			Move_BG2_Iruka += 0.1;
 		}
-		if (Move_BG_2P_Iruka < (SCREEN_HEIGHT * 2 - 310))
+		if (Move_BG_2P_Iruka < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_2P_Iruka = (Move_BG_2P_Iruka_ + Move_BG2_Iruka);
 		}
-		else if (Move_BG_2P_Iruka > (SCREEN_HEIGHT * 2 - 310))
+		else if (Move_BG_2P_Iruka > (SCREEN_HEIGHT * 2 - 510))
 		{
 			if (Goal_2P_Iruka == false) {
 				Time_Minute_2P_Iruka = Timer_GetMinute();
@@ -160,8 +160,8 @@ void Iruka_Update_2P(void)
 void Iruka_Draw_1P(void)
 {
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), Move_BG_1P_Iruka_ + Move_BG1_Iruka, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 150) + Move_BG_1P_Iruka_ + Move_BG1_Iruka,  (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 300) + Move_BG_1P_Iruka_, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 250) + Move_BG_1P_Iruka_ + Move_BG1_Iruka,  (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG_1P_Iruka_, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	
 
 	Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, iruka.pos.x, iruka.pos.y, g_animCount * 100, 0, 100, 300);
@@ -193,19 +193,19 @@ void Iruka_Draw_2P(void)
 	
 	Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, iruka_2P.pos.x, iruka_2P.pos.y, g_animCount * 100, 0, 100, 300);
 
-	if (iruka.button == 1 && iruka.button_flag)
+	if (iruka_2P.button == 1 && iruka_2P.button_flag)
 	{
 		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 50);
 	}
-	if (iruka.button == 2 && iruka.button_flag)
+	if (iruka_2P.button == 2 && iruka_2P.button_flag)
 	{
 		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 50);
 	}
-	if (iruka.button == 3 && iruka.button_flag)
+	if (iruka_2P.button == 3 && iruka_2P.button_flag)
 	{
 		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 50);
 	}
-	if (iruka.button == 4 && iruka.button_flag)
+	if (iruka_2P.button == 4 && iruka_2P.button_flag)
 	{
 		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 50);
 	}

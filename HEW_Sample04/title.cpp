@@ -22,7 +22,7 @@ void Title_Finalize(void)
 void Title_Update(void)
 {
 	if( !g_bEnd ) { 
-		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(2, BUTTON_A)) {
+		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(1, BUTTON_A)) {
 			Fade_Start(true, 30, D3DCOLOR_RGBA(255, 255, 255, 255));
 			g_bEnd = true;
 		}
@@ -30,8 +30,8 @@ void Title_Update(void)
 	else{
 		if( !Fade_IsFade() ) {
 			//Scene_Change(SCENE_INDEX_TUTORIAL);
-			//Scene_Change(SCENE_INDEX_P_SELECT);
-			Scene_Change(SCENE_INDEX_GAME);
+			Scene_Change(SCENE_INDEX_P_SELECT);
+			//Scene_Change(SCENE_INDEX_GAME);
 		}
 	}
 

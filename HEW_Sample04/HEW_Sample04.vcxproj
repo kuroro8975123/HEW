@@ -145,6 +145,7 @@
     <ClCompile Include="timer.cpp" />
     <ClCompile Include="title.cpp" />
     <ClCompile Include="Uma.cpp" />
+    <ClCompile Include="worldrecord.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="collision.h" />
@@ -170,6 +171,7 @@
     <ClInclude Include="timer.h" />
     <ClInclude Include="title.h" />
     <ClInclude Include="Uma.h" />
+    <ClInclude Include="worldrecord.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

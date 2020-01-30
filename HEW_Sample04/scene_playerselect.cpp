@@ -5,10 +5,6 @@
 #include "texture.h"
 #include "fade.h"
 #include "enemy.h"
-<<<<<<< HEAD
-=======
-
->>>>>>> 4bf285b112f60a0a2b0038e6dca04e09f93992da
 #include "enemy.h"
 
 #include "scene_playerselect.h"
@@ -66,7 +62,7 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-			if (kuzira.pos.x > 550)
+			if (kuzira.pos.x >= 550)
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -94,7 +90,7 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-			if (iruka.pos.x > 550)
+			if (iruka.pos.x >= 550)
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -110,7 +106,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-			if (kaziki.pos.x < 550)
+			if (kaziki.pos.x <= 550)
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -139,7 +135,7 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-			if (uma.pos.x > 550)
+			if (uma.pos.x >= 550)
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -155,7 +151,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-			if (kuzira.pos.x < 550)
+			if (kuzira.pos.x <= 550)
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -183,7 +179,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-			if (iruka.pos.x < 550)
+			if (iruka.pos.x <= 550)
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
