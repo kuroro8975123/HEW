@@ -46,6 +46,8 @@ int Player_2P;
 
 int swimCount;
 
+
+
 void Game_Initialize(void)
 {
 	Player_1P = Get_Select_1P();
@@ -124,13 +126,13 @@ void Game_Update(void)
 		case PHASE_INDEX_PLAYER_NORMAL:
 
 			// 泳いでる音のSE（うるさいので今コメントアウトしてます。）
-			/*swimCount++;
+			swimCount++;
 
 			if (swimCount > 90)
 			{
 				PlaySound(SOUND_LABEL_SE_SWIM);
 				swimCount = 0;
-			}*/
+			}
 
 			//Enemy_Update();
 			Timer_Update();

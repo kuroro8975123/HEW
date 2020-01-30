@@ -5,10 +5,7 @@
 #include "texture.h"
 #include "fade.h"
 #include "enemy.h"
-<<<<<<< HEAD
-=======
 
->>>>>>> fec8e74568152b1f30defe052497a7c61487d3c2
 #include "enemy.h"
 
 #include "scene_playerselect.h"
@@ -21,6 +18,8 @@ int frame;
 bool Select;
 bool Left;
 bool Right;
+
+bool oneP;
 
 Select_Kaziki kaziki;
 Select_Kujira kuzira;
@@ -48,6 +47,7 @@ void P_Select_Initialize(void)
 	Select = false;
 	Left = false;
 	Right = false;
+	oneP = false;
 }
 
 void P_Select_Finalize(void)
@@ -68,11 +68,7 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-<<<<<<< HEAD
-			if (kuzira.pos.x >= 550)
-=======
 			if (kuzira.pos.x > 300)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -102,11 +98,7 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-<<<<<<< HEAD
-			if (iruka.pos.x >= 550)
-=======
 			if (iruka.pos.x > 200)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -122,11 +114,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-<<<<<<< HEAD
-			if (kaziki.pos.x <= 550)
-=======
 			if (kaziki.pos.x < 200)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -157,11 +145,7 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-<<<<<<< HEAD
-			if (uma.pos.x >= 550)
-=======
 			if (uma.pos.x > 300)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -177,11 +161,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-<<<<<<< HEAD
-			if (kuzira.pos.x <= 550)
-=======
 			if (kuzira.pos.x < 300)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -210,11 +190,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-<<<<<<< HEAD
-			if (iruka.pos.x <= 550)
-=======
 			if (iruka.pos.x < 200)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -231,63 +207,70 @@ void P_Select_Update(void)
 	}
 
 
-
-	if (Keyboard_IsTrigger(DIK_B) || GamePad_IsTrigger(2, BUTTON_A))
+	if (!oneP)
 	{
-		if (kaziki.flag)
+		if (Keyboard_IsTrigger(DIK_B) || GamePad_IsTrigger(2, BUTTON_A))
 		{
-			PlaySound(SOUND_LABEL_SE_KETTEI);
-			Select_1P = 1;
-			Select_Count = 1;
-
-		}
-		else if (kuzira.flag)
-		{
-			PlaySound(SOUND_LABEL_SE_KETTEI);
-			Select_1P = 2;
-			Select_Count = 1;
-		}
-		else if (iruka.flag)
-		{
-			PlaySound(SOUND_LABEL_SE_KETTEI);
-			Select_1P = 3;
-			Select_Count = 1;
-		}
-		else if (uma.flag)
-		{
-			PlaySound(SOUND_LABEL_SE_KETTEI);
-			Select_1P = 4;
-			Select_Count = 1;
+			if (kaziki.flag)
+			{
+				PlaySound(SOUND_LABEL_SE_KETTEI);
+				Select_1P = 1;
+				Select_Count = 1;
+				oneP = true;
+			}
+			else if (kuzira.flag)
+			{
+				PlaySound(SOUND_LABEL_SE_KETTEI);
+				Select_1P = 2;
+				Select_Count = 1;
+				oneP = true;
+			}
+			else if (iruka.flag)
+			{
+				PlaySound(SOUND_LABEL_SE_KETTEI);
+				Select_1P = 3;
+				Select_Count = 1;
+				oneP = true;
+			}
+			else if (uma.flag)
+			{
+				PlaySound(SOUND_LABEL_SE_KETTEI);
+				Select_1P = 4;
+				Select_Count = 1;
+				oneP = true;
+			}
 		}
 	}
-	if (Keyboard_IsTrigger(DIK_N) || GamePad_IsTrigger(2, BUTTON_B) && Select_Count == 1)
+	if (oneP)
 	{
-		if (kaziki.flag)
+		if (Keyboard_IsTrigger(DIK_N) || GamePad_IsTrigger(2, BUTTON_B) && Select_Count == 1)
 		{
-			PlaySound(SOUND_LABEL_SE_KETTEI);
-			Select_2P = 1;
-			Select_Count = 2;
-		}
-		else if (kuzira.flag)
-		{
-			PlaySound(SOUND_LABEL_SE_KETTEI);
-			Select_2P = 2;
-			Select_Count = 2;
-		}
-		else if (iruka.flag)
-		{
-			PlaySound(SOUND_LABEL_SE_KETTEI);
-			Select_2P = 3;
-			Select_Count = 2;
-		}
-		else if (uma.flag)
-		{
-			PlaySound(SOUND_LABEL_SE_KETTEI);
-			Select_2P = 4;
-			Select_Count = 2;
+			if (kaziki.flag)
+			{
+				PlaySound(SOUND_LABEL_SE_KETTEI);
+				Select_2P = 1;
+				Select_Count = 2;
+			}
+			else if (kuzira.flag)
+			{
+				PlaySound(SOUND_LABEL_SE_KETTEI);
+				Select_2P = 2;
+				Select_Count = 2;
+			}
+			else if (iruka.flag)
+			{
+				PlaySound(SOUND_LABEL_SE_KETTEI);
+				Select_2P = 3;
+				Select_Count = 2;
+			}
+			else if (uma.flag)
+			{
+				PlaySound(SOUND_LABEL_SE_KETTEI);
+				Select_2P = 4;
+				Select_Count = 2;
+			}
 		}
 	}
-
 	if (Select_Count == 2)
 	{
 		Scene_Change(SCENE_INDEX_GAME);
