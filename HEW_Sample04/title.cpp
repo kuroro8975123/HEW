@@ -3,7 +3,6 @@
 #include "fade.h"
 #include "main.h"
 #include "sound.h"
-#include "timer.h"
 #include <d3d9.h>
 
 static bool g_bEnd = false;
@@ -51,7 +50,6 @@ void Title_Draw(void)
 	Sprite_Draw(TEXTURE_INDEX_TITLE2, 0.0f, 0.0f);
 	Sprite_Draw(TEXTURE_INDEX_TITLE1, 0.0f, 0.0f);
 	Sprite_Draw(TEXTURE_INDEX_PRESS, SCREEN_WIDTH / 3 - 200.0f, SCREEN_HEIGHT / 3);
-
 
 	//Sprite_Draw(TEXTURE_INDEX_BG, 0.0f, y);
 	//Sprite_Draw(TEXTURE_INDEX_BG, 0.0f, -500 + y);

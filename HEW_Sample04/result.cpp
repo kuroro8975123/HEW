@@ -79,8 +79,8 @@ void Result_Initialize(void)
 
 	if (Player_1P == 4)
 	{
-		Player[0].Minute = Minute_1P_Uma();
-		Player[0].Second = Second_1P_Uma();
+		Player[1].Minute = Minute_1P_Uma();
+		Player[1].Second = Second_1P_Uma();
 	}
 
 	if (Player_2P == 1)
@@ -116,11 +116,26 @@ void Result_Finalize(void)
 
 void Result_Update(void)
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
+
+		if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
+			Scene_Change(SCENE_INDEX_WORLDRECORD);
+			PlaySound(SOUND_LABEL_SE_AWA);
+			//Scene_Change(SCENE_INDEX_TITLE);
+		}
+<<<<<<< HEAD
+=======
+=======
 	if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
 		Scene_Change(SCENE_INDEX_WORLDRECORD);
 		PlaySound(SOUND_LABEL_SE_AWA);
 		Scene_Change(SCENE_INDEX_TITLE);
 	}
+>>>>>>> 30c7be4363dd7eb0345bf129664dd2c93b975c90
+>>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
 }
 
 void Result_Draw()
@@ -134,163 +149,171 @@ void Result_Draw()
 		if (Player[0].Second < Player[1].Second)
 		{
 			//1Pが1位
-			Sprite_Draw(TEXTURE_INDEX_1P, 650.0f, 400.0f, 0.0f, 0.0f, 175.0f, 175.0f, 0.0f, 0.0f, 2.0f, 2.0f, 0.0f);
-
-			Minute_Draw(1024, 525, Player[0].Minute, 2, true, 1.5f, 1.5f);	//1位分数
-			Second_Draw(1184, 525, Player[0].Second, 2, true, 1.5f, 1.5f);	//1位秒数
+			Minute_Draw(440, 450, Player[0].Minute, 2, true);	//1位分数
+			Second_Draw(600, 450, Player[0].Second, 2, true);	//1位秒数
 
 			//1Pがカジキ選択
 			if (Get_Select_1P() == 1)
-				Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//1Pがくじら選択
 			if (Get_Select_1P() == 2)
-				Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//1Pがイルカ選択
 			if (Get_Select_1P() == 3)
-				Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//1Pがうま選択
 			if (Get_Select_1P() == 4)
-				Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
 
 			//2Pが2位
-			Sprite_Draw(TEXTURE_INDEX_2P, 850.0f, 750.0f, 0.0f, 0.0f, 175.0f, 175.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
-
-			Minute_Draw(1074, 800, Player[1].Minute, 2, true);	//2位分数
-			Second_Draw(1234, 800, Player[1].Second, 2, true);	//2位秒数
+			Minute_Draw(1440, 450, Player[1].Minute, 2, true);	//2位分数
+			Second_Draw(1600, 450, Player[1].Second, 2, true);	//2位秒数
 
 			//2Pがカジキ選択
 			if (Get_Select_2P() == 1)
-				Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//2Pがくじら選択
 			if (Get_Select_2P() == 2)
-				Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//2Pがイルカ選択
 			if (Get_Select_2P() == 3)
-				Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//1Pがうま選択
 			if (Get_Select_2P() == 4)
-				Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
 		}
 		else
 		{
 			//2Pが1位
-			Sprite_Draw(TEXTURE_INDEX_2P, 650.0f, 400.0f, 0.0f, 0.0f, 175.0f, 175.0f, 0.0f, 0.0f, 2.0f, 2.0f, 0.0f);
-
-			Minute_Draw(1024, 525, Player[1].Minute, 2, true, 1.5f, 1.5f);	//1位分数
-			Second_Draw(1184, 525, Player[1].Second, 2, true, 1.5f, 1.5f);	//1位秒数
+			Minute_Draw(440, 450, Player[1].Minute, 2, true);	//1位分数
+			Second_Draw(600, 450, Player[1].Second, 2, true);	//1位秒数
 
 			//2Pがカジキ選択
 			if (Get_Select_2P() == 1)
-				Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//2Pがくじら選択
 			if (Get_Select_2P() == 2)
-				Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//2Pがイルカ選択
 			if (Get_Select_2P() == 3)
-				Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//2Pがうま選択
 			if (Get_Select_2P() == 4)
-				Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
 
 			//1Pが2位
-			Sprite_Draw(TEXTURE_INDEX_1P, 850.0f, 750.0f, 0.0f, 0.0f, 175.0f, 175.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
-
-			Minute_Draw(1074, 800, Player[0].Minute, 2, true);	//2位分数
-			Second_Draw(1234, 800, Player[0].Second, 2, true);	//2位秒数
+			Minute_Draw(1440, 450, Player[0].Minute, 2, true);	//2位分数
+			Second_Draw(1600, 450, Player[0].Second, 2, true);	//2位秒数
 
 			//2Pがカジキ選択
 			if (Get_Select_1P() == 1)
-				Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//2Pがくじら選択
 			if (Get_Select_1P() == 2)
-				Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//2Pがイルカ選択
 			if (Get_Select_1P() == 3)
-				Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 			//2Pがうま選択
 			if (Get_Select_1P() == 4)
-				Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+				Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
 		}
 	}
 	else if (Player[0].Minute < Player[1].Minute)
 	{
 		//1Pが1位
-		Sprite_Draw(TEXTURE_INDEX_1P, 650.0f, 400.0f, 0.0f, 0.0f, 175.0f, 175.0f, 0.0f, 0.0f, 2.0f, 2.0f, 0.0f);
-
-		Minute_Draw(1024, 525, Player[0].Minute, 2, true, 1.5f, 1.5f);	//1位分数
-		Second_Draw(1184, 525, Player[0].Second, 2, true, 1.5f, 1.5f);	//1位秒数
+		Minute_Draw(440, 450, Player[0].Minute, 2, true);	//1位分数
+		Second_Draw(600, 450, Player[0].Second, 2, true);	//1位秒数
 
 															//1Pがカジキ選択
 		if (Get_Select_1P() == 1)
-			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 		//1Pがくじら選択
 		if (Get_Select_1P() == 2)
-			Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 		//1Pがイルカ選択
 		if (Get_Select_1P() == 3)
-			Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 		//1Pがうま選択
 		if (Get_Select_1P() == 4)
-			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
 
 		//2Pが2位
-		Sprite_Draw(TEXTURE_INDEX_2P, 850.0f, 750.0f, 0.0f, 0.0f, 175.0f, 175.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
-
-		Minute_Draw(1074, 800, Player[1].Minute, 2, true);	//2位分数
-		Second_Draw(1234, 800, Player[1].Second, 2, true);	//2位秒数
+		Minute_Draw(1440, 450, Player[1].Minute, 2, true);	//2位分数
+		Second_Draw(1600, 450, Player[1].Second, 2, true);	//2位秒数
 
 															//2Pがカジキ選択
 		if (Get_Select_2P() == 1)
-			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 		//2Pがくじら選択
 		if (Get_Select_2P() == 2)
-			Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 		//2Pがイルカ選択
 		if (Get_Select_2P() == 3)
-			Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 		//2Pがうま選択
 		if (Get_Select_2P() == 4)
-			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
 	}
 	else if (Player[0].Minute > Player[1].Minute)
 	{
 		//2Pが1位
-		Sprite_Draw(TEXTURE_INDEX_2P, 650.0f, 400.0f, 0.0f, 0.0f, 175.0f, 175.0f, 0.0f, 0.0f, 2.0f, 2.0f, 0.0f);
-
-		Minute_Draw(1024, 525, Player[1].Minute, 2, true, 1.5f, 1.5f);	//1位分数
-		Second_Draw(1184, 525, Player[1].Second, 2, true, 1.5f, 1.5f);	//1位秒数
+		Minute_Draw(440, 450, Player[1].Minute, 2, true);	//1位分数
+		Second_Draw(600, 450, Player[1].Second, 2, true);	//1位秒数
 
 															//2Pがカジキ選択
 		if (Get_Select_2P() == 1)
-			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 		//2Pがくじら選択
 		if (Get_Select_2P() == 2)
-			Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 		//2Pがイルカ選択
 		if (Get_Select_2P() == 3)
-			Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
 		//1Pがうま選択
 		if (Get_Select_2P() == 4)
-			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 1600.0f, 350.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f, 1.0f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
 
 		//1Pが2位
-		Sprite_Draw(TEXTURE_INDEX_1P, 850.0f, 750.0f, 0.0f, 0.0f, 175.0f, 175.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+		Minute_Draw(1440, 450, Player[0].Minute, 2, true);	//2位分数
+		Second_Draw(1600, 450, Player[0].Second, 2, true);	//2位秒数
 
-		Minute_Draw(1074, 800, Player[0].Minute, 2, true);	//2位分数
-		Second_Draw(1234, 800, Player[0].Second, 2, true);	//2位秒数
-
-		//1Pがカジキ選択
+		//2Pがカジキ選択
 		if (Get_Select_1P() == 1)
-			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
-		//1Pがくじら選択
+			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
+		//2Pがくじら選択
 		if (Get_Select_1P() == 2)
-			Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
-		//1Pがイルカ選択
+			Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
+		//2Pがイルカ選択
 		if (Get_Select_1P() == 3)
-			Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
-		//1Pがうま選択
+			Sprite_Draw(TEXTURE_INDEX_IRUKA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
+
+		//2Pがうま選択
 		if (Get_Select_1P() == 4)
-			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 1620.0f, 675.0f, 0, 0, 100.0f, 300.0f, 0.0f, 0.0f, 1.5f*0.75f, 1.0f*0.75f, 0.0f);
+			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
 	}
 
 

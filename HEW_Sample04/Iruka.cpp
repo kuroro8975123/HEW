@@ -183,19 +183,19 @@ void Iruka_Draw_1P(void)
 
 	if (iruka.button == 1 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 675, 80);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 680, 80);
 	}
 	if (iruka.button == 2 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 675, 80);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 680, 80);
 	}
 	if (iruka.button == 3 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 675, 80);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 680, 80);
 	}
 	if (iruka.button == 4 && iruka.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 675, 80);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 680, 80);
 	}
 
 }

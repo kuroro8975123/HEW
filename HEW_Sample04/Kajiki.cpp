@@ -1,3 +1,8 @@
+/*-----------------------------------------------------------------------------
+カジキ.cpp
+
+カジキの処理全般の処理
+------------------------------------------------------------------------------*/
 #include "Kajiki.h"
 #include "main.h"
 #include "input.h"
@@ -5,11 +10,16 @@
 #include "sprite.h"
 #include "sound.h"
 
+/*------------------------------------------------------------------------------
+マクロ定義
+------------------------------------------------------------------------------*/
 #define NOMAL_SCR		(1)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 #define ANIME_PATTERN_MAX	7
 
-
+/*------------------------------------------------------------------------------
+グローバル変数
+------------------------------------------------------------------------------*/
 int Count_1P_Kajiki;
 int Count_2P_Kajiki;
 bool Goal_1P_Kajiki;
@@ -29,6 +39,9 @@ static int g_animCount;
 Kajiki kajiki;
 Kajiki_2P kajiki_2P;
 
+/*------------------------------------------------------------------------------
+カジキ1Pの初期化
+------------------------------------------------------------------------------*/
 void Kajiki_Initialize_1P(float x, float y)
 {
 
@@ -46,6 +59,9 @@ void Kajiki_Initialize_1P(float x, float y)
 	Goal_1P_Kajiki = false;
 
 }
+/*------------------------------------------------------------------------------
+カジキ2Pの初期化
+------------------------------------------------------------------------------*/
 void Kajiki_Initialize_2P(float x, float y)
 {
 
@@ -62,10 +78,16 @@ void Kajiki_Initialize_2P(float x, float y)
 	Goal_2P_Kajiki = false;
 
 }
+/*------------------------------------------------------------------------------
+カジキの終了処理
+------------------------------------------------------------------------------*/
 void Kajiki_Finalize(void)
 {
 
 }
+/*------------------------------------------------------------------------------
+カジキ1Pの更新処理
+------------------------------------------------------------------------------*/
 void Kajiki_Update_1P(void)
 {
 	//プレイヤー
@@ -106,9 +128,11 @@ void Kajiki_Update_1P(void)
 				PlaySound(SOUND_LABEL_SE_TIMEOUT);
 			}
 			Goal_1P_Kajiki = true;
+			
 		}
 	}
 	Kajiki_Button_1P();
+
 
 	g_animCount += 1;
 
@@ -118,6 +142,9 @@ void Kajiki_Update_1P(void)
 	}
 
 }
+/*------------------------------------------------------------------------------
+カジキ2Pの更新処理
+------------------------------------------------------------------------------*/
 void Kajiki_Update_2P(void)
 {
 	//プレイヤー
@@ -170,32 +197,38 @@ void Kajiki_Update_2P(void)
 	}
 
 }
+/*------------------------------------------------------------------------------
+カジキ1Pの描画処理
+------------------------------------------------------------------------------*/
 void Kajiki_Draw_1P(void)
 {
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 250) + Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT -50);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT -50);
-
 	Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, kajiki.pos.x, kajiki.pos.y, g_animCount * 100, 0, 100, 300);
 
+	//1pボタンの位置x=680
 	if (kajiki.button == 1 && kajiki.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 700, 80);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 680, 80);
 	}
 	if (kajiki.button == 2 && kajiki.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 700, 80);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 680, 80);
 	}
 	if (kajiki.button == 3 && kajiki.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 700, 80);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 680, 80);
 	}
 	if (kajiki.button == 4 && kajiki.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 700, 80);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 680, 80);
 	}
 
 }
+/*------------------------------------------------------------------------------
+カジキ2Pの描画
+------------------------------------------------------------------------------*/
 void Kajiki_Draw_2P(void)
 {
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), Move_BG_2P_Kajiki_ + Move_BG2_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
@@ -223,6 +256,9 @@ void Kajiki_Draw_2P(void)
 
 }
 
+/*------------------------------------------------------------------------------
+カジキ1Pのボタン入力処理
+------------------------------------------------------------------------------*/
 void Kajiki_Button_1P(void)
 {
 	D3DXVECTOR2 dir = D3DXVECTOR2(0.0f, 0.0f);
@@ -291,6 +327,9 @@ void Kajiki_Button_1P(void)
 	kajiki.pos += dir;
 
 }
+/*------------------------------------------------------------------------------
+カジキ2Pのボタン入力処理
+------------------------------------------------------------------------------*/
 void Kajiki_Button_2P(void)
 {
 	D3DXVECTOR2 dir = D3DXVECTOR2(0.0f, 0.0f);
@@ -359,29 +398,45 @@ void Kajiki_Button_2P(void)
 	kajiki_2P.pos += dir;
 
 }
-
+/*------------------------------------------------------------------------------
+カジキ1Pのゴール処理
+------------------------------------------------------------------------------*/
 bool Goal_Flag_1P_Kajiki()
 {
 	return Goal_1P_Kajiki;
 }
+/*------------------------------------------------------------------------------
+カジキ2Pのゴール処理
+------------------------------------------------------------------------------*/
 bool Goal_Flag_2P_Kajiki()
 {
 	return Goal_2P_Kajiki;
 }
 
+/*------------------------------------------------------------------------------
+カジキ1Pのスピードのゲッター
+------------------------------------------------------------------------------*/
 float GetSpeed_1P_Kajiki()
 {
 	return kajiki.speed;
 }
+/*------------------------------------------------------------------------------
+カジキ2Pのスピードのゲッター
+------------------------------------------------------------------------------*/
 float GetSpeed_2P_Kajiki()
 {
 	return kajiki_2P.speed;
 }
-
+/*------------------------------------------------------------------------------
+カジキ1Pのエンドフラグのゲッター
+------------------------------------------------------------------------------*/
 bool End_1P_Kajiki()
 {
 	return kajiki.end_flag;
 }
+/*------------------------------------------------------------------------------
+カジキ1Pのエンドフラグのゲッター
+------------------------------------------------------------------------------*/
 bool End_2P_Kajiki()
 {
 	return kajiki_2P.end_flag;
@@ -403,4 +458,13 @@ int Second_1P_Kajiki()
 int Second_2P_Kajiki()
 {
 	return Time_Second_2P_Kajiki;
+}
+
+float Kajiki_Speed_1P()
+{
+	return Move_BG1_1P_Kajiki;
+}
+float Kajiki_Speed_2P()
+{
+	return Move_BG_2P_Kajiki;
 }
