@@ -68,7 +68,10 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
+<<<<<<< HEAD
 			//if (kuzira.pos.x >= 550)
+=======
+>>>>>>> 37ffc62761056abfff0589254b4282c60930ebe5
 			if (kuzira.pos.x > 300)
 			{
 				kaziki.pos.x -= 50;

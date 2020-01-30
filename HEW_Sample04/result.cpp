@@ -121,8 +121,6 @@ void Result_Update(void)
 		PlaySound(SOUND_LABEL_SE_AWA);
 		Scene_Change(SCENE_INDEX_TITLE);
 	}
-
-
 }
 
 void Result_Draw()
