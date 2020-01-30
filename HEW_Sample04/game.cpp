@@ -11,6 +11,7 @@
 #include "Kujira.h"
 #include "Uma.h"
 #include "scene_playerselect.h"
+#include "sound.h"
 
 #define NOMAL_SCR		(100)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
@@ -123,7 +124,6 @@ void Game_Update(void)
 			//Enemy_Update();
 			Timer_Update();
 
-
 			//ゲームの終了チェック
 			if (Game_EndCheck())
 			{
@@ -222,18 +222,22 @@ void Game_Draw(void)
 
 	if (CountDown < 60)
 	{
+		PlaySound(SOUND_LABEL_SE_COUNT);
 		Sprite_Draw(TEXTURE_INDEX_3, 600.0f, 320.0f);
 	}
 	if (CountDown > 60 && CountDown < 120)
 	{
+		PlaySound(SOUND_LABEL_SE_COUNT);
 		Sprite_Draw(TEXTURE_INDEX_2, 600.0f, 320.0f);
 	}
 	if (CountDown > 120 && CountDown < 180)
 	{
+		PlaySound(SOUND_LABEL_SE_COUNT);
 		Sprite_Draw(TEXTURE_INDEX_1, 600.0f, 320.0f);
 	}
 	if (CountDown > 180 && CountDown < 240)
 	{
+		PlaySound(SOUND_LABEL_SE_START);
 		Sprite_Draw(TEXTURE_INDEX_START, -10.0f, 30.0f);
 	}
 

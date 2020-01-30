@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.16299.0
+<<<<<<< HEAD
 Debug|Win32|C:\Users\1\Documents\HEW\|
+=======
+Debug|Win32|C:\Users\saris\Documents\HEW\|
+>>>>>>> fec8e74568152b1f30defe052497a7c61487d3c2

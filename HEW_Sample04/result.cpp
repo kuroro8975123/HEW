@@ -21,6 +21,7 @@
 #include "Iruka.h"
 #include "Kujira.h"
 #include "Uma.h"
+#include "sound.h"
 
 static float y;
 
@@ -64,7 +65,12 @@ void Result_Finalize(void)
 void Result_Update(void)
 {
 	if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
+<<<<<<< HEAD
 		Scene_Change(SCENE_INDEX_WORLDRECORD);
+=======
+		PlaySound(SOUND_LABEL_SE_AWA);
+		Scene_Change(SCENE_INDEX_TITLE);
+>>>>>>> fec8e74568152b1f30defe052497a7c61487d3c2
 	}
 	
 
