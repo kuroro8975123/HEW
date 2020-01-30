@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Iruka.cpp
 c:\users\tomo0105\documents\hew\hew_sample04\texture.h(61): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
 c:\users\tomo0105\documents\hew\hew_sample04\iruka.cpp(96): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
@@ -32,3 +33,48 @@ c:\users\tomo0105\documents\hew\hew_sample04\scene.h(15): warning C4091: 'typede
 c:\users\tomo0105\documents\hew\hew_sample04\texture.h(61): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
   コードを生成中...
   HEW_Sample04.vcxproj -> C:\Users\tomo0105\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+﻿  worldrecord.cpp
+c:\users\tomo0105\documents\hew\hew_sample04\scene.h(15): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+=======
+<<<<<<< HEAD
+﻿  scene_playerselect.cpp
+c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(14): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+=======
+<<<<<<< HEAD
+>>>>>>> 534d6cfedff349f93ab96c29a731c915ebdf34a7
+﻿  game.cpp
+c:\users\kuror\onedrive\documents\hew\hew_sample04\texture.h(60): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\scene.h(14): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\kuror\onedrive\documents\hew\hew_sample04\game.cpp(29): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'PHASE_INDEX' の左辺を無視します。
+  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+﻿  result.cpp
+c:\users\tomo0105\documents\hew\hew_sample04\scene.h(14): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+>>>>>>> b4c28deb9b6b4a0e1ef3a8fbe736b5116c04a7b2
+c:\users\tomo0105\documents\hew\hew_sample04\texture.h(58): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\tomo0105\documents\hew\hew_sample04\worldrecord.cpp(139): warning C4553: '==': 演算子にプログラム上の作用がありません。'=' を意図しましたか?
+  HEW_Sample04.vcxproj -> C:\Users\tomo0105\Documents\HEW\Debug\HEW_Sample04.exe
+<<<<<<< HEAD
+=======
+=======
+﻿  game.cpp
+c:\users\saris\documents\hew\hew_sample04\texture.h(58): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\saris\documents\hew\hew_sample04\scene.h(14): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'SCENE_INDEX' の左辺を無視します。
+c:\users\saris\documents\hew\hew_sample04\game.cpp(30): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'PHASE_INDEX' の左辺を無視します。
+  HEW_Sample04.vcxproj -> C:\Users\saris\Documents\HEW\Debug\HEW_Sample04.exe
+>>>>>>> 37ffc62761056abfff0589254b4282c60930ebe5
+>>>>>>> fe1cbd37ae95941dc848217399d83dd128624aab
+>>>>>>> 30c7be4363dd7eb0345bf129664dd2c93b975c90
+>>>>>>> 18544ae1ca852774e9a3e96adb18dcf0fd2624c3
+>>>>>>> b4c28deb9b6b4a0e1ef3a8fbe736b5116c04a7b2
+>>>>>>> 534d6cfedff349f93ab96c29a731c915ebdf34a7
+>>>>>>> 0248121f6a8f729358b4c93d992f751fa328770b

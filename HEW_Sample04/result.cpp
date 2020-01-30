@@ -118,6 +118,7 @@ void Result_Update(void)
 		Scene_Change(SCENE_INDEX_WORLDRECORD);
 		PlaySound(SOUND_LABEL_SE_AWA);
 	}
+<<<<<<< HEAD
 
 	//ŸŽÒŒˆ’èˆ—
 	if (Player[0].Second < Player[1].Second) {
@@ -130,6 +131,8 @@ void Result_Update(void)
 			Player[1].win = true;
 		}
 	}*/
+=======
+>>>>>>> 0248121f6a8f729358b4c93d992f751fa328770b
 }
 
 void Result_Draw()

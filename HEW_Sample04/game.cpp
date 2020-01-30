@@ -57,18 +57,23 @@ void Game_Initialize(void)
 	Player_2P = Get_Select_2P();
 	if (Player_1P == 1)
 	{
+<<<<<<< HEAD
 	    Kajiki_Initialize_1P(675,300);
+=======
+		Kajiki_Initialize_1P(675, 600);
+>>>>>>> 0248121f6a8f729358b4c93d992f751fa328770b
 	}
 	if (Player_1P == 2)
 	{
-		Kujira_Initialize_1P(675, 300);
+	    Kujira_Initialize_1P(675,600);
 	}
 	if (Player_1P == 3)
 	{
-		Iruka_Initialize_1P(675, 300);
+	    Iruka_Initialize_1P(675,600);
 	}
 	if (Player_1P == 4)
 	{
+<<<<<<< HEAD
 		Uma_Initialize_1P(675, 300);
 	    //Kajiki_Initialize_1P(690,600);
 	}
@@ -84,9 +89,14 @@ void Game_Initialize(void)
 	{
 	    Uma_Initialize_1P(675,300);
 	   // Uma_Initialize_1P(690,600);
+=======
+	    Uma_Initialize_1P(690,600);
+>>>>>>> 0248121f6a8f729358b4c93d992f751fa328770b
 	}
+
 	if (Player_2P == 1)
 	{
+<<<<<<< HEAD
 	    Kajiki_Initialize_2P(1175,300);
 		//Kajiki_Initialize_2P(1175, 300);
 	}
@@ -102,19 +112,26 @@ void Game_Initialize(void)
 	{
 		Uma_Initialize_2P(1175, 300);
 	    //Kajiki_Initialize_2P(1190,600);
+=======
+	    Kajiki_Initialize_2P(1175,600);
+>>>>>>> 0248121f6a8f729358b4c93d992f751fa328770b
 	}
 	if (Player_2P == 2)
 	{
-	    Kujira_Initialize_2P(1175,300);
+	    Kujira_Initialize_2P(1175,600);
 	}
 	if (Player_2P == 3)
 	{
-	    Iruka_Initialize_2P(1175,300);
+	    Iruka_Initialize_2P(1175,600);
 	}
 	if (Player_2P == 4)
 	{
+<<<<<<< HEAD
 	    Uma_Initialize_2P(1175,300);
 	    //Uma_Initialize_2P(1190,600);
+=======
+	    Uma_Initialize_2P(1175,600);
+>>>>>>> 0248121f6a8f729358b4c93d992f751fa328770b
 	}
 
 
@@ -174,6 +191,7 @@ void Game_Update(void)
 			//ゲームの終了チェック
 			if (Game_EndCheck())
 			{
+				StopSound(SOUND_LABEL_SE_SWIM);
 				Fade_Start(true, 90, D3DCOLOR_RGBA(0, 0, 0, 0));
 				g_Phase = PHASE_INDEX_STAGE_CLEAR;
 			}

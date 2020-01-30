@@ -65,7 +65,11 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/5th.png",175, 175 },					//48.5th
 	{ "asset/texture/1P.png",75, 55 },					//42.1P
 	{ "asset/texture/2P.png",75, 55 },					//42.1P
+<<<<<<< HEAD
 	{ "asset/texture/start&goal.png",175, 175 },			//49.スタートとゴールの素材
+=======
+	{"asset/texture/start&goal.png",175, 175 },			//49.スタートとゴールの素材
+>>>>>>> 0248121f6a8f729358b4c93d992f751fa328770b
 };
 
 static const int TEXTURE_FILE_COUNT = sizeof(g_TextureFiles) / sizeof(g_TextureFiles[0]);
