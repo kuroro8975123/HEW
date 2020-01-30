@@ -180,19 +180,19 @@ void Kujira_Draw_1P(void)
 
 	if (kujira.button == 1 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 675, 80);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 680, 80);
 	}
 	if (kujira.button == 2 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 675, 80);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 680, 80);
 	}
 	if (kujira.button == 3 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 675, 80);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 680, 80);
 	}
 	if (kujira.button == 4 && kujira.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 675, 80);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 680, 80);
 	}
 
 }

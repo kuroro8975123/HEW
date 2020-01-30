@@ -33,10 +33,10 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/chara_select.png", 712, 400 },				//17.キャラクターを選択してください
 	{ "asset/texture/button2.png", 400, 400 },					//18.キャラクターを選択してください
 	{"asset/texture/Block.png",52,52},								//19ロックサンプル
-	{"asset/texture/A_button.png", 64 ,64},						//20.Aボタン
-	{"asset/texture/B_button.png",  64 ,64},						//21.Bボタン
-	{"asset/texture/X_button.png", 64,64},							//22.Xボタン
-	{"asset/texture/Y_button.png",  64 ,64},						//23.Yボタン
+	{"asset/texture/A_button.png", 128 ,128},						//20.Aボタン
+	{"asset/texture/B_button.png",  128 ,128},						//21.Bボタン
+	{"asset/texture/X_button.png", 128,128},							//22.Xボタン
+	{"asset/texture/Y_button.png",  128 ,128},						//23.Yボタン
 	{ "asset/texture/KAZIKI(1).png", 128, 256 },					//24.カジキ
 	{ "asset/texture/kujira(1).png", 192, 256 },					//25.クジラ
 	{ "asset/texture/iruka.png", 96, 220 },							//26.イルカ
@@ -63,9 +63,13 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/3rd.png",175, 175 },					//46.3rd
 	{ "asset/texture/4th.png",175, 175 },					//47.4th
 	{ "asset/texture/5th.png",175, 175 },					//48.5th
+<<<<<<< HEAD
 	{ "asset/texture/1P.png",75, 55 },					//42.1P
 	{ "asset/texture/2P.png",75, 55 },					//42.1P
 
+=======
+	{"asset/texture/start&goal.png",175, 175 },			//49.スタートとゴールの素材
+>>>>>>> 30c7be4363dd7eb0345bf129664dd2c93b975c90
 };
 
 static const int TEXTURE_FILE_COUNT = sizeof(g_TextureFiles) / sizeof(g_TextureFiles[0]);

@@ -65,6 +65,17 @@ void Second_Draw(float x, float y, int second, int fig, bool bZero)
 		Number_Draw(x + NUMBER_WIDTH * (fig - (i + 1)), y, n);
 	}
 }
+//追加分（サイズ拡大用）
+void Second_Draw(float x, float y, int second, int fig, bool bZero,float sx,float sy)
+{
+	for (int i = 0; i < fig; i++) {
+
+		int n = second % 10;
+		second /= 10;
+
+		Number_Draw(x + NUMBER_WIDTH * (fig - (i + 1)), y, n, sx, sy);
+	}
+}
 
 void Minute_Draw(float x, float y, int minute, int fig, bool bZero)
 {
@@ -74,6 +85,18 @@ void Minute_Draw(float x, float y, int minute, int fig, bool bZero)
 		minute /= 10;
 
 		Number_Draw(x + NUMBER_WIDTH * (fig - (i + 1)), y, m);
+	}
+}
+
+//追加分（サイズ拡大用）
+void Minute_Draw(float x, float y, int minute, int fig, bool bZero,float sx,float sy)
+{
+	for (int i = 0; i < fig; i++) {
+
+		int m = minute % 10;
+		minute /= 10;
+
+		Number_Draw(x + NUMBER_WIDTH * (fig - (i + 1)), y, m, sx, sy);
 	}
 }
 
