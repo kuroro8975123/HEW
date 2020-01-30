@@ -46,16 +46,67 @@ typedef struct
 RANKING Ranking[6];
 PLAYER  Player[2];
 
+static int Player_1P;
+
+static int Player_2P;
+
+
 void Result_Initialize(void)
 {
 	Fade_Start(false, 90, D3DCOLOR_RGBA(0, 0, 0, 0));
-	y = 0;
-	
-	Player[0].Minute = Minute_1P_Kajiki();
-	Player[1].Minute = Minute_2P_Kajiki();
 
-	Player[0].Second = Second_1P_Kajiki();
-	Player[1].Second = Second_2P_Kajiki();
+	Player_1P = Get_Select_1P();
+	Player_2P = Get_Select_2P();
+
+
+	if (Player_1P == 1)
+	{
+		Player[0].Minute = Minute_1P_Kajiki();
+		Player[0].Second = Second_1P_Kajiki();
+	}
+
+	if (Player_1P == 2)
+	{
+		Player[0].Minute = Minute_1P_Kujira();
+		Player[0].Second = Second_1P_Kujira();
+	}
+
+	if (Player_1P == 3)
+	{
+		Player[0].Minute = Minute_1P_Iruka();
+		Player[0].Second = Second_1P_Iruka();
+	}
+
+	if (Player_1P == 4)
+	{
+		Player[1].Minute = Minute_1P_Uma();
+		Player[1].Second = Second_1P_Uma();
+	}
+
+	if (Player_2P == 1)
+	{
+		Player[1].Minute = Minute_2P_Kajiki();
+		Player[1].Second = Second_2P_Kajiki();
+	}
+
+	if (Player_2P == 2)
+	{
+		Player[1].Minute = Minute_2P_Kujira();
+		Player[1].Second = Second_2P_Kujira();
+	}
+
+	if (Player_2P == 3)
+	{
+		Player[1].Minute = Minute_2P_Iruka();
+		Player[1].Second = Second_2P_Iruka();
+	}
+
+	if (Player_2P == 4)
+	{
+		Player[1].Minute = Minute_2P_Uma();
+		Player[1].Second = Second_2P_Uma();
+	}
+
 
 }
 
@@ -65,15 +116,12 @@ void Result_Finalize(void)
 
 void Result_Update(void)
 {
-	if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
-<<<<<<< HEAD
+	if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
 		Scene_Change(SCENE_INDEX_WORLDRECORD);
-=======
 		PlaySound(SOUND_LABEL_SE_AWA);
 		Scene_Change(SCENE_INDEX_TITLE);
->>>>>>> fec8e74568152b1f30defe052497a7c61487d3c2
 	}
-	
+
 
 }
 
@@ -254,7 +302,7 @@ void Result_Draw()
 		if (Get_Select_1P() == 4)
 			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 100.0f, 100.0f, 1, 0, 100, 300);
 	}
-	
+
 
 	//int x = 0;
 

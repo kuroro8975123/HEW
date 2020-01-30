@@ -40,9 +40,9 @@ int Score;
 
 int CountDown;
 
-int Player_1P;
+static int Player_1P;
 
-int Player_2P;
+static int Player_2P;
 
 int swimCount;
 
@@ -92,7 +92,7 @@ void Game_Initialize(void)
 	g_Score = 0;
 	g_KillCount = 0;
 	Fade_Start(false, 30, D3DCOLOR_RGBA(0, 0, 0, 0));
-
+	CountDown = 0;
 	swimCount = 90;
 }
 

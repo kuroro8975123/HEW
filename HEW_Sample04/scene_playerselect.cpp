@@ -5,10 +5,7 @@
 #include "texture.h"
 #include "fade.h"
 #include "enemy.h"
-<<<<<<< HEAD
-=======
 
->>>>>>> fec8e74568152b1f30defe052497a7c61487d3c2
 #include "enemy.h"
 
 #include "scene_playerselect.h"
@@ -58,9 +55,9 @@ void P_Select_Update(void)
 {
 	if (kaziki.flag)
 	{
-		if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_LB))
-		{
-		}
+		//if (Keyboard_IsTrigger(DIK_Y) || GamePad_IsTrigger(2, BUTTON_LB))
+		//{
+		//}
 		if (Keyboard_IsTrigger(DIK_E) || GamePad_IsPress(2, BUTTON_RB))
 		{
 			PlaySound(SOUND_LABEL_SE_KASORU);
@@ -68,11 +65,8 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-<<<<<<< HEAD
-			if (kuzira.pos.x >= 550)
-=======
+			//if (kuzira.pos.x >= 550)
 			if (kuzira.pos.x > 300)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -102,11 +96,7 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-<<<<<<< HEAD
-			if (iruka.pos.x >= 550)
-=======
-			if (iruka.pos.x > 200)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
+			if (iruka.pos.x >= 200)
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -122,11 +112,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-<<<<<<< HEAD
-			if (kaziki.pos.x <= 550)
-=======
-			if (kaziki.pos.x < 200)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
+			if (kaziki.pos.x <= 200)
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -157,11 +143,7 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-<<<<<<< HEAD
-			if (uma.pos.x >= 550)
-=======
-			if (uma.pos.x > 300)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
+			if (uma.pos.x >= 300)
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -177,11 +159,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-<<<<<<< HEAD
-			if (kuzira.pos.x <= 550)
-=======
-			if (kuzira.pos.x < 300)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
+			if (kuzira.pos.x <= 300)
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -210,11 +188,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-<<<<<<< HEAD
-			if (iruka.pos.x <= 550)
-=======
 			if (iruka.pos.x < 200)
->>>>>>> e0191f952e3fbd77a924834d3d0a411f4ab29e01
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
