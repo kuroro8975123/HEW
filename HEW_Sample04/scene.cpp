@@ -5,6 +5,7 @@
 #include "game.h"
 #include "result.h"
 #include "worldrecord.h"
+#include "worldrecord_2.h"
 
 
 static SCENE_INDEX g_SceneIndex;
@@ -19,6 +20,7 @@ static const SceneFunc Initialize[] = {
 	Game_Initialize,
 	Result_Initialize,
 	WorldRecord_Initialize,
+	WorldRecord_2_Initialize,
 };
 
 
@@ -56,6 +58,10 @@ void Scene_Finalize(void)
 	case SCENE_INDEX_WORLDRECORD:
 		WorldRecord_Finalize();
 		break;
+
+	case SCENE_INDEX_WORLDRECORD_2:
+		WorldRecord_2_Finalize();
+		break;
 	}
 }
 
@@ -86,6 +92,10 @@ void Scene_Update(void)
 	case SCENE_INDEX_WORLDRECORD:
 		WorldRecord_Update();
 		break;
+
+	case SCENE_INDEX_WORLDRECORD_2:
+		WorldRecord_2_Update();
+		break;
 	}
 }
 
@@ -115,6 +125,10 @@ void Scene_Draw(void)
 	
 	case SCENE_INDEX_WORLDRECORD:
 		WorldRecord_Draw();
+		break;
+
+	case SCENE_INDEX_WORLDRECORD_2:
+		WorldRecord_2_Draw();
 		break;
 	}
 }
