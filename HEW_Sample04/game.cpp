@@ -52,37 +52,47 @@ void Game_Initialize(void)
 {
 	Player_1P = Get_Select_1P();
 	Player_2P = Get_Select_2P();
+
+	//xが690でコースの中心
+	//yが600でちょうど
+	/*
+	1Pの初期化処理
+	*/
 	if (Player_1P == 1)
 	{
-	    Kajiki_Initialize_1P(675,300);
+	    Kajiki_Initialize_1P(690,600);
 	}
 	if (Player_1P == 2)
 	{
-	    Kujira_Initialize_1P(675,300);
+	    Kujira_Initialize_1P(690,600);
 	}
 	if (Player_1P == 3)
 	{
-	    Iruka_Initialize_1P(675,300);
+	    Iruka_Initialize_1P(690,600);
 	}
 	if (Player_1P == 4)
 	{
-	    Uma_Initialize_1P(675,300);
+	    Uma_Initialize_1P(690,600);
 	}
+
+	/*
+	2Pの座標初期化処理
+	*/
 	if (Player_2P == 1)
 	{
-	    Kajiki_Initialize_2P(1175,300);
+	    Kajiki_Initialize_2P(1190,600);
 	}
 	if (Player_2P == 2)
 	{
-	    Kujira_Initialize_2P(1175,300);
+	    Kujira_Initialize_2P(1190,600);
 	}
 	if (Player_2P == 3)
 	{
-	    Iruka_Initialize_2P(1175,300);
+	    Iruka_Initialize_2P(1190,600);
 	}
 	if (Player_2P == 4)
 	{
-	    Uma_Initialize_2P(1175,300);
+	    Uma_Initialize_2P(1190,600);
 	}
 
 
@@ -125,7 +135,7 @@ void Game_Update(void)
 		case PHASE_INDEX_PLAYER_MUTEKI:
 		case PHASE_INDEX_PLAYER_NORMAL:
 
-			// 泳いでる音のSE（うるさいので今コメントアウトしてます。）
+			// 泳いでる音のSE
 			swimCount++;
 
 			if (swimCount > 90)

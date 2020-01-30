@@ -68,10 +68,6 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-<<<<<<< HEAD
-=======
-			//if (kuzira.pos.x >= 550)
->>>>>>> d59f43ab6cdc254a145301f671e2538b95d8edf4
 			if (kuzira.pos.x > 300)
 			{
 				kaziki.pos.x -= 50;
@@ -101,12 +97,8 @@ void P_Select_Update(void)
 			Left = true;
 		}
 		if (Left)
-		{
-<<<<<<< HEAD
-			if (iruka.pos.x > 200)
-=======
+		{			
 			if (iruka.pos.x >= 200)
->>>>>>> d59f43ab6cdc254a145301f671e2538b95d8edf4
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -122,11 +114,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-<<<<<<< HEAD
-			if (kaziki.pos.x < 200)
-=======
 			if (kaziki.pos.x <= 200)
->>>>>>> d59f43ab6cdc254a145301f671e2538b95d8edf4
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;
@@ -157,11 +145,8 @@ void P_Select_Update(void)
 		}
 		if (Left)
 		{
-<<<<<<< HEAD
-			if (uma.pos.x > 300)
-=======
+
 			if (uma.pos.x >= 300)
->>>>>>> d59f43ab6cdc254a145301f671e2538b95d8edf4
 			{
 				kaziki.pos.x -= 50;
 				kuzira.pos.x -= 50;
@@ -177,11 +162,7 @@ void P_Select_Update(void)
 		}
 		if (Right)
 		{
-<<<<<<< HEAD
-			if (kuzira.pos.x < 300)
-=======
 			if (kuzira.pos.x <= 300)
->>>>>>> d59f43ab6cdc254a145301f671e2538b95d8edf4
 			{
 				kaziki.pos.x += 50;
 				kuzira.pos.x += 50;

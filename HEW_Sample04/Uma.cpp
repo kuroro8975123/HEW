@@ -180,19 +180,19 @@ void Uma_Draw_1P(void)
 
 	if (uma.button == 1 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 650, 80);
+		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 680, 80);
 	}
 	if (uma.button == 2 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 650, 80);
+		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 680, 80);
 	}
 	if (uma.button == 3 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 650, 80);
+		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 680, 80);
 	}
 	if (uma.button == 4 && uma.button_flag)
 	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 650, 80);
+		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 680, 80);
 	}
 
 }
