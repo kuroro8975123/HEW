@@ -41,3 +41,6 @@ int Minute_1P_Iruka();
 int Minute_2P_Iruka();
 int Second_1P_Iruka();
 int Second_2P_Iruka();
+float Iruka_Speed_1P();
+float Iruka_Speed_2P();
+

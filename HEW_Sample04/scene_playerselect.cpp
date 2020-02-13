@@ -97,7 +97,10 @@ void P_Select_Update(void)
 			Left = true;
 		}
 		if (Left)
+<<<<<<< HEAD
+=======
 		{
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 			if (iruka.pos.x >= 200)
 			{
 				kaziki.pos.x -= 50;
@@ -129,7 +132,7 @@ void P_Select_Update(void)
 				kaziki.flag = true;
 			}
 		}
-	}
+	
 	if (iruka.flag)
 	{
 		if (Keyboard_IsTrigger(DIK_Q) || GamePad_IsTrigger(2, BUTTON_LB))

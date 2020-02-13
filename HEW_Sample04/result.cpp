@@ -114,10 +114,21 @@ void Result_Finalize(void)
 
 void Result_Update(void)
 {
+<<<<<<< HEAD
+
+		if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
+			Scene_Change(SCENE_INDEX_WORLDRECORD);
+			PlaySound(SOUND_LABEL_SE_AWA);
+			//Scene_Change(SCENE_INDEX_TITLE);
+		}
+=======
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 	if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
 		Scene_Change(SCENE_INDEX_WORLDRECORD);
 		PlaySound(SOUND_LABEL_SE_AWA);
 	}
+<<<<<<< HEAD
+=======
 	//ŸŽÒŒˆ’èˆ—
 	if (Player[0].Second < Player[1].Second) {
 		if (Player[0].Minute <= Player[1].Minute) {
@@ -129,6 +140,7 @@ void Result_Update(void)
 			Player[1].win = true;
 		}
 	}*/
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 }
 
 void Result_Draw()

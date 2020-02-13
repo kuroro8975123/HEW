@@ -41,3 +41,5 @@ int Minute_1P_Kujira();
 int Minute_2P_Kujira();
 int Second_1P_Kujira();
 int Second_2P_Kujira();
+float Kujira_Speed_1P();
+float Kujira_Speed_2P();

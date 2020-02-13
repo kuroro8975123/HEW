@@ -42,3 +42,5 @@ int Minute_1P_Uma();
 int Minute_2P_Uma();
 int Second_1P_Uma();
 int Second_2P_Uma();
+float Uma_Speed_1P();
+float Uma_Speed_2P();

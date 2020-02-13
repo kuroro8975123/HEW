@@ -8,6 +8,7 @@
 #define NOMAL_SCR		(1)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 #define ANIME_PATTERN_MAX	7
+#define MAX_SPEED       (10000)
 
 int Count_1P_Kujira;
 int Count_2P_Kujira;
@@ -24,6 +25,13 @@ int Time_Second_1P_Kujira;
 int Time_Minute_2P_Kujira;
 int Time_Second_2P_Kujira;
 static int g_animCount;
+static float Speed_Button;
+static float Speed;
+static float END;
+
+static float Speed_Button_2P;
+static float Speed_2P;
+static float END_2P;
 
 Kujira kujira;
 Kujira_2P kujira_2P;
@@ -43,6 +51,9 @@ void Kujira_Initialize_1P(float x, float y)
 	Move_BG_1P_Kujira = 0;
 	Move_BG_1P_Kujira_ = 0;
 	Goal_1P_Kujira = false;
+	Speed = 0;
+	Speed_Button = 0;
+	END = 0;
 
 }
 void Kujira_Initialize_2P(float x, float y)
@@ -60,6 +71,9 @@ void Kujira_Initialize_2P(float x, float y)
 	Move_BG2_2P_Kujira = 0;
 	Move_BG2_2P_Kujira_ = 0;
 	Goal_2P_Kujira = false;
+	Speed_2P = 0;
+	Speed_Button_2P = 0;
+	END_2P = 0;
 
 }
 void Kujira_Finalize(void)
@@ -69,8 +83,12 @@ void Kujira_Finalize(void)
 void Kujira_Update_1P(void)
 {
 	//プレイヤー
-	if (Count_1P_Kujira <= NOMAL_SCR)
+	if ((Speed_Button + Speed) <= MAX_SPEED)
 	{
+		Speed += 1.0;
+		Speed_Button += GetSpeed_1P_Kujira();
+		END = (Speed + Speed_Button);
+
 		Move_BG1_Kujira += 1.0;
 		Move_BG_1P_Kujira_ += GetSpeed_1P_Kujira();
 		Move_BG_1P_Kujira = (Move_BG1_Kujira + Move_BG_1P_Kujira_);
@@ -87,8 +105,14 @@ void Kujira_Update_1P(void)
 
 		}
 	}
-	else if (Count_1P_Kujira >= END_SCR)
+	else 
 	{
+		Speed += 1.0;
+		Speed_Button += GetSpeed_1P_Kujira();
+		END = (Speed + Speed_Button);
+
+
+
 		if (Move_BG_1P_Kujira_ + Move_BG1_Kujira < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_1P_Kujira_ += GetSpeed_1P_Kujira();
@@ -121,8 +145,12 @@ void Kujira_Update_1P(void)
 void Kujira_Update_2P(void)
 {
 	//プレイヤー
-	if (Count_2P_Kujira <= NOMAL_SCR)
+	if ((Speed_Button_2P + Speed_2P) <= MAX_SPEED)
 	{
+		Speed_2P += 1.0;
+		Speed_Button_2P += GetSpeed_2P_Kujira();
+		END_2P = (Speed_2P + Speed_Button_2P);
+
 		Move_BG2_Kujira += 2.0;
 		Move_BG2_2P_Kujira_ += GetSpeed_2P_Kujira();
 		Move_BG2_2P_Kujira = (Move_BG2_Kujira + Move_BG2_2P_Kujira_);
@@ -139,8 +167,13 @@ void Kujira_Update_2P(void)
 
 		}
 	}
-	else if (Count_2P_Kujira >= END_SCR)
+	else 
 	{
+		Speed_2P += 1.0;
+		Speed_Button_2P += GetSpeed_2P_Kujira();
+		END_2P = (Speed_2P + Speed_Button_2P);
+
+
 		if (Move_BG2_2P_Kujira_ + Move_BG2_Kujira < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG2_2P_Kujira_ += GetSpeed_2P_Kujira();
@@ -172,9 +205,17 @@ void Kujira_Update_2P(void)
 }
 void Kujira_Draw_1P(void)
 {
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), Move_BG_1P_Kujira_ + Move_BG1_Kujira, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 250) + Move_BG_1P_Kujira_ + Move_BG1_Kujira, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG_1P_Kujira_ + Move_BG1_Kujira, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), 
+									Move_BG_1P_Kujira_ + Move_BG1_Kujira, (SCREEN_WIDTH / 2),
+									0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
+	
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), 
+									(-SCREEN_HEIGHT + 250) + Move_BG_1P_Kujira_ + Move_BG1_Kujira,
+									(SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
+	
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), 
+									((-SCREEN_HEIGHT * 2) + 500) + Move_BG_1P_Kujira_ + Move_BG1_Kujira,
+									(SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	
 	Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, kujira.pos.x, kujira.pos.y, g_animCount * 100, 0, 100, 300);
 
@@ -403,4 +444,13 @@ int Second_1P_Kujira()
 int Second_2P_Kujira()
 {
 	return Time_Second_2P_Kujira;
+}
+
+float Kujira_Speed_1P()
+{
+	return END;
+}
+float Kujira_Speed_2P()
+{
+	return END_2P;
 }

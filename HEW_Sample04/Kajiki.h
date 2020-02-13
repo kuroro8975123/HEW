@@ -43,4 +43,7 @@ int Second_1P_Kajiki();
 int Second_2P_Kajiki();
 float Kajiki_Speed_1P();
 float Kajiki_Speed_2P();
+bool Kajiki_Map();
+bool Kajiki_Map_false();
+
 

@@ -15,6 +15,7 @@
 
 #define NOMAL_SCR		(1)	//ÉRÅ[ÉXÇÃí∑Ç≥
 #define END_SCR			(NOMAL_SCR + 1)
+#define MAP             (515)
 
 typedef enum PHASE_INDEX
 {
@@ -48,7 +49,10 @@ int swimCount;
 
 float map_1P;
 float map_1P_;
+float map_1P_count;
 float map_2P;
+float map_2P_;
+float map_2P_count;
 
 
 void Game_Initialize(void)
@@ -57,7 +61,11 @@ void Game_Initialize(void)
 	Player_2P = Get_Select_2P();
 	if (Player_1P == 1)
 	{
+<<<<<<< HEAD
+		Kajiki_Initialize_1P(675, 300);
+=======
 		Kajiki_Initialize_1P(675, 600);
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 	}
 	if (Player_1P == 2)
 	{
@@ -71,6 +79,23 @@ void Game_Initialize(void)
 	{
 		Uma_Initialize_1P(675, 300);
 	}
+<<<<<<< HEAD
+	if (Player_2P == 1)
+	{
+		Kajiki_Initialize_2P(1175, 300);
+	}
+	if (Player_2P == 2)
+	{
+		Kujira_Initialize_2P(1175, 300);
+	}
+	if (Player_2P == 3)
+	{
+		Iruka_Initialize_2P(1175, 300);
+	}
+	if (Player_2P == 4)
+	{
+		Uma_Initialize_2P(1175, 300);
+=======
 
 	if(Player_2P ==1)
 	{
@@ -87,10 +112,10 @@ void Game_Initialize(void)
 	if (Player_2P == 4)
 	{
 	    Uma_Initialize_2P(1175,600);
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 	}
 
 
-	//Enemy_Initialize();
 	Timer_Initialize();
 
 	g_Phase = PHASE_INDEX_FADE;
@@ -99,8 +124,12 @@ void Game_Initialize(void)
 	g_KillCount = 0;
 	Fade_Start(false, 30, D3DCOLOR_RGBA(0, 0, 0, 0));
 	CountDown = 0;
-	map_1P = 715;
-	map_2P = 715;
+	map_1P = 800;
+	map_1P_ = 0;
+	map_1P_count = 0;
+	map_2P = 800;
+	map_2P_ = 0;
+	map_2P_count = 0;
 	swimCount = 90;
 }
 
@@ -111,7 +140,6 @@ void Game_Finalize(void)
 	Kujira_Finalize();
 	Iruka_Finalize();
 	Uma_Finalize();
-	//Enemy_Finalize();
 	Timer_Uninit();
 }
 
@@ -163,45 +191,138 @@ void Game_Update(void)
 		if (Player_1P == 1)
 		{
 			Kajiki_Update_1P();
+			if (map_1P > 220)
+			{
+				map_1P_ = Kajiki_Speed_1P();
+				map_1P_count = map_1P_ / 20;
+				map_1P = 800 - map_1P_count;
+
+				if (map_1P < 220)
+				{
+					map_1P = 220;
+				}
+			}
+
 		}
 		if (Player_1P == 2)
 		{
 			Kujira_Update_1P();
+			if (map_1P > 220)
+			{
+				map_1P_ = Kujira_Speed_1P();
+				map_1P_count = map_1P_ / 20;
+				map_1P = 800 - map_1P_count;
+
+				if (map_1P < 220)
+				{
+					map_1P = 220;
+				}
+			}
+
 		}
 		if (Player_1P == 3)
 		{
 			Iruka_Update_1P();
+			if (map_1P > 220)
+			{
+				map_1P_ = Iruka_Speed_1P();
+				map_1P_count = map_1P_ / 20;
+				map_1P = 800 - map_1P_count;
+
+				if (map_1P < 220)
+				{
+					map_1P = 220;
+				}
+			}
+
 		}
 		if (Player_1P == 4)
 		{
 			Uma_Update_1P();
+			if (map_1P > 220)
+			{
+				map_1P_ = Uma_Speed_1P();
+				map_1P_count = map_1P_ / 20;
+				map_1P = 800 - map_1P_count;
+
+				if (map_1P < 220)
+				{
+					map_1P = 220;
+				}
+			}
+
 		}
 		if (Player_2P == 1)
 		{
 			Kajiki_Update_2P();
+			if (map_2P > 220)
+			{
+				map_2P_ = Kajiki_Speed_2P();
+				map_2P_count = map_2P_ / 20;
+				map_2P = 800 - map_2P_count;
+
+				if (map_2P < 220)
+				{
+					map_2P = 220;
+				}
+			}
+
 		}
 		if (Player_2P == 2)
 		{
 			Kujira_Update_2P();
+			if (map_2P > 220)
+			{
+				map_2P_ = Kujira_Speed_2P();
+				map_2P_count = map_2P_ / 20;
+				map_2P = 800 - map_2P_count;
+
+				if (map_2P < 220)
+				{
+					map_2P = 220;
+				}
+			}
+
 		}
 		if (Player_2P == 3)
 		{
 			Iruka_Update_2P();
+			if (map_2P > 220)
+			{
+				map_2P_ = Iruka_Speed_2P();
+				map_2P_count = map_2P_ / 20;
+				map_2P = 800 - map_2P_count;
+
+				if (map_2P < 220)
+				{
+					map_2P = 220;
+				}
+			}
+
 		}
 		if (Player_2P == 4)
 		{
 			Uma_Update_2P();
-		}
+			if (map_2P > 220)
+			{
+				map_2P_ = Uma_Speed_2P();
+				map_2P_count = map_2P_ / 20;
+				map_2P = 800 - map_2P_count;
 
-		//map_1P_ = ((NOMAL_SCR / 515) * (SCREEN_HEIGHT / 515));// - (Kajiki_Speed_1P()) / 515);
-		//map_1P = (NOMAL_SCR / 515) / (SCREEN_HEIGHT / 515) / (Kajiki_Speed_1P()) / 515;
-		
+				if (map_2P < 220)
+				{
+					map_2P = 220;
+				}
+			}
+
+		}
 
 	}
 	if (CountDown < 300)
 		CountDown++;
 
 }
+
 
 void Game_Draw(void)
 {
@@ -241,8 +362,8 @@ void Game_Draw(void)
 
 	Sprite_Draw(TEXTURE_INDEX_BG, 0, 0);
 
-	Sprite_Draw(TEXTURE_INDEX_1P_MAP, 1640, map_1P);// 715 200
-	Sprite_Draw(TEXTURE_INDEX_2P_MAP, 1745, map_2P);// 715 200
+	Sprite_Draw(TEXTURE_INDEX_1P_MAP, 1590, map_1P);// 800 220 105
+	Sprite_Draw(TEXTURE_INDEX_2P_MAP, 1695, map_2P);// 800 220
 
 	//Enemy_Draw();
 	Minute_Draw(850, 20, Timer_GetMinute(), 2, true);

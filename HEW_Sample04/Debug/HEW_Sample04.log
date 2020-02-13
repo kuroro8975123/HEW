@@ -1,2 +1,47 @@
+<<<<<<< HEAD
 ﻿  myDirect3D.cpp
   HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+<<<<<<< HEAD
+﻿  Kajiki.cpp
+c:\users\1\documents\hew\hew_sample04\texture.h(61): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(143): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(209): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(242): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(246): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(250): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(280): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(284): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(288): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(329): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(339): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(349): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(359): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(403): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(412): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(421): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kajiki.cpp(430): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  Kujira.cpp
+c:\users\1\documents\hew\hew_sample04\texture.h(61): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(119): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(180): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(210): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(214): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(218): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(242): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(243): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(244): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(281): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(290): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(299): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(308): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(349): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(358): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(367): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\1\documents\hew\hew_sample04\kujira.cpp(376): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  コードを生成中...
+  HEW_Sample04.vcxproj -> C:\Users\1\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+﻿  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
+>>>>>>> de5473ffe790d885994a57bedc745e7178feecec
