@@ -97,6 +97,10 @@ void P_Select_Update(void)
 			Left = true;
 		}
 		if (Left)
+<<<<<<< HEAD
+=======
+		{
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 			if (iruka.pos.x >= 200)
 			{
 				kaziki.pos.x -= 50;

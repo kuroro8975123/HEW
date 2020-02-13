@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Kajiki.cpp
 c:\users\1\documents\hew\hew_sample04\texture.h(61): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TextureIndex' の左辺を無視します。
 c:\users\1\documents\hew\hew_sample04\kajiki.cpp(143): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
@@ -36,3 +37,6 @@ c:\users\1\documents\hew\hew_sample04\kujira.cpp(367): warning C4305: '+=': 'dou
 c:\users\1\documents\hew\hew_sample04\kujira.cpp(376): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
   コードを生成中...
   HEW_Sample04.vcxproj -> C:\Users\1\Documents\HEW\Debug\HEW_Sample04.exe
+=======
+﻿  HEW_Sample04.vcxproj -> C:\Users\kuror\OneDrive\Documents\HEW\Debug\HEW_Sample04.exe
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7

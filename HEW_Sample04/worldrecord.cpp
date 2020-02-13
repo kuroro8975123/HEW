@@ -1,106 +1,102 @@
+/*================================================
+			     worldrecord.cpp
+--------------------------------------------------
+	過去を含むTOP5のタイムをソートし、
+	順位付けして、出力する。
+	また、各順位のタイムを返す。
+
+	ソート方法はバブルソート
+================================================*/
+
 #include "input.h"
 #include "scene.h"
 #include "sprite.h"
-//#include "texture.h"
 #include "fade.h"
 #include "main.h"
-#include "game.h"
-#include "score_draw.h"
-#include "number.h"
 #include "timer.h"
-#include "Kajiki.h"
-#include "Iruka.h"
-#include "Kujira.h"
-#include "Uma.h"
 #include "worldrecord.h"
-#include "scene_playerselect.h"
+#include "result.h"
 
-//
-//int tmpS;
-//int tmpM;
-//
-//typedef struct
-//{
-//	int Second;
-//	int Minute;
-//	int Rank;
-//}RANKING;
-//
-//typedef struct
-//{
-//	int Second;
-//	int Minute;
-//	int Rank;
-//}PLAYER;
-//
-//RANKING Ranking[6];
-//PLAYER  Player[1];
+#define RECORD_SIZE		7
 
 typedef struct {
 	int Min;
 	int Sec;
 }RECORD;
+typedef struct {
+	int Min;
+	int Sec;
+}PLAYER;
 
-RECORD g_Wrecord[7];				//　プレイヤーレコード（七人分）
-static int WinnerMin, WinnerSec;	//　勝者のタイム格納変数
-static int tempMin, tempSec;		//　タイム一時格納変数
-static int SelectPlayer[2];			//　0…1P　,　1…2P
+RECORD g_Wrecord[RECORD_SIZE];				//　プレイヤーレコード（七人分）
+PLAYER g_Player[2];							//　プレイヤーレコード（仮置き）
 
-//
-static bool	_1st, _2nd, _3rd, _4th, _5th, Drow;
+static bool FirstTime = true;				//二回目以降のInitializeでランキングを初期化して上書きしないように飛ばすためのフラグ
 
+
+void Swap(int *x, int *y);					//Swap関数プロトタイプ宣言(ここでしか使わない予定なので.hには書かない)
 
 void WorldRecord_Initialize(void)
 {
 	Fade_Start(false, 90, D3DCOLOR_RGBA(0, 0, 0, 0));
 
-	//フラグをすべて"false"に
-	_1st = false;
-	_2nd = false;
-	_3rd = false;
-	_4th = false;
-	_5th = false;
-	Drow = false;
+	//すべてのMin,Secをともに99で初期化
+	if (FirstTime) {	
+		for (int i = 0; i < RECORD_SIZE - 1; i++)
+		{
+			g_Wrecord[i].Min = 99;
+			g_Wrecord[i].Sec = 99;
+		}
+	}
+	/*
+	予備処理
+	---内容---
+	HEW当日にゲームを終了してしまい、
+	ランキングのデータが消えてしまった時
+	ここで直接記述する。
+	if(FIrstTime){
+		//1位
+		g_Wrecord[0].Min = ;
+		g_Wrecord[0].Sec = ;
 
-	//1P,2Pの配列にキャラクター番号を格納
-	SelectPlayer[0] = Get_Select_1P();
-	SelectPlayer[1] = Get_Select_2P();
+		//2位
+		g_Wrecord[1].Min = ;
+		g_Wrecord[1].Sec = ;
 
-	//1Pのタイム格納処理
-	if (SelectPlayer[0] == 1){	//1Pがカジキを選んだとき
-		g_Wrecord[5].Min = Minute_1P_Kajiki(); 
-		g_Wrecord[5].Sec = Second_1P_Kajiki();
+		//3位
+		g_Wrecord[2].Min = ;
+		g_Wrecord[2].Sec = ;
+
+		//4位
+		g_Wrecord[3].Min = ;
+		g_Wrecord[3].Sec = ;
+
+		//5位
+		g_Wrecord[4].Min = ;
+		g_Wrecord[4].Sec = ;
 	}
-	if (SelectPlayer[0] == 2) {	//1Pがクジラを選んだとき
-		g_Wrecord[5].Min = Minute_1P_Kujira();
-		g_Wrecord[5].Sec = Second_1P_Kujira();
-	}
-	if (SelectPlayer[0] == 3) {	//1Pがイルカを選んだとき
-		g_Wrecord[5].Min = Minute_1P_Iruka();
-		g_Wrecord[5].Sec = Second_1P_Iruka();
-	}
-	if (SelectPlayer[0] == 4) { //1Pがうまを選んだとき
-		g_Wrecord[5].Min = Minute_1P_Uma();
-		g_Wrecord[5].Sec = Second_1P_Uma();
+	*/
+
+	for (int i = 0; i < 2; i++)
+	{
+		//プレイヤーごとのタイムをg_Wrecordの[6][7]番目に格納
+		g_Wrecord[i + 5].Min = Get_Player_Min(i);
+		g_Wrecord[i + 5].Sec = Get_Player_Sec(i);
+
+		//タイムに"Min"があった場合は"Min * 60"の値を"Sec"に加算
+		if (g_Wrecord[i + 5].Min != 0 && g_Wrecord[i + 5].Min != 99) {
+			g_Wrecord[i + 5].Sec += 60 * g_Wrecord[i + 5].Min;
+			g_Wrecord[i + 5].Min  = 0;
+		}
+		//プレイヤーごとのタイムをそれぞれの変数に格納
+		//※g_Wrecordに入れたままだとソートする際に入れ替えられてしまうため、別変数に保管
+		g_Player[i].Min = Get_Player_Min(i);
+		g_Player[i].Sec = Get_Player_Sec(i);
 	}
 
-	//2Pのタイム格納処理
-	if (SelectPlayer[1] == 1) {	//2Pがカジキを選んだとき
-		g_Wrecord[6].Min = Minute_2P_Kajiki();
-		g_Wrecord[6].Sec = Second_2P_Kajiki();
-	}
-	if (SelectPlayer[1] == 2) {	//2Pがクジラを選んだとき
-		g_Wrecord[6].Min = Minute_2P_Kujira();
-		g_Wrecord[6].Sec = Second_2P_Kujira();
-	}
-	if (SelectPlayer[1] == 3) {	//2Pがイルカを選んだとき
-		g_Wrecord[6].Min = Minute_2P_Iruka();
-		g_Wrecord[6].Sec = Second_2P_Iruka();
-	}
-	if (SelectPlayer[1] == 4) { //2Pがうまを選んだとき
-		g_Wrecord[6].Min = Minute_2P_Uma();
-		g_Wrecord[6].Sec = Second_2P_Uma();
-	}
+	//ここで"FirstTime"フラグを切っておくことで、2回目以降初期化されない
+	FirstTime = false;
+
 }
 
 void WorldRecord_Finalize(void)
@@ -114,34 +110,17 @@ void WorldRecord_Update(void)
 		Scene_Change(SCENE_INDEX_TITLE);
 	}
 
-	//ランキング計算処理
-
-	//プレイヤーのタイムで早いほうをとりだす
-
-	//1Pと2Pの分数が同じとき
-	if (g_Wrecord[5].Min == g_Wrecord[6].Min){
-		//秒数を比較する
-		if (g_Wrecord[5].Sec < g_Wrecord[6].Sec){			//1Pの方が速い場合
-			//1Pのタイムを格納
-			WinnerMin = g_Wrecord[5].Min;
-			WinnerSec = g_Wrecord[5].Sec;
+	//タイムソート処理
+	for (int i = 0; i < RECORD_SIZE - 1; i++) {
+		for (int j = 0; j < RECORD_SIZE - 1; j++) {
+			if (g_Wrecord[j + 1].Sec < g_Wrecord[j].Sec) {				//秒数が一つ先より大きければ"真"
+				if (g_Wrecord[j + 1].Min <= g_Wrecord[j].Min) {			//分数が一つ先より大きければ"真"
+					Swap(&g_Wrecord[j + 1].Sec, &g_Wrecord[j].Sec);		//秒数入れ替え
+					Swap(&g_Wrecord[j + 1].Min, &g_Wrecord[j].Min);		//分数入れ替え
+				}
+			}
 		}
-		else if (g_Wrecord[5].Sec > g_Wrecord[6].Sec) {		//2Pの方が速い場合
-			//2Pのタイムを格納
-			WinnerMin = g_Wrecord[6].Min;
-			WinnerSec = g_Wrecord[6].Sec;
-		}
-		else if (g_Wrecord[5].Sec == g_Wrecord[6].Sec) {	//同速の場合
-			//1Pのタイムを格納
-			WinnerMin = g_Wrecord[5].Min;
-			WinnerSec = g_Wrecord[5].Sec;
-			//Drowフラグを"true"に
-			Drow == true;
-		}
-
 	}
-
-
 }
 
 void WorldRecord_Draw()
@@ -149,67 +128,63 @@ void WorldRecord_Draw()
 	Sprite_Draw(TEXTURE_INDEX_WORLDRECORD, 0.0f, 0.0f);
 	Sprite_Draw(TEXTURE_INDEX_1ST, 450.0f, 150.0f);
 	Sprite_Draw(TEXTURE_INDEX_2ND, 250.0f, 350.0f);
-	Sprite_Draw(TEXTURE_INDEX_3RD, 1050.0f,350.0f);
+	Sprite_Draw(TEXTURE_INDEX_3RD, 1050.0f, 350.0f);
 	Sprite_Draw(TEXTURE_INDEX_4TH, 250.0f, 550.0f);
-	Sprite_Draw(TEXTURE_INDEX_5TH, 1050.0f,550.0f);
-	Sprite_Draw(TEXTURE_INDEX_1P, 250.0f,750.0f);
-	Sprite_Draw(TEXTURE_INDEX_2P, 1050.0f,750.0f);
+	Sprite_Draw(TEXTURE_INDEX_5TH, 1050.0f, 550.0f);
+	Sprite_Draw(TEXTURE_INDEX_1P, 250.0f, 750.0f);
+	Sprite_Draw(TEXTURE_INDEX_2P, 1050.0f, 750.0f);
 
-	int x = 0;
+	//Sec -> Minに変換
+	for (int i = 0; i < 5; i++)
+	{
+		if (g_Wrecord[i].Min == 99)
+			continue;
 
-	//for (int i = 0; i < 4; i++)
-	//{
-	//	for (int j = 1+x; j < 4; j++)
-	//	{
-	//		if (Player[i].Second > Player[j].Second)
-	//		{
-	//			if (Player[i].Minute >= Player[j].Minute)
-	//			{
-	//				tmpS = Player[i].Second;
-	//				Player[i].Second = Player[j].Second;
-	//				Player[j].Second = tmpS;
+		if (g_Wrecord[i].Sec / 60 >= 1) {
+			g_Wrecord[i].Min = g_Wrecord[i].Sec / 60;
+			g_Wrecord[i].Sec = g_Wrecord[i].Sec % 60;
+		}
+	}
 
-	//				tmpM = Player[i].Minute;
-	//				Player[i].Minute = Player[j].Minute;
-	//				Player[j].Minute = tmpM;
-	//			}
-	//		}
-	//	}
-	//	x++;
-	//}
-	////1位描画
-	//Minute_Draw(440, 120, Player[0].Minute, 2, true);	//1位分数
-	//Second_Draw(520, 120, Player[0].Second, 2, true);	//1位秒数
+	Minute_Draw( 750, 250, g_Wrecord[0].Min, 2, true, 1.5f, 1.5f);	//1位分数
+	Second_Draw( 950, 250, g_Wrecord[0].Sec, 2, true, 1.5f, 1.5f);	//1位秒数
 
-	//if (Player[0].Second == Second_1P_Iruka())
-	//{
-	//	Sprite_Draw(TEXTURE_INDEX_KAZIKI, SCREEN_WIDTH / 2 - 70.0f , 150.0f);
-	//}
-	//if (Player[0].Second == Second_1P_Iruka())
-	//{
-	//	Sprite_Draw(TEXTURE_INDEX_IRUKA, SCREEN_WIDTH / 2 - 70.0f, 150.0f);
-	//}
-	////2位描画
-	//Minute_Draw(100, 200, Player[1].Minute, 2, true);	//2位分数
-	//Second_Draw(180, 200, Player[1].Second, 2, true);	//2位秒数
+	Minute_Draw( 440, 425, g_Wrecord[1].Min, 2, true);				//2位分数
+	Second_Draw( 600, 425, g_Wrecord[1].Sec, 2, true);				//2位秒数
 
-	//if (Player[1].Second == Second_1P_Iruka())
-	//{
-	//	Sprite_Draw(TEXTURE_INDEX_KAZIKI, 150.0f, 250.0f);
-	//}
-	//if (Player[1].Second == Second_1P_Iruka())
-	//{
-	//	Sprite_Draw(TEXTURE_INDEX_IRUKA, 150.0f, 250.0f);
-	//}
+	Minute_Draw(1240, 425, g_Wrecord[2].Min, 2, true);				//3位分数
+	Second_Draw(1400, 425, g_Wrecord[2].Sec, 2, true);				//3位秒数
+
+	Minute_Draw( 440, 625, g_Wrecord[3].Min, 2, true);				//4位分数
+	Second_Draw( 600, 625, g_Wrecord[3].Sec, 2, true);				//4位秒数
+
+	Minute_Draw(1240, 625, g_Wrecord[4].Min, 2, true);				//5位分数
+	Second_Draw(1400, 625, g_Wrecord[4].Sec, 2, true);				//5位秒数
+
+	Minute_Draw( 440, 815, g_Player[0].Min, 2, true);				//1P分数
+	Second_Draw( 600, 815, g_Player[0].Sec, 2, true);				//1P秒数
+
+	Minute_Draw(1240, 815, g_Player[1].Min, 2, true);				//2P分数
+	Second_Draw(1400, 815, g_Player[1].Sec, 2, true);				//2P秒数
 
 }
 
+//g_Wrecordに格納されている"分数"を返す。(引数は構造体の番号)
 int Get_WorldMin(int n)
 {
 	return g_Wrecord[n].Min;
 }
-
+//g_Wrecordに格納されている"秒数"を返す。(引数は構造体の番号)
 int Get_WorldSec(int n)
 {
 	return g_Wrecord[n].Sec;
+}
+//Swap関数。引数に入れた数字を入れ替える。
+void Swap(int *x, int *y)
+{
+	int tmp;
+
+	tmp = *x;
+	*x = *y;
+	*y = tmp;
 }

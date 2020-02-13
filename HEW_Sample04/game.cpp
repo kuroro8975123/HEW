@@ -61,20 +61,25 @@ void Game_Initialize(void)
 	Player_2P = Get_Select_2P();
 	if (Player_1P == 1)
 	{
+<<<<<<< HEAD
 		Kajiki_Initialize_1P(675, 300);
+=======
+		Kajiki_Initialize_1P(675, 600);
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 	}
 	if (Player_1P == 2)
 	{
-		Kujira_Initialize_1P(675, 300);
+	    Kujira_Initialize_1P(675,600);
 	}
 	if (Player_1P == 3)
 	{
-		Iruka_Initialize_1P(675, 300);
+	    Iruka_Initialize_1P(675,600);
 	}
 	if (Player_1P == 4)
 	{
 		Uma_Initialize_1P(675, 300);
 	}
+<<<<<<< HEAD
 	if (Player_2P == 1)
 	{
 		Kajiki_Initialize_2P(1175, 300);
@@ -90,6 +95,24 @@ void Game_Initialize(void)
 	if (Player_2P == 4)
 	{
 		Uma_Initialize_2P(1175, 300);
+=======
+
+	if(Player_2P ==1)
+	{
+	    Kajiki_Initialize_2P(1175,600);
+	}
+	if (Player_2P == 2)
+	{
+	    Kujira_Initialize_2P(1175,600);
+	}
+	if (Player_2P == 3)
+	{
+	    Iruka_Initialize_2P(1175,600);
+	}
+	if (Player_2P == 4)
+	{
+	    Uma_Initialize_2P(1175,600);
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 	}
 
 
@@ -151,6 +174,7 @@ void Game_Update(void)
 			//ゲームの終了チェック
 			if (Game_EndCheck())
 			{
+				StopSound(SOUND_LABEL_SE_SWIM);
 				Fade_Start(true, 90, D3DCOLOR_RGBA(0, 0, 0, 0));
 				g_Phase = PHASE_INDEX_STAGE_CLEAR;
 			}

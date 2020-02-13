@@ -55,7 +55,10 @@ typedef enum TextureIndex
 	TEXTURE_INDEX_5TH,          //5th
 	TEXTURE_INDEX_1P_MAP,          //1P
 	TEXTURE_INDEX_2P_MAP,          //1P
+<<<<<<< HEAD
 
+=======
+>>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 	TEXTURE_INDEX_START_GOAL,		//スタートとゴール
 	TEXTURE_INDEX_MAX
 };
