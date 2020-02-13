@@ -8,6 +8,7 @@
 #define NOMAL_SCR		(1)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 #define ANIME_PATTERN_MAX	7
+#define MAX_SPEED       (10000)
 
 int Count_1P_Iruka;
 int Count_2P_Iruka;
@@ -24,6 +25,15 @@ int Time_Second_1P_Iruka;
 int Time_Minute_2P_Iruka;
 int Time_Second_2P_Iruka;
 static int g_animCount;
+
+static float Speed_Button;
+static float Speed;
+static float END;
+
+static float Speed_Button_2P;
+static float Speed_2P;
+static float END_2P;
+
 
 Iruka iruka;
 Iruka_2P iruka_2P;
@@ -43,6 +53,9 @@ void Iruka_Initialize_1P(float x, float y)
 	Move_BG_1P_Iruka = 0;
 	Move_BG_1P_Iruka_ = 0;
 	Goal_1P_Iruka = false;
+	Speed = 0;
+	Speed_Button = 0;
+	END = 0;
 
 }
 void Iruka_Initialize_2P(float x, float y)
@@ -60,6 +73,9 @@ void Iruka_Initialize_2P(float x, float y)
 	Move_BG_2P_Iruka = 0;
 	Move_BG_2P_Iruka_ = 0;
 	Goal_2P_Iruka = false;
+	Speed_2P = 0;
+	Speed_Button_2P = 0;
+	END_2P = 0;
 
 
 }
@@ -70,8 +86,12 @@ void Iruka_Finalize(void)
 void Iruka_Update_1P(void)
 {
 	//プレイヤー
-	if (Count_1P_Iruka <= NOMAL_SCR)
+	if ((Speed_Button + Speed) <= MAX_SPEED)
 	{
+		Speed += 1.0;
+		Speed_Button += GetSpeed_1P_Iruka();
+		END = (Speed + Speed_Button);
+
 		Move_BG1_Iruka += 1.0;
 		Move_BG_1P_Iruka_ += GetSpeed_1P_Iruka();
 		Move_BG_1P_Iruka = (Move_BG1_Iruka + Move_BG_1P_Iruka_);
@@ -88,8 +108,12 @@ void Iruka_Update_1P(void)
 
 		}
 	}
-	else if (Count_1P_Iruka >= END_SCR)
+	else
 	{
+		Speed += 1.0;
+		Speed_Button += GetSpeed_1P_Iruka();
+		END = (Speed + Speed_Button);
+
 		if (Move_BG_1P_Iruka_ + Move_BG1_Iruka < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_1P_Iruka_ += GetSpeed_1P_Iruka();
@@ -122,8 +146,12 @@ void Iruka_Update_1P(void)
 void Iruka_Update_2P(void)
 {
 	//プレイヤー
-	if (Count_2P_Iruka <= NOMAL_SCR)
+	if ((Speed_Button_2P + Speed_2P) <= MAX_SPEED)
 	{
+		Speed_2P += 1.0;
+		Speed_Button_2P += GetSpeed_2P_Iruka();
+		END_2P = (Speed_2P + Speed_Button_2P);
+
 		Move_BG2_Iruka += 1.0;
 		Move_BG_2P_Iruka_ += GetSpeed_2P_Iruka();
 		Move_BG_2P_Iruka = (Move_BG2_Iruka + Move_BG_2P_Iruka_);
@@ -140,8 +168,12 @@ void Iruka_Update_2P(void)
 
 		}
 	}
-	else if (Count_2P_Iruka >= END_SCR)
+	else 
 	{
+		Speed_2P += 1.0;
+		Speed_Button_2P += GetSpeed_2P_Iruka();
+		END_2P = (Speed_2P + Speed_Button_2P);
+
 		if (Move_BG_2P_Iruka_ + Move_BG2_Iruka < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_2P_Iruka_ += GetSpeed_2P_Iruka();
@@ -406,4 +438,13 @@ int Second_1P_Iruka()
 int Second_2P_Iruka()
 {
 	return Time_Second_2P_Iruka;
+}
+
+float Iruka_Speed_1P()
+{
+	return END;
+}
+float Iruka_Speed_2P()
+{
+	return END_2P;
 }

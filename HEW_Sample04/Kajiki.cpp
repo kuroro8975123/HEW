@@ -13,8 +13,9 @@
 /*------------------------------------------------------------------------------
 マクロ定義
 ------------------------------------------------------------------------------*/
-#define NOMAL_SCR		(1)	//コースの長さ
+#define NOMAL_SCR		(30)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
+#define MAX_SPEED       (10000)
 #define ANIME_PATTERN_MAX	7
 
 /*------------------------------------------------------------------------------
@@ -24,12 +25,24 @@ int Count_1P_Kajiki;
 int Count_2P_Kajiki;
 bool Goal_1P_Kajiki;
 bool Goal_2P_Kajiki;
+bool map_flag;
+
 float Move_BG1_Kajiki; 
 float Move_BG1_1P_Kajiki;
 float Move_BG1_1P_Kajiki_;
+
+static float Speed_Button;
+static float Speed;
+static float END;
+
+static float Speed_Button_2P;
+static float Speed_2P;
+static float END_2P;
+
 float Move_BG2_Kajiki;
 float Move_BG_2P_Kajiki;
 float Move_BG_2P_Kajiki_;
+
 int Time_Minute_1P_Kajiki;
 int Time_Second_1P_Kajiki;
 int Time_Minute_2P_Kajiki;
@@ -57,7 +70,9 @@ void Kajiki_Initialize_1P(float x, float y)
 	Move_BG1_1P_Kajiki_ = 0;
 	Move_BG1_1P_Kajiki = 0;
 	Goal_1P_Kajiki = false;
-
+	Speed = 0;
+	Speed_Button = 0;
+	END = 0;
 }
 /*------------------------------------------------------------------------------
 カジキ2Pの初期化
@@ -76,6 +91,10 @@ void Kajiki_Initialize_2P(float x, float y)
 	Move_BG_2P_Kajiki_ = 0;
 	Move_BG_2P_Kajiki = 0;
 	Goal_2P_Kajiki = false;
+	Speed_2P = 0;
+	Speed_Button_2P = 0;
+	END_2P = 0;
+
 
 }
 /*------------------------------------------------------------------------------
@@ -91,17 +110,20 @@ void Kajiki_Finalize(void)
 void Kajiki_Update_1P(void)
 {
 	//プレイヤー
-	if (Count_1P_Kajiki <= NOMAL_SCR)
+	if ((Speed_Button + Speed) <= MAX_SPEED)
 	{
+		Speed += 1.0;
+		Speed_Button += GetSpeed_1P_Kajiki();
+		END = (Speed + Speed_Button);
+
 		Move_BG1_Kajiki += 1.0;
 		Move_BG1_1P_Kajiki_ += GetSpeed_1P_Kajiki();
 		Move_BG1_1P_Kajiki = (Move_BG1_Kajiki + Move_BG1_1P_Kajiki_);
-
+		
 		if (Move_BG1_Kajiki + Move_BG1_1P_Kajiki_ > (SCREEN_HEIGHT + 250))
 		{
 			Move_BG1_Kajiki = 250;
 			Move_BG1_1P_Kajiki_ = 250;
-			Count_1P_Kajiki++;
 		}
 		if (Move_BG1_1P_Kajiki > (SCREEN_HEIGHT * 2) + 500)
 		{
@@ -109,12 +131,16 @@ void Kajiki_Update_1P(void)
 
 		}
 	}
-	else if (Count_1P_Kajiki >= END_SCR)
+	else
 	{
+		Speed += 1.0;
+		Speed_Button += GetSpeed_1P_Kajiki();
+		END = (Speed + Speed_Button);
+
 		if (Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG1_1P_Kajiki_ += GetSpeed_1P_Kajiki();
-			Move_BG1_Kajiki += 0.1;
+			Move_BG1_Kajiki += 1.1;
 		}
 		if (Move_BG1_1P_Kajiki < (SCREEN_HEIGHT * 2 - 510))
 		{
@@ -148,8 +174,13 @@ void Kajiki_Update_1P(void)
 void Kajiki_Update_2P(void)
 {
 	//プレイヤー
-	if (Count_2P_Kajiki <= NOMAL_SCR)
+	if (Speed_Button_2P + Speed_2P <= NOMAL_SCR)
 	{
+		Speed_2P += 1.0;
+		Speed_Button_2P += GetSpeed_2P_Kajiki();
+		END_2P = (Speed_2P + Speed_Button_2P);
+
+
 		Move_BG2_Kajiki += 1.0;
 		Move_BG_2P_Kajiki_ += GetSpeed_2P_Kajiki();
 		Move_BG_2P_Kajiki = (Move_BG2_Kajiki + Move_BG_2P_Kajiki_);
@@ -166,8 +197,12 @@ void Kajiki_Update_2P(void)
 
 		}
 	}
-	else if (Count_2P_Kajiki >= END_SCR)
+	else 
 	{
+		Speed_2P += 1.0;
+		Speed_Button_2P += GetSpeed_2P_Kajiki();
+		END_2P = (Speed_2P + Speed_Button_2P);
+
 		if (Move_BG_2P_Kajiki_ + Move_BG2_Kajiki < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_2P_Kajiki_ += GetSpeed_2P_Kajiki();
@@ -202,9 +237,18 @@ void Kajiki_Update_2P(void)
 ------------------------------------------------------------------------------*/
 void Kajiki_Draw_1P(void)
 {
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 250) + Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT -50);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT -50);
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4),
+		                            Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki,
+		                            (SCREEN_WIDTH / 2),0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
+
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4),
+		                            (-SCREEN_HEIGHT + 250) + Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki,
+		                            (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT -50);
+	
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), 
+		                            ((-SCREEN_HEIGHT * 2) + 500) + Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki,
+		                            (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT -50);
+
 	Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, kajiki.pos.x, kajiki.pos.y, g_animCount * 100, 0, 100, 300);
 
 	//1pボタンの位置x=680
@@ -231,9 +275,17 @@ void Kajiki_Draw_1P(void)
 ------------------------------------------------------------------------------*/
 void Kajiki_Draw_2P(void)
 {
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), Move_BG_2P_Kajiki_ + Move_BG2_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), (-SCREEN_HEIGHT + 250) + Move_BG_2P_Kajiki_ + Move_BG2_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
-	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG_2P_Kajiki_ + Move_BG2_Kajiki, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), 
+									 Move_BG_2P_Kajiki_ + Move_BG2_Kajiki,
+									(SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
+	
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2),
+									(-SCREEN_HEIGHT + 250) + Move_BG_2P_Kajiki_ + Move_BG2_Kajiki,
+									(SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
+	
+	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2),
+									((-SCREEN_HEIGHT * 2) + 500) + Move_BG_2P_Kajiki_ + Move_BG2_Kajiki,
+									(SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 
 	Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, kajiki_2P.pos.x, kajiki_2P.pos.y, g_animCount * 100, 0, 100, 300);
 
@@ -272,8 +324,9 @@ void Kajiki_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_UP) || GamePad_IsPress(2, BUTTON_A))
 		{
+			map_flag = true;
 			PlaySound(SOUND_LABEL_SE_ATARI);
-			kajiki.speed += 0.08;
+			kajiki.speed += 1.08;
 			kajiki.button_flag = false;
 		}
 	}
@@ -281,8 +334,9 @@ void Kajiki_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_RIGHT) || GamePad_IsPress(2, BUTTON_B))
 		{
+			map_flag = true;
 			PlaySound(SOUND_LABEL_SE_ATARI);
-			kajiki.speed += 0.05;
+			kajiki.speed += 1.05;
 			kajiki.button_flag = false;
 		}
 	}
@@ -290,8 +344,9 @@ void Kajiki_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_DOWN) || GamePad_IsPress(2, BUTTON_X))
 		{
+			map_flag = true;
 			PlaySound(SOUND_LABEL_SE_ATARI);
-			kajiki.speed += 0.03;
+			kajiki.speed += 1.03;
 			kajiki.button_flag = false;
 		}
 	}
@@ -299,8 +354,9 @@ void Kajiki_Button_1P(void)
 	{
 		if (Keyboard_IsPress(DIK_LEFT) || GamePad_IsPress(2, BUTTON_Y))
 		{
+			map_flag = true;
 			PlaySound(SOUND_LABEL_SE_ATARI);
-			kajiki.speed += 0.01;
+			kajiki.speed += 1.01;
 			kajiki.button_flag = false;
 		}
 	}
@@ -462,9 +518,10 @@ int Second_2P_Kajiki()
 
 float Kajiki_Speed_1P()
 {
-	return Move_BG1_1P_Kajiki;
+	return END;
 }
 float Kajiki_Speed_2P()
 {
-	return Move_BG_2P_Kajiki;
+	return END_2P;
 }
+

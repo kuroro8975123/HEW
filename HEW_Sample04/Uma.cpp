@@ -8,6 +8,7 @@
 #define NOMAL_SCR		(1)	//コースの長さ
 #define END_SCR			(NOMAL_SCR + 1)
 #define ANIME_PATTERN_MAX	7
+#define MAX_SPEED       (10000)
 
 int Count_1P_Uma;
 int Count_2P_Uma;
@@ -24,6 +25,13 @@ int Time_Second_1P_Uma;
 int Time_Minute_2P_Uma;
 int Time_Second_2P_Uma;
 static int g_animCount;
+static float Speed_Button;
+static float Speed;
+static float END;
+
+static float Speed_Button_2P;
+static float Speed_2P;
+static float END_2P;
 
 Uma uma;
 Uma_2P uma_2P;
@@ -43,6 +51,9 @@ void Uma_Initialize_1P(float x, float y)
 	Move_BG_1P_Uma = 0;
 	Move_BG_1P_Uma_ = 0;
 	Goal_1P_Uma = false;
+	Speed = 0;
+	Speed_Button = 0;
+	END = 0;
 
 }
 void Uma_Initialize_2P(float x, float y)
@@ -60,6 +71,9 @@ void Uma_Initialize_2P(float x, float y)
 	Move_BG2_2P_Uma = 0;
 	Move_BG2_2P_Uma_ = 0;
 	Goal_2P_Uma = false;
+	Speed_2P = 0;
+	Speed_Button_2P = 0;
+	END_2P = 0;
 }
 void Uma_Finalize(void)
 {
@@ -68,8 +82,12 @@ void Uma_Finalize(void)
 void Uma_Update_1P(void)
 {
 	//プレイヤー
-	if (Count_1P_Uma <= NOMAL_SCR)
+	if ((Speed_Button + Speed) <= MAX_SPEED)
 	{
+		Speed += 1.0;
+		Speed_Button += GetSpeed_1P_Uma();
+		END = (Speed + Speed_Button);
+
 		Move_BG1_Uma += 1.0;
 		Move_BG_1P_Uma_ += GetSpeed_1P_Uma();
 		Move_BG_1P_Uma = (Move_BG1_Uma + Move_BG_1P_Uma_);
@@ -86,8 +104,12 @@ void Uma_Update_1P(void)
 
 		}
 	}
-	else if (Count_1P_Uma >= END_SCR)
+	else 
 	{
+		Speed += 1.0;
+		Speed_Button += GetSpeed_1P_Uma();
+		END = (Speed + Speed_Button);
+
 		if (Move_BG_1P_Uma_ + Move_BG1_Uma < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG_1P_Uma_ += GetSpeed_1P_Uma();
@@ -120,8 +142,12 @@ void Uma_Update_1P(void)
 void Uma_Update_2P(void)
 {
 	//プレイヤー
-	if (Count_2P_Uma <= NOMAL_SCR)
+	if ((Speed_Button_2P + Speed_2P) <= MAX_SPEED)
 	{
+		Speed_2P += 1.0;
+		Speed_Button_2P += GetSpeed_2P_Uma();
+		END_2P = (Speed_2P + Speed_Button_2P);
+
 		Move_BG2 += 1.0;
 		Move_BG2_2P_Uma_ += GetSpeed_2P_Uma();
 		Move_BG2_2P_Uma = (Move_BG2 + Move_BG2_2P_Uma_);
@@ -138,8 +164,12 @@ void Uma_Update_2P(void)
 
 		}
 	}
-	else if (Count_2P_Uma >= END_SCR)
+	else 
 	{
+		Speed_2P += 1.0;
+		Speed_Button_2P += GetSpeed_2P_Uma();
+		END_2P = (Speed_2P + Speed_Button_2P);
+
 		if (Move_BG2_2P_Uma_ + Move_BG2 < (SCREEN_HEIGHT * 2 - 510))
 		{
 			Move_BG2_2P_Uma_ += GetSpeed_2P_Uma();
@@ -403,4 +433,13 @@ int Second_1P_Uma()
 int Second_2P_Uma()
 {
 	return Time_Second_2P_Uma;
+}
+
+float Uma_Speed_1P()
+{
+	return END;
+}
+float Uma_Speed_2P()
+{
+	return END_2P;
 }
