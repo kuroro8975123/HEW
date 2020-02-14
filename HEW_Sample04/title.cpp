@@ -25,6 +25,7 @@ void Title_Finalize(void)
 void Title_Update(void)
 {
 	if( !g_bEnd ) { 
+		//PlaySound(SOUND_LABEL_BGM_TITLE);
 		if( Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(2, BUTTON_A)) {
 			PlaySound(SOUND_LABEL_SE_AWA);
 			Fade_Start(true, 30, D3DCOLOR_RGBA(255, 255, 255, 255));

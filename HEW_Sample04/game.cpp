@@ -55,64 +55,42 @@ float map_2P_;
 float map_2P_count;
 
 
+
 void Game_Initialize(void)
 {
 	Player_1P = Get_Select_1P();
 	Player_2P = Get_Select_2P();
 	if (Player_1P == 1)
 	{
-<<<<<<< HEAD
-		Kajiki_Initialize_1P(675, 300);
-=======
-		Kajiki_Initialize_1P(675, 600);
->>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
+		Kajiki_Initialize_1P(675, 550);
 	}
 	if (Player_1P == 2)
 	{
-	    Kujira_Initialize_1P(675,600);
+		Kujira_Initialize_1P(675, 550);
 	}
 	if (Player_1P == 3)
 	{
-	    Iruka_Initialize_1P(675,600);
+		Iruka_Initialize_1P(675, 550);
 	}
 	if (Player_1P == 4)
 	{
-		Uma_Initialize_1P(675, 300);
+		Uma_Initialize_1P(675, 550);
 	}
-<<<<<<< HEAD
 	if (Player_2P == 1)
 	{
-		Kajiki_Initialize_2P(1175, 300);
+		Kajiki_Initialize_2P(1150, 550);
 	}
 	if (Player_2P == 2)
 	{
-		Kujira_Initialize_2P(1175, 300);
+		Kujira_Initialize_2P(1150, 550);
 	}
 	if (Player_2P == 3)
 	{
-		Iruka_Initialize_2P(1175, 300);
+		Iruka_Initialize_2P(1150, 550);
 	}
 	if (Player_2P == 4)
 	{
-		Uma_Initialize_2P(1175, 300);
-=======
-
-	if(Player_2P ==1)
-	{
-	    Kajiki_Initialize_2P(1175,600);
-	}
-	if (Player_2P == 2)
-	{
-	    Kujira_Initialize_2P(1175,600);
-	}
-	if (Player_2P == 3)
-	{
-	    Iruka_Initialize_2P(1175,600);
-	}
-	if (Player_2P == 4)
-	{
-	    Uma_Initialize_2P(1175,600);
->>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
+		Uma_Initialize_2P(1150, 550);
 	}
 
 
@@ -131,6 +109,7 @@ void Game_Initialize(void)
 	map_2P_ = 0;
 	map_2P_count = 0;
 	swimCount = 90;
+
 }
 
 void Game_Finalize(void)
@@ -152,7 +131,7 @@ void Game_Update(void)
 		case PHASE_INDEX_FADE:
 			if (!Fade_IsFade()) {
 				g_Phase = PHASE_INDEX_PLAYER_NORMAL;
-				// PlaySound(SOUND_LABEL_BGM000);
+				//PlaySound(SOUND_LABEL_BGM_GAME01);
 			}
 			break;
 		case PHASE_INDEX_PLAYER_IN:
@@ -194,7 +173,7 @@ void Game_Update(void)
 			if (map_1P > 220)
 			{
 				map_1P_ = Kajiki_Speed_1P();
-				map_1P_count = map_1P_ / 20;
+				map_1P_count = map_1P_ / 19.7;
 				map_1P = 800 - map_1P_count;
 
 				if (map_1P < 220)
@@ -210,7 +189,7 @@ void Game_Update(void)
 			if (map_1P > 220)
 			{
 				map_1P_ = Kujira_Speed_1P();
-				map_1P_count = map_1P_ / 20;
+				map_1P_count = map_1P_ / 19.7;
 				map_1P = 800 - map_1P_count;
 
 				if (map_1P < 220)
@@ -226,7 +205,7 @@ void Game_Update(void)
 			if (map_1P > 220)
 			{
 				map_1P_ = Iruka_Speed_1P();
-				map_1P_count = map_1P_ / 20;
+				map_1P_count = map_1P_ / 19.7;
 				map_1P = 800 - map_1P_count;
 
 				if (map_1P < 220)
@@ -242,7 +221,7 @@ void Game_Update(void)
 			if (map_1P > 220)
 			{
 				map_1P_ = Uma_Speed_1P();
-				map_1P_count = map_1P_ / 20;
+				map_1P_count = map_1P_ / 19.7;
 				map_1P = 800 - map_1P_count;
 
 				if (map_1P < 220)
@@ -258,7 +237,7 @@ void Game_Update(void)
 			if (map_2P > 220)
 			{
 				map_2P_ = Kajiki_Speed_2P();
-				map_2P_count = map_2P_ / 20;
+				map_2P_count = map_2P_ / 19.7;
 				map_2P = 800 - map_2P_count;
 
 				if (map_2P < 220)
@@ -274,7 +253,7 @@ void Game_Update(void)
 			if (map_2P > 220)
 			{
 				map_2P_ = Kujira_Speed_2P();
-				map_2P_count = map_2P_ / 20;
+				map_2P_count = map_2P_ / 19.7;
 				map_2P = 800 - map_2P_count;
 
 				if (map_2P < 220)
@@ -290,7 +269,7 @@ void Game_Update(void)
 			if (map_2P > 220)
 			{
 				map_2P_ = Iruka_Speed_2P();
-				map_2P_count = map_2P_ / 20;
+				map_2P_count = map_2P_ / 19.7;
 				map_2P = 800 - map_2P_count;
 
 				if (map_2P < 220)
@@ -306,7 +285,7 @@ void Game_Update(void)
 			if (map_2P > 220)
 			{
 				map_2P_ = Uma_Speed_2P();
-				map_2P_count = map_2P_ / 20;
+				map_2P_count = map_2P_ / 19.7;
 				map_2P = 800 - map_2P_count;
 
 				if (map_2P < 220)
@@ -359,6 +338,7 @@ void Game_Draw(void)
 	{
 		Uma_Draw_2P();
 	}
+
 
 	Sprite_Draw(TEXTURE_INDEX_BG, 0, 0);
 

@@ -97,10 +97,6 @@ void P_Select_Update(void)
 			Left = true;
 		}
 		if (Left)
-<<<<<<< HEAD
-=======
-		{
->>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 			if (iruka.pos.x >= 200)
 			{
 				kaziki.pos.x -= 50;
@@ -293,6 +289,14 @@ void P_Select_Draw(void)
 	Sprite_Draw(TEXTURE_INDEX_KUJIRA_SELECT, kuzira.pos.x, kuzira.pos.y);
 	Sprite_Draw(TEXTURE_INDEX_IRUKA_SELECT, iruka.pos.x, iruka.pos.y);
 	Sprite_Draw(TEXTURE_INDEX_UMA_SELECT, uma.pos.x, uma.pos.y);
+	if (!oneP)
+	{
+		Sprite_Draw(TEXTURE_INDEX_1P_GAME, 900, 890);
+	}
+	if (oneP)
+	{
+		Sprite_Draw(TEXTURE_INDEX_2P_GAME, 900, 890);
+	}
 }
 
 

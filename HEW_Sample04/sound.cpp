@@ -48,7 +48,8 @@ SOUNDPARAM g_aParam[SOUND_LABEL_MAX] =
 	{(char *)"asset/SE/hakushu.wav",0},			// 拍手
 	{(char *)"asset/SE/kasoru.wav",0},			// カーソル移動音
 	{(char *)"asset/SE/mizubasya.wav",0},		// 
-	{(char *)"asset/SE/bassya.wav",0},			// 
+	{(char *)"asset/SE/bassya.wav",0},			//
+	{(char*)"asset/BGM/HEW_titleBGM.wav",0}	//タイトルBGM
 };
 
 //=============================================================================

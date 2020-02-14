@@ -114,33 +114,40 @@ void Result_Finalize(void)
 
 void Result_Update(void)
 {
-<<<<<<< HEAD
 
-		if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
-			Scene_Change(SCENE_INDEX_WORLDRECORD);
-			PlaySound(SOUND_LABEL_SE_AWA);
-			//Scene_Change(SCENE_INDEX_TITLE);
-		}
-=======
->>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 	if (Keyboard_IsTrigger(DIK_SPACE) || GamePad_IsTrigger(0, BUTTON_A)) {
 		Scene_Change(SCENE_INDEX_WORLDRECORD);
 		PlaySound(SOUND_LABEL_SE_AWA);
+		//Scene_Change(SCENE_INDEX_TITLE);
 	}
-<<<<<<< HEAD
-=======
+	for (int i = 0; i < 2; i++)
+	{
+		if (Player[i].Minute != 0 && Player[i].Minute != 99)
+		{
+			Player[i].Second += 60 * Player[i].Minute;
+			Player[i].Minute = 0;
+		}
+	}
 	//勝者決定処理
 	if (Player[0].Second < Player[1].Second) {
 		if (Player[0].Minute <= Player[1].Minute) {
 			Player[0].win = true;
 		}
 	}
-	/*else if (Player[1].Second < Player[0].Second) {
-		if (Player[1].Minute <= Player[0].Minute) {
-			Player[1].win = true;
+	for (int i = 0; i < 2; i++)
+	{
+		if (Player[i].Second / 60 >= 1)
+		{
+			Player[i].Minute = Player[i].Second / 60;
+		    Player[i].Second = Player[i].Second % 60;
 		}
-	}*/
->>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
+	}
+
+	//else if (Player[1].Second < Player[0].Second) {
+	//	if (Player[1].Minute <= Player[0].Minute) {
+	//		Player[1].win = true;
+	//	}
+	
 }
 
 void Result_Draw()
@@ -152,14 +159,14 @@ void Result_Draw()
 
 	if (Player[0].win) {
 		//1Pが1位
-		Minute_Draw( 940, 500, Player[0].Minute, 2, true, 1.5, 1.5);	//1位分数
+		Minute_Draw(940, 500, Player[0].Minute, 2, true, 1.5, 1.5);	//1位分数
 		Second_Draw(1100, 500, Player[0].Second, 2, true, 1.5, 1.5);	//1位秒数
 
-		Sprite_Draw(TEXTURE_INDEX_1P, 650, 450, 0, 0, 175, 175, 16, 16, 1.5f, 1.5f, 0);
+		Sprite_Draw(TEXTURE_INDEX_1P_GAME, 650, 450, 0, 0, 175, 175, 16, 16, 1.5f, 1.5f, 0);
 
 		//1Pがカジキ選択
 		if (Get_Select_1P() == 1)
-			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1400.0f, 350.0f, 1, 0, 100, 300, 0, 0, 1.5f, 1.0f, 0);			
+			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1400.0f, 350.0f, 1, 0, 100, 300, 0, 0, 1.5f, 1.0f, 0);
 		//1Pがくじら選択
 		if (Get_Select_1P() == 2)
 			Sprite_Draw(TEXTURE_INDEX_KUZIRA_ANIMATION, 1400.0f, 350.0f, 1, 0, 100, 300, 0, 0, 1.5f, 1.0f, 0);
@@ -171,11 +178,11 @@ void Result_Draw()
 			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 1400.0f, 350.0f, 1, 0, 100, 300, 0, 0, 1.5f, 1.0f, 0);
 
 
-			//2Pが2位
-		Minute_Draw( 954, 800, Player[1].Minute, 2, true);	//2位分数
+		//2Pが2位
+		Minute_Draw(954, 800, Player[1].Minute, 2, true);	//2位分数
 		Second_Draw(1114, 800, Player[1].Second, 2, true);	//2位秒数
 
-		Sprite_Draw(TEXTURE_INDEX_2P, 750, 750);
+		Sprite_Draw(TEXTURE_INDEX_2P_GAME, 750, 750);
 
 		//2Pがカジキ選択
 		if (Get_Select_2P() == 1)
@@ -192,13 +199,13 @@ void Result_Draw()
 	}
 	else if (!Player[0].win) {
 		//2Pが1位
-		Minute_Draw( 940, 500, Player[1].Minute, 2, true, 1.5, 1.5);	//1位分数
+		Minute_Draw(940, 500, Player[1].Minute, 2, true, 1.5, 1.5);	//1位分数
 		Second_Draw(1100, 500, Player[1].Second, 2, true, 1.5, 1.5);	//1位秒数
 
-		Sprite_Draw(TEXTURE_INDEX_2P, 650, 450, 0, 0, 175, 175, 16, 16, 1.5f, 1.5f, 0);
+		Sprite_Draw(TEXTURE_INDEX_2P_GAME, 650, 450, 0, 0, 175, 175, 16, 16, 1.5f, 1.5f, 0);
 
 		//2Pがカジキ選択
-		if (Get_Select_2P() == 1) 
+		if (Get_Select_2P() == 1)
 			Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, 1400.0f, 350.0f, 1, 0, 100, 300, 0, 0, 1.5f, 1.0f, 0);
 		//2Pがくじら選択
 		if (Get_Select_2P() == 2)
@@ -211,10 +218,10 @@ void Result_Draw()
 			Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, 1400.0f, 350.0f, 1, 0, 100, 300, 0, 0, 1.5f, 1.0f, 0);
 
 		//1Pが2位
-		Minute_Draw( 954, 800, Player[0].Minute, 2, true);	//2位分数
+		Minute_Draw(954, 800, Player[0].Minute, 2, true);	//2位分数
 		Second_Draw(1114, 800, Player[0].Second, 2, true);	//2位秒数
 
-		Sprite_Draw(TEXTURE_INDEX_1P, 750, 750);
+		Sprite_Draw(TEXTURE_INDEX_1P_GAME, 750, 750);
 
 		//2Pがカジキ選択
 		if (Get_Select_1P() == 1)

@@ -32,6 +32,7 @@ static float END;
 static float Speed_Button_2P;
 static float Speed_2P;
 static float END_2P;
+static float Start;
 
 Uma uma;
 Uma_2P uma_2P;
@@ -54,7 +55,7 @@ void Uma_Initialize_1P(float x, float y)
 	Speed = 0;
 	Speed_Button = 0;
 	END = 0;
-
+	Start = 0;
 }
 void Uma_Initialize_2P(float x, float y)
 {
@@ -205,52 +206,76 @@ void Uma_Draw_1P(void)
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), Move_BG_1P_Uma_ + Move_BG1_Uma, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), (-SCREEN_HEIGHT + 250) + Move_BG_1P_Uma_ + Move_BG1_Uma, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 4), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG_1P_Uma_ + Move_BG1_Uma, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
+	
+	if (END < SCREEN_HEIGHT)
+	{
+		Sprite_Draw(TEXTURE_INDEX_START_GOAL, 0, END + 500);
+	}
+	Sprite_Draw(TEXTURE_INDEX_1P, uma.pos.x - 15, uma.pos.y + 250);
+	if (!Goal_1P_Uma)
+	{
+		Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, uma.pos.x, uma.pos.y, g_animCount * 100, 0, 100, 300);
 
-	Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, uma.pos.x, uma.pos.y, g_animCount * 100, 0, 100, 300);
-
-	if (uma.button == 1 && uma.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 680, 80);
+		if (uma.button == 1 && uma.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 660, 890);
+		}
+		if (uma.button == 2 && uma.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 660, 890);
+		}
+		if (uma.button == 3 && uma.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 660, 890);
+		}
+		if (uma.button == 4 && uma.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 660, 890);
+		}
 	}
-	if (uma.button == 2 && uma.button_flag)
+	else
 	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 680, 80);
+		Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, uma.pos.x, uma.pos.y, 0, 0, 100, 300);
 	}
-	if (uma.button == 3 && uma.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 680, 80);
-	}
-	if (uma.button == 4 && uma.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 680, 80);
-	}
-
 }
 void Uma_Draw_2P(void)
 {
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), Move_BG2_2P_Uma_ + Move_BG2, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), (-SCREEN_HEIGHT + 250) + Move_BG2_2P_Uma_ + Move_BG2, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2), ((-SCREEN_HEIGHT * 2) + 500) + Move_BG2_2P_Uma_ + Move_BG2, (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
-
-	Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, uma_2P.pos.x, uma_2P.pos.y, g_animCount * 100, 0, 100, 300);
-
-	if (uma_2P.button == 1 && uma_2P.button_flag)
+	
+	if (END_2P < SCREEN_HEIGHT)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 80);
-	}
-	if (uma_2P.button == 2 && uma_2P.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 80);
-	}
-	if (uma_2P.button == 3 && uma_2P.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 80);
-	}
-	if (uma_2P.button == 4 && uma_2P.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 80);
+		Sprite_Draw(TEXTURE_INDEX_START_GOAL, SCREEN_WIDTH / 2, END_2P + 500);
 	}
 
+	Sprite_Draw(TEXTURE_INDEX_2P, uma_2P.pos.x - 10, uma_2P.pos.y + 250);
+	
+	if (!Goal_2P_Uma)
+	{
+		Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, uma_2P.pos.x, uma_2P.pos.y, g_animCount * 100, 0, 100, 300);
+
+		if (uma_2P.button == 1 && uma_2P.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1140, 890);
+		}
+		if (uma_2P.button == 2 && uma_2P.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1140, 890);
+		}
+		if (uma_2P.button == 3 && uma_2P.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1140, 890);
+		}
+		if (uma_2P.button == 4 && uma_2P.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1140, 890);
+		}
+	}
+	else
+	{
+		Sprite_Draw(TEXTURE_INDEX_UMA_ANIMATION, uma_2P.pos.x, uma_2P.pos.y, 0, 0, 100, 300);
+	}
 }
 
 void Uma_Button_1P(void)

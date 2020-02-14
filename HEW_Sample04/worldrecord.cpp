@@ -84,7 +84,8 @@ void WorldRecord_Initialize(void)
 		g_Wrecord[i + 5].Sec = Get_Player_Sec(i);
 
 		//タイムに"Min"があった場合は"Min * 60"の値を"Sec"に加算
-		if (g_Wrecord[i + 5].Min != 0 && g_Wrecord[i + 5].Min != 99) {
+		if (g_Wrecord[i + 5].Min != 0 && g_Wrecord[i + 5].Min != 99) 
+		{
 			g_Wrecord[i + 5].Sec += 60 * g_Wrecord[i + 5].Min;
 			g_Wrecord[i + 5].Min  = 0;
 		}
@@ -113,10 +114,10 @@ void WorldRecord_Update(void)
 	//タイムソート処理
 	for (int i = 0; i < RECORD_SIZE - 1; i++) {
 		for (int j = 0; j < RECORD_SIZE - 1; j++) {
-			if (g_Wrecord[j + 1].Sec < g_Wrecord[j].Sec) {				//秒数が一つ先より大きければ"真"
-				if (g_Wrecord[j + 1].Min <= g_Wrecord[j].Min) {			//分数が一つ先より大きければ"真"
-					Swap(&g_Wrecord[j + 1].Sec, &g_Wrecord[j].Sec);		//秒数入れ替え
-					Swap(&g_Wrecord[j + 1].Min, &g_Wrecord[j].Min);		//分数入れ替え
+			if (g_Wrecord[i + 1].Sec < g_Wrecord[j].Sec) {				//秒数が一つ先より大きければ"真"
+				if (g_Wrecord[i + 1].Min <= g_Wrecord[j].Min) {			//分数が一つ先より大きければ"真"
+					Swap(&g_Wrecord[i + 1].Sec, &g_Wrecord[j].Sec);		//秒数入れ替え
+					Swap(&g_Wrecord[i + 1].Min, &g_Wrecord[j].Min);		//分数入れ替え
 				}
 			}
 		}

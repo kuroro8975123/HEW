@@ -21,7 +21,7 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/result.png", SCREEN_WIDTH, SCREEN_HEIGHT },						//05.リザルト画面
 	{ "asset/texture/player.png", 64, 128 },							//06.プレイヤー
 	{ "asset/texture/enemy.png", 64, 128 },						//07.敵？
-	{ "asset/texture/number.png",704 , 64 },						//08.数字
+	{ "asset/texture/numberchange.png",704 , 64 },						//08.数字
 	{ "asset/texture/3.png", 800, 400 },								//09.カウントダウン
 	{ "asset/texture/2.png", 800, 400 },								//10.カウントダウン
 	{ "asset/texture/1.png", 800, 400 },								//11.カウントダウン
@@ -56,21 +56,19 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/winner.png",400, 400 },				//40.勝利
 	{ "asset/texture/loser.png",400, 200 },					//41.敗北
 	{ "asset/texture/Worldrecode.png",SCREEN_WIDTH, SCREEN_HEIGHT },					//41.敗北
-	{ "asset/texture/1P.png",175, 175 },					//42.1P
-	{ "asset/texture/2P.png",175, 175 },					//43.2P
+	{ "asset/texture/1P.png",125, 125 },					//42.1P
+	{ "asset/texture/2P.png",125, 125 },					//43.2P
 	{ "asset/texture/1st.png",225, 225 },					//44.1st
 	{ "asset/texture/2nd.png",175, 175},					//45.2nd
 	{ "asset/texture/3rd.png",175, 175 },					//46.3rd
 	{ "asset/texture/4th.png",175, 175 },					//47.4th
 	{ "asset/texture/5th.png",175, 175 },					//48.5th
 	{ "asset/texture/1P.png",75, 55 },					//42.1P
-	{ "asset/texture/2P.png",75, 55 },					//42.1P
-<<<<<<< HEAD
+	{ "asset/texture/2P.png",75, 55 },					//42.2P
+	{ "asset/texture/start&goal.png",960, 100 },			//49.スタートとゴールの素材
+	{ "asset/texture/1P.png",175, 175 },					//50.1P
+	{ "asset/texture/2P.png",175, 175 },					//51.2P
 
-	{"asset/texture/start&goal.png",175, 175 },			//49.スタートとゴールの素材
-=======
-	{ "asset/texture/start&goal.png",175, 175 },			//49.スタートとゴールの素材
->>>>>>> c5227bc3d10325d40158aa2f99a8d01be121f8a7
 };
 
 static const int TEXTURE_FILE_COUNT = sizeof(g_TextureFiles) / sizeof(g_TextureFiles[0]);

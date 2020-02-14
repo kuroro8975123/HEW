@@ -39,6 +39,8 @@ static float Speed_Button_2P;
 static float Speed_2P;
 static float END_2P;
 
+static float Start;
+
 float Move_BG2_Kajiki;
 float Move_BG_2P_Kajiki;
 float Move_BG_2P_Kajiki_;
@@ -73,6 +75,7 @@ void Kajiki_Initialize_1P(float x, float y)
 	Speed = 0;
 	Speed_Button = 0;
 	END = 0;
+	Start = 0;
 }
 /*------------------------------------------------------------------------------
 カジキ2Pの初期化
@@ -94,7 +97,6 @@ void Kajiki_Initialize_2P(float x, float y)
 	Speed_2P = 0;
 	Speed_Button_2P = 0;
 	END_2P = 0;
-
 
 }
 /*------------------------------------------------------------------------------
@@ -174,7 +176,7 @@ void Kajiki_Update_1P(void)
 void Kajiki_Update_2P(void)
 {
 	//プレイヤー
-	if (Speed_Button_2P + Speed_2P <= NOMAL_SCR)
+	if ((Speed_Button_2P + Speed_2P) <= MAX_SPEED)
 	{
 		Speed_2P += 1.0;
 		Speed_Button_2P += GetSpeed_2P_Kajiki();
@@ -249,26 +251,39 @@ void Kajiki_Draw_1P(void)
 		                            ((-SCREEN_HEIGHT * 2) + 500) + Move_BG1_1P_Kajiki_ + Move_BG1_Kajiki,
 		                            (SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT -50);
 
-	Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, kajiki.pos.x, kajiki.pos.y, g_animCount * 100, 0, 100, 300);
+	if (END < SCREEN_HEIGHT)
+	{
+		Sprite_Draw(TEXTURE_INDEX_START_GOAL, 0, END + 500);
+	}
+	Sprite_Draw(TEXTURE_INDEX_1P, kajiki.pos.x - 15, kajiki.pos.y + 250);
 
-	//1pボタンの位置x=680
-	if (kajiki.button == 1 && kajiki.button_flag)
+	if (!Goal_1P_Kajiki)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 680, 80);
-	}
-	if (kajiki.button == 2 && kajiki.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 680, 80);
-	}
-	if (kajiki.button == 3 && kajiki.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 680, 80);
-	}
-	if (kajiki.button == 4 && kajiki.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 680, 80);
-	}
+		Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, kajiki.pos.x, kajiki.pos.y, g_animCount * 100, 0, 100, 300);
 
+		//1pボタンの位置x=680
+		if (kajiki.button == 1 && kajiki.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 660, 890);
+		}
+		if (kajiki.button == 2 && kajiki.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 660, 890);
+		}
+		if (kajiki.button == 3 && kajiki.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 660, 890);
+		}
+		if (kajiki.button == 4 && kajiki.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 660, 890);
+		}
+	}
+	else
+	{
+		Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, kajiki.pos.x, kajiki.pos.y,0, 0, 100, 300);
+
+	}
 }
 /*------------------------------------------------------------------------------
 カジキ2Pの描画
@@ -286,26 +301,39 @@ void Kajiki_Draw_2P(void)
 	Sprite_Draw(TEXTURE_INDEX_GAME, (SCREEN_WIDTH / 2),
 									((-SCREEN_HEIGHT * 2) + 500) + Move_BG_2P_Kajiki_ + Move_BG2_Kajiki,
 									(SCREEN_WIDTH / 2), 0.0f, (SCREEN_WIDTH / 4), SCREEN_HEIGHT - 50);
-
-	Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, kajiki_2P.pos.x, kajiki_2P.pos.y, g_animCount * 100, 0, 100, 300);
-
-	if (kajiki_2P.button == 1 && kajiki_2P.button_flag)
+	if (END_2P < SCREEN_HEIGHT)
 	{
-		Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1175, 80);
-	}
-	if (kajiki_2P.button == 2 && kajiki_2P.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1175, 80);
-	}
-	if (kajiki_2P.button == 3 && kajiki_2P.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1175, 80);
-	}
-	if (kajiki_2P.button == 4 && kajiki_2P.button_flag)
-	{
-		Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1175, 80);
+		Sprite_Draw(TEXTURE_INDEX_START_GOAL, SCREEN_WIDTH / 2, END_2P + 500);
 	}
 
+	Sprite_Draw(TEXTURE_INDEX_2P, kajiki_2P.pos.x -10, kajiki_2P.pos.y + 250);
+
+	if (!Goal_2P_Kajiki)
+	{
+		Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, kajiki_2P.pos.x, kajiki_2P.pos.y, g_animCount * 100, 0, 100, 300);
+
+		if (kajiki_2P.button == 1 && kajiki_2P.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_A_BUTTON, 1140, 890);
+		}
+		if (kajiki_2P.button == 2 && kajiki_2P.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_B_BUTTON, 1140, 890);
+		}
+		if (kajiki_2P.button == 3 && kajiki_2P.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_X_BUTTON, 1140, 890);
+		}
+		if (kajiki_2P.button == 4 && kajiki_2P.button_flag)
+		{
+			Sprite_Draw(TEXTURE_INDEX_Y_BUTTON, 1140, 890);
+		}
+	}
+	else
+	{
+		Sprite_Draw(TEXTURE_INDEX_KAZIKI_ANIMATION, kajiki_2P.pos.x, kajiki_2P.pos.y, 0, 0, 100, 300);
+
+	}
 }
 
 /*------------------------------------------------------------------------------
